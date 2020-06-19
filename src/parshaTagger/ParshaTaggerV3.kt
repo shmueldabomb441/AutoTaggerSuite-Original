@@ -54,12 +54,11 @@ fun main() {
         actualSpellings36
     }
 
-    var parshaName = ""
+    var properParshaName = ""//this is what the album should correctly be
     for (word in shiurTitle.split(" ", "-", "_")) if (listOfPossibleSpellings36.indexOf(word) != -1) {
-        parshaName = correctSpelling36[word].toString()
+        properParshaName = correctSpelling36[word].toString()
     }
-    println(parshaName)
-    println(timesInvoked)
+    println(properParshaName)
     //Input: shiurim: possessing title, lacking album, series, and year; Speaker; Year (if ubiquitous across all input-ed shiurim)
     //Output: shiurim: possessing album (e.g. "Ki Setzei") and series (e.g. "Parsha 5772") and Year (e.g. "5772")
 
@@ -92,16 +91,4 @@ fun main() {
 //                              i. if match was found,
 //                                  1. set conductor to "Parsha $match"
 //                                  2. set year to match
-}
-
-fun getNumbers1(): List<Int> {
-    timesInvoked++
-    return listOf(1, 7, 19, 21, 45)
-
-}
-
-fun String.split12(s: String): List<String> {
-    timesInvoked++
-    return this.split(s)
-
 }
