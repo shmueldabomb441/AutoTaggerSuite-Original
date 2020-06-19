@@ -6,16 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="ParshaTaggerV3 works fully for 1 parsha">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Cleaned up comments">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="16" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -171,14 +171,29 @@
       <option name="project" value="LOCAL" />
       <updated>1592602714195</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ParshaTaggerV3 works fully for 1 parsha">
+      <created>1592602794952</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592602794952</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Cleaned up comments">
+      <created>1592602904406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592602904406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="ParshaTaggerV3 works fully for 1 parsha" />
-    <option name="LAST_COMMIT_MESSAGE" value="ParshaTaggerV3 works fully for 1 parsha" />
+    <MESSAGE value="Cleaned up comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -201,22 +216,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1592602640595">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592604255343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592602640595" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1592602640594">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592604255343" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592604255342">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592602640594" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1592602640594">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592604255342" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592604255342">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592602640594" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1592602640595">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592604255342" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592604255343">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592602640595" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592604255343" />
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592533169907">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,10 +260,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592581111923" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592602518059">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592604659139">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592602518059" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592604659139" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAudioTagger$GeneralTagger.ic" NAME="GeneralTagger Coverage Results" MODIFIED="1578229830532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -262,5 +277,6 @@
       <FILTER>com.company.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JAudioTagger$JAudioTagger_jar__1_.ic" NAME="JAudioTagger.jar (1) Coverage Results" MODIFIED="1576510757664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JAudioTagger___Copy$ParshaTaggerV3Kt.ic" NAME="ParshaTaggerV3Kt Coverage Results" MODIFIED="1592605055428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
