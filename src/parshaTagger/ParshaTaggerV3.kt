@@ -2,7 +2,20 @@ package parshaTagger
 
 fun main() {
     //Local Knowledge: Map<PossibleSpellings, Actual Spelling>//use listOfPossibleSpellings.associateWith{actualSpellings}
-    //listOfPossibleSpellings must contain the correct spelling/actualSpelling. Instead of inserting the actual spelling in the list as a string, put the variable name in the list so that if you need to change the actual spelling(e.g. they change the spelling on the website in the future) it will accomodate accordingly and the person will not need to know to add the spelling
+
+    //Input: shiurim: possessing title, lacking album, series, and year; Speaker; Year (if ubiquitous across all input-ed shiurim)
+
+    //Output: shiurim: possessing album (e.g. "Ki Setzei") and series (e.g. "Parsha 5772") and Year (e.g. "5772")
+
+    //Specifications:
+    //If two occurrences of 4-digit numbers {"(57|19|20)\d\d".toRegex()---(##e.g.5775),(##e.g.1994)(##e.g.2017)} or two parsha names are found in the title, add said title to list of shiurim which ParshaTagger was unable to determine proper series for and print the list of said shiurim upon completion and state reason
+    //If no parsha is found, add it to ^ list and state reason
+    //If 4-digit number found in title is different than year supplied as input, add to ^ list and state reason
+    //Figure out what to do about double parshiyos
+    //If rejection reasons contain "No recognized spelling of any parsha name in title", when the popupp at the end displays, add button to display list of recognized spellings of parsha names
+
+    //TODO listOfPossibleSpellings must contain the correct spelling/actualSpelling. Instead of inserting the actual spelling in the list as a string, put the variable name in the list so that if you need to change the actual spelling(e.g. they change the spelling on the website in the future) it will accomodate accordingly and the person will not need to know to add the spelling
+
     val shiurTitle = "Parshas  5780-Beha'alotcha Finding Your Potential In A Chaotic World"
 
     val actualSpellings36 = "Beha'aloscha"
@@ -58,37 +71,6 @@ fun main() {
     for (word in shiurTitle.split(" ", "-", "_")) if (listOfPossibleSpellings36.indexOf(word) != -1) {
         properParshaName = correctSpelling36[word].toString()
     }
+
     println(properParshaName)
-    //Input: shiurim: possessing title, lacking album, series, and year; Speaker; Year (if ubiquitous across all input-ed shiurim)
-    //Output: shiurim: possessing album (e.g. "Ki Setzei") and series (e.g. "Parsha 5772") and Year (e.g. "5772")
-
-    //Specifications:
-    //If two occurrences of 4-digit numbers {"(57|19|20)\d\d".toRegex()---(##e.g.5775),(##e.g.1994)(##e.g.2017)} or two parsha names are found in the title, add said title to list of shiurim which ParshaTagger was unable to determine proper series for and print the list of said shiurim upon completion and state reason
-    //If no parsha is found, add it to ^ list and state reason
-    //If 4-digit number found in title is different than year supplied as input, add to ^ list and state reason
-    //Figure out what to do about double parshiyos
-    //If rejection reasons contain "No recognized spelling of any parsha name in title", when the popupp at the end displays, add button to display list of recognized spellings of parsha names
-
-//    Order of Operations:
-//    1. Walk the current folder for shiurim
-//    2. analyzeShiur@For every shiur, read the title
-//    3. Determine if the shiur contains the name of a parsha:
-//          a. if yes,
-//                i. determine if the shiur contains a second name of a parsha
-//                       a.
-//               ii. set the album to the correct spelling of the current parsha
-//              iii. search the title for "(57|19|20)\d\d"
-//               iv. determine if year was given in the file:
-//                       1. if yes,
-//                          a. determine if match was found for ii.
-//                              i. if yes,
-//                                  1. add shiur to list of rejects with the reason, "date in title and date in file"
-//                                  2. move on to next shiur(i.e. break@analyzeShiur)
-//                          a. set conductor to "Parsha $year"
-//                          b. set year to year
-//                       2. if no,
-//                          a.
-//                              i. if match was found,
-//                                  1. set conductor to "Parsha $match"
-//                                  2. set year to match
 }
