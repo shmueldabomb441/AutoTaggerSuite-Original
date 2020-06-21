@@ -1,4 +1,4 @@
-package com.company
+package com.GeneralTagger
 
 import java.io.FileWriter
 import java.io.Writer

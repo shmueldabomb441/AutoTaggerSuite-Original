@@ -1,9 +1,9 @@
-package com.company;
+package com.GeneralTagger;
 
 import javax.swing.*;
 import java.io.IOException;
 
-import static com.company.GeneralTaggerJava.setLookAndFeelOfGUIToNimbusStyle;
+import static com.GeneralTagger.GeneralTaggerJava.setLookAndFeelOfGUIToNimbusStyle;
 
 public class ForRandomCodeTests2 {
     public static void main(String[] args) throws IOException {

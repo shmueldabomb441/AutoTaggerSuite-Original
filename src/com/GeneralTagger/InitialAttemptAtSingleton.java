@@ -1,10 +1,9 @@
-package com.company;
+package com.GeneralTagger;
 
-import javax.swing.*;
 import java.io.*;
 
-import static com.company.GeneralTaggerJava.getAllCurrentlyRunningProcesses;
-import static com.company.GeneralTaggerJava.readBatchFile;
+import static com.GeneralTagger.GeneralTaggerJava.getAllCurrentlyRunningProcesses;
+import static com.GeneralTagger.GeneralTaggerJava.readBatchFile;
 
 public class InitialAttemptAtSingleton {
     public static void main(String[] args) throws IOException {

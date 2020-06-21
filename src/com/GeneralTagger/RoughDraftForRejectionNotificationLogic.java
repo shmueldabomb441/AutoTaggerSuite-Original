@@ -1,4 +1,4 @@
-package com.company;
+package com.GeneralTagger;
 
 
 import javax.swing.*;
@@ -6,8 +6,8 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import static com.company.GeneralTaggerJava.setLookAndFeelOfGUIToNimbusStyle;
-import static com.company.ForRandomCodeTests3.longmessage;
+import static com.GeneralTagger.GeneralTaggerJava.setLookAndFeelOfGUIToNimbusStyle;
+import static com.GeneralTagger.ForRandomCodeTests3.longmessage;
 
 public class RoughDraftForRejectionNotificationLogic {
     static String title = "Files Rejected";

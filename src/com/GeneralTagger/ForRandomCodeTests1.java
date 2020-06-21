@@ -1,4 +1,4 @@
-package com.company;
+package com.GeneralTagger;
 
 import java.io.File;
 import java.io.IOException;

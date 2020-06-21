@@ -6,9 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added all correct spellings and clarified some comments">
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTagger.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerJavaCodeStyleTestDummy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerVersion1025.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerVersion923.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GetFileSize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/GetRunningProcessesUsingExecTASKLIST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/HowBigIsEachMethodOfGeneralTaggerInCharacters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InitialAttemptAtSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/PrintListOfAvailableFontsForJavaOnComputer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ReingoldTaggerLegacyVersion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/RoughDraftForRejectionNotificationLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/StopWatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TDPushEnder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/test1.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/whoKnows.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/whoKnows.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +98,11 @@
   </component>
   <component name="RunManager" selected="Kotlin.ParshaTaggerV3Kt">
     <configuration name="ForRandomCodeTests5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.ForRandomCodeTests5" />
+      <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.ForRandomCodeTests5" />
       <module name="JAudioTagger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.GeneralTagger" />
+          <option name="PATTERN" value="com.GeneralTagger.GeneralTagger" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,11 +111,11 @@
       </method>
     </configuration>
     <configuration name="InitialAttemptAtSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.InitialAttemptAtSingleton" />
+      <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.InitialAttemptAtSingleton" />
       <module name="JAudioTagger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.GeneralTagger" />
+          <option name="PATTERN" value="com.GeneralTagger.GeneralTagger" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -190,8 +218,26 @@
       <option name="project" value="LOCAL" />
       <updated>1592605199244</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added all correct spellings and clarified some comments">
+      <created>1592759558977</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592759558977</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -199,7 +245,8 @@
     <MESSAGE value="ParshaTaggerV3 works fully for 1 parsha" />
     <MESSAGE value="Cleaned up comments" />
     <MESSAGE value="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)" />
+    <MESSAGE value="Added all correct spellings and clarified some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all correct spellings and clarified some comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">

@@ -1,4 +1,4 @@
-package com.company;
+package com.GeneralTagger;
 
 import org.jaudiotagger.audio.AudioFileIO;
 import org.jaudiotagger.audio.exceptions.CannotReadException;

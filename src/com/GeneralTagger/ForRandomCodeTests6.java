@@ -1,11 +1,11 @@
-package com.company;
+package com.GeneralTagger;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-import static com.company.GeneralTaggerJava.*;
-import static com.company.ForRandomCodeTests3.readRejectedFile;
+import static com.GeneralTagger.GeneralTaggerJava.*;
+import static com.GeneralTagger.ForRandomCodeTests3.readRejectedFile;
 
 public class ForRandomCodeTests6 {
     public static <e> void main(String[] args) throws IOException {

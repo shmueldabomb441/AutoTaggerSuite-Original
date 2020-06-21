@@ -1,11 +1,11 @@
-package com.company;
+package com.GeneralTagger;
 
 import javax.swing.*;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import static com.company.GeneralTaggerJava.setLookAndFeelOfGUIToNimbusStyle;
-import static com.company.ForRandomCodeTests3.readRejectedFile;
+import static com.GeneralTagger.GeneralTaggerJava.setLookAndFeelOfGUIToNimbusStyle;
+import static com.GeneralTagger.ForRandomCodeTests3.readRejectedFile;
 
 public class ForRandomCodeTests4 {
     public static void main(String[] args) throws IOException {

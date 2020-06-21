@@ -1,12 +1,9 @@
-package com.company;
+package com.GeneralTagger;
 
-import javax.swing.*;
-import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import static com.company.GeneralTaggerJava.getAllCurrentlyRunningProcesses;
+import static com.GeneralTagger.GeneralTaggerJava.getAllCurrentlyRunningProcesses;
 
 public class ForRandomCodeTests5 {
     public static void main(String[] args) throws IOException {

@@ -1,8 +1,8 @@
-package com.company;
+package com.GeneralTagger;
 
 import java.io.*;
 
-import static com.company.GeneralTaggerJava.getAllCurrentlyRunningProcesses;
+import static com.GeneralTagger.GeneralTaggerJava.getAllCurrentlyRunningProcesses;
 
 public class TDPushEnder {
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.GeneralTagger;
 
 //import com.sun.javafx.image.impl.General;
 

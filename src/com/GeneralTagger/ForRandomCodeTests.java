@@ -1,4 +1,4 @@
-package com.company;
+package com.GeneralTagger;
 
 import org.jaudiotagger.audio.exceptions.CannotReadException;
 import org.jaudiotagger.audio.exceptions.CannotWriteException;
@@ -8,10 +8,6 @@ import org.jaudiotagger.tag.TagException;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.util.Arrays;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 import static java.lang.Math.ceil;
 import static java.nio.file.Paths.get;
