@@ -20,6 +20,26 @@ fun main() {
     var properParshaName = ""//this is what the album should correctly be
 
 
+
+
+
+    Spellings.mapOfPossibleSpellingListToCorrectSpellingMap.forEach { (listOfPossibleSpellings, correctSpelling) ->
+        val shiurTitleDelimited = givenShiurTitle.split(" ", "-", "_")
+        //Solution to two-word parshiyos problem:
+        //Loop through list of lists of possible spellings(returns list of possible spelling): Loop through list of possible spellings(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
+
+
+        for (word in shiurTitleDelimited
+        //TODO DOES NOT WORK FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
+        )
+            if (listOfPossibleSpellings.indexOf(word) != -1) {
+                properParshaName = correctSpelling[word].toString()
+            }
+    }
+    println(properParshaName)
+}
+
+object Spellings{
     val actualSpelling1 = "Bereishis"
     val listOfPossibleSpellings1 = listOf(
 
@@ -241,22 +261,6 @@ fun main() {
             listOfPossibleSpellings2 to correctSpelling2,
             listOfPossibleSpellings3 to correctSpelling3,
             listOfPossibleSpellings4 to correctSpelling4,
-            listOfPossibleSpellings37 to correctSpelling37)
-
-
-
-    mapOfPossibleSpellingListToCorrectSpellingMap.forEach { (listOfPossibleSpellings, correctSpelling) ->
-        val shiurTitleDelimited = givenShiurTitle.split(" ", "-", "_")
-        //Solution to two-word parshiyos problem:
-        //Loop through list of lists of possible spellings(returns list of possible spelling): Loop through list of possible spellings(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
-
-
-        for (word in shiurTitleDelimited
-        //TODO DOES NOT WORK FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
-        )
-            if (listOfPossibleSpellings.indexOf(word) != -1) {
-                properParshaName = correctSpelling[word].toString()
-            }
-    }
-    println(properParshaName)
+            listOfPossibleSpellings37 to correctSpelling37
+    )
 }
