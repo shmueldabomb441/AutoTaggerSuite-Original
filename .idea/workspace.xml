@@ -15,37 +15,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added all correct spellings and clarified some comments">
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ForRandomCodeTests7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTagger.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerJava.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerJavaCodeStyleTestDummy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerVersion1025.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GeneralTaggerVersion923.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GetFileSize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/GetRunningProcessesUsingExecTASKLIST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/HowBigIsEachMethodOfGeneralTaggerInCharacters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/InitialAttemptAtSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/PrintListOfAvailableFontsForJavaOnComputer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ReingoldTaggerLegacyVersion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/RoughDraftForRejectionNotificationLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/StopWatch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TDPushEnder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/test1.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/whoKnows.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/whoKnows.java" beforeDir="false" />
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Extracted list of spellings into an object called Spellings so that the main method would be cleaner">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +206,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592759558977</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Renamed package to com.GeneralTagger, and in the process (by accident) optimized imports, probably among other things)">
+      <created>1592759732610</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592759732610</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Extracted list of spellings into an object called Spellings so that the main method would be cleaner">
+      <created>1592760011371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592760011371</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,7 +241,9 @@
     <MESSAGE value="Cleaned up comments" />
     <MESSAGE value="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)" />
     <MESSAGE value="Added all correct spellings and clarified some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all correct spellings and clarified some comments" />
+    <MESSAGE value="Renamed package to com.GeneralTagger, and in the process (by accident) optimized imports, probably among other things)" />
+    <MESSAGE value="Extracted list of spellings into an object called Spellings so that the main method would be cleaner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted list of spellings into an object called Spellings so that the main method would be cleaner" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -278,22 +266,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592605211600">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592759955315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592605211600" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592605211599">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592759955315" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592759955314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592605211599" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592605211599">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592759955314" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592759955314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592605211599" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592605211599">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592759955314" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592759955314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592605211599" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592759955314" />
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592758497988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

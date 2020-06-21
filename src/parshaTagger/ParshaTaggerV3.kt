@@ -1,43 +1,30 @@
 package parshaTagger
 
-fun main() {
-    //Local Knowledge: Map<PossibleSpellings, Actual Spelling>//use listOfPossibleSpellings.associateWith{actualSpellings}
 
-    //Input: shiurim: possessing title, lacking album, series, and year; Speaker; Year (if ubiquitous across all input-ed shiurim)
+//Local Knowledge: Map<PossibleSpellings, Actual Spelling>//use listOfPossibleSpellings.associateWith{actualSpellings}
 
-    //Output: shiurim: possessing album (e.g. "Ki Setzei") and series (e.g. "Parsha 5772") and Year (e.g. "5772")
+//Input: shiurim: possessing title, lacking album, series, and year; Speaker; Year (if ubiquitous across all input-ed shiurim)
 
-    //Specifications:
-    //If two occurrences of 4-digit numbers {"(57|19|20)\d\d".toRegex()---(##e.g.5775),(##e.g.1994)(##e.g.2017)} or two parsha names are found in the title, add said title to list of shiurim which ParshaTagger was unable to determine proper series for and print the list of said shiurim upon completion and state reason
-    //If no parsha is found, add it to ^ list and state reason
-    //If 4-digit number found in title is different than year supplied as input, add to ^ list and state reason
-    //Figure out what to do about double parshiyos
-    //If rejection reasons contain "No recognized spelling of any parsha name in title", when the popupp at the end displays, add button to display list of recognized spellings of parsha names
+//Output: shiurim: possessing album (e.g. "Ki Setzei") and series (e.g. "Parsha 5772") and Year (e.g. "5772")
 
-    //TODO listOfPossibleSpellings must contain the correct spelling/actualSpelling. Instead of inserting the actual spelling in the list as a string, put the variable name in the list so that if you need to change the actual spelling(e.g. they change the spelling on the website in the future) it will accomodate accordingly and the person will not need to know to add the spelling
-
-    val givenShiurTitle = "Parshas  5780-Now'ach Finding Your Potential In A Chaotic World"
-    var properParshaName = ""//this is what the album should correctly be
+//Specifications:
+//If two occurrences of 4-digit numbers {"(57|19|20)\d\d".toRegex()---(##e.g.5775),(##e.g.1994)(##e.g.2017)} or two parsha names are found in the title, add said title to list of shiurim which ParshaTagger was unable to determine proper series for and print the list of said shiurim upon completion and state reason
+//If no parsha is found, add it to ^ list and state reason
+//If 4-digit number found in title is different than year supplied as input, add to ^ list and state reason
+//Figure out what to do about double parshiyos
+//If rejection reasons contain "No recognized spelling of any parsha name in title", when the popupp at the end displays, add button to display list of recognized spellings of parsha names
 
 
 
+//TODO listOfPossibleSpellings must contain the correct spelling/actualSpelling. Instead of inserting the actual spelling in the list as a string, put the variable name in the list so that if you need to change the actual spelling(e.g. they change the spelling on the website in the future) it will accomodate accordingly and the person will not need to know to add the spelling
 
 
-    Spellings.mapOfPossibleSpellingListToCorrectSpellingMap.forEach { (listOfPossibleSpellings, correctSpelling) ->
-        val shiurTitleDelimited = givenShiurTitle.split(" ", "-", "_")
-        //Solution to two-word parshiyos problem:
-        //Loop through list of lists of possible spellings(returns list of possible spelling): Loop through list of possible spellings(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
+//Solution to two-word parshiyos problem:
+//Loop through list of lists of possible spellings(returns list of possible spelling): Loop through list of possible spellings(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
+//TODO DOES NOT WORK FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
 
 
-        for (word in shiurTitleDelimited
-        //TODO DOES NOT WORK FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
-        )
-            if (listOfPossibleSpellings.indexOf(word) != -1) {
-                properParshaName = correctSpelling[word].toString()
-            }
-    }
-    println(properParshaName)
-}
+
 
 object Spellings{
     val actualSpelling1 = "Bereishis"
@@ -112,17 +99,157 @@ object Spellings{
     val actualSpelling3 = "Lech Lecha"
     val listOfPossibleSpellings3 = listOf(
             "Leich Licha",
-            "Lecha Licha",
+            "Lech Licha",
             "Laich Licha",
             "Leich Lecha",
             "Laich Lecha",
 
             "Leikh Likha",
-            "Lekha Likha",
+            "Lekh Likha",
             "Laikh Likha",
             "Leikh Lekha",
-            "Laikh Lekha"
-    )
+            "Laikh Lekha",
+
+            "Leich Lichah",
+            "Lech Lichah",
+            "Laich Lichah",
+            "Leich Lechah",
+            "Laich Lechah",
+
+            "Leikh Likhah",
+            "Lekh Likhah",
+            "Laikh Likhah",
+            "Leikh Lekhah",
+            "Laikh Lekhah",
+
+            "Leich Licho",
+            "Lech Licho",
+            "Laich Licho",
+            "Leich Lecho",
+            "Laich Lecho",
+
+            "Leikh Likho",
+            "Lekh Likho",
+            "Laikh Likho",
+            "Leikh Lekho",
+            "Laikh Lekho",
+
+
+            "Leich Lichoh",
+            "Lech Lichoh",
+            "Laich Lichoh",
+            "Leich Lechoh",
+            "Laich Lechoh",
+
+            "Leikh Likhoh",
+            "Lekh Likhoh",
+            "Laikh Likhoh",
+            "Leikh Lekhoh",
+            "Laikh Lekhoh",
+
+
+
+
+            "Leich Lucha",
+            "Lech Lucha",
+            "Laich Lucha",
+            "Leich Lucha",
+            "Laich Lucha",
+
+            "Leikh Lukha",
+            "Lekh Lukha",
+            "Laikh Lukha",
+            "Leikh Lukha",
+            "Laikh Lukha",
+
+            "Leich Luchah",
+            "Lech Luchah",
+            "Laich Luchah",
+            "Leich Luchah",
+            "Laich Luchah",
+
+            "Leikh Lukhah",
+            "Lekh Lukhah",
+            "Laikh Lukhah",
+            "Leikh Lukhah",
+            "Laikh Lukhah",
+
+            "Leich Lucho",
+            "Lech Lucho",
+            "Laich Lucho",
+            "Leich Lucho",
+            "Laich Lucho",
+
+            "Leikh Lukho",
+            "Lekh Lukho",
+            "Laikh Lukho",
+            "Leikh Lukho",
+            "Laikh Lukho",
+
+
+            "Leich Luchoh",
+            "Lech Luchoh",
+            "Laich Luchoh",
+            "Leich Luchoh",
+            "Laich Luchoh",
+
+            "Leikh Lukhoh",
+            "Lekh Lukhoh",
+            "Laikh Lukhoh",
+            "Leikh Lukhoh",
+            "Laikh Lukhoh",
+
+
+
+            "Leich Locha",
+            "Lech Locha",
+            "Laich Locha",
+            "Leich Locha",
+            "Laich Locha",
+
+            "Leikh Lokha",
+            "Lekh Lokha",
+            "Laikh Lokha",
+            "Leikh Lokha",
+            "Laikh Lokha",
+
+            "Leich Lochah",
+            "Lech Lochah",
+            "Laich Lochah",
+            "Leich Lochah",
+            "Laich Lochah",
+
+            "Leikh Lokhah",
+            "Lekh Lokhah",
+            "Laikh Lokhah",
+            "Leikh Lokhah",
+            "Laikh Lokhah",
+
+            "Leich Locho",
+            "Lech Locho",
+            "Laich Locho",
+            "Leich Locho",
+            "Laich Locho",
+
+            "Leikh Lokho",
+            "Lekh Lokho",
+            "Laikh Lokho",
+            "Leikh Lokho",
+            "Laikh Lokho",
+
+
+            "Leich Lochoh",
+            "Lech Lochoh",
+            "Laich Lochoh",
+            "Leich Lochoh",
+            "Laich Lochoh",
+
+            "Leikh Lokhoh",
+            "Lekh Lokhoh",
+            "Laikh Lokhoh",
+            "Leikh Lokhoh",
+            "Laikh Lokhoh"
+            )
     val correctSpelling3: Map<String, String> = listOfPossibleSpellings3.associateWith {
         actualSpelling3
     }
@@ -264,3 +391,20 @@ object Spellings{
             listOfPossibleSpellings37 to correctSpelling37
     )
 }
+
+
+fun main() {
+
+    val givenShiurTitle = "Parshas  5780-Now'ach Finding Your Potential In A Chaotic World"
+    var properParshaName = ""//this is what the album should correctly be
+    Spellings.mapOfPossibleSpellingListToCorrectSpellingMap.forEach { (listOfPossibleSpellings, correctSpelling) ->
+        for (word in givenShiurTitle.split(" ", "-", "_")) {
+            if (listOfPossibleSpellings.indexOf(word) != -1) {
+                properParshaName = correctSpelling[word].toString()
+            }
+        }
+    }
+    println(properParshaName)
+
+}
+
