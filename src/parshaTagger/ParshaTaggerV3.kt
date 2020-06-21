@@ -79,7 +79,7 @@ fun main() {
             "No'ach", "Now'ach",
             "Noach", "Nowach",
             "Noah", "Nowah",
-            "Noakh", "Nowakh","Now'ach",
+            "Noakh", "Nowakh", "Now'ach",
 
             "No'ach", "Noh'ach",
             "Noach", "Nohach",
@@ -90,7 +90,7 @@ fun main() {
         actualSpelling2
     }
     val actualSpelling3 = "Lech Lecha"
-    val listOfPossibleSpellings3=listOf(
+    val listOfPossibleSpellings3 = listOf(
             "Leich Licha",
             "Lecha Licha",
             "Laich Licha",
@@ -106,9 +106,8 @@ fun main() {
     val correctSpelling3: Map<String, String> = listOfPossibleSpellings3.associateWith {
         actualSpelling3
     }
-
-    val actualSpelling4="Vayeira"
-    val listOfPossibleSpellings4=listOf(
+    val actualSpelling4 = "Vayeira"
+    val listOfPossibleSpellings4 = listOf(
             "Vayeirah",
             "Vayera",
             "Vayaira",
@@ -123,17 +122,41 @@ fun main() {
     val correctSpelling4: Map<String, String> = listOfPossibleSpellings4.associateWith {
         actualSpelling4
     }
-    val actualSpelling5= "Chayei Sara"
+    val actualSpelling5 = "Chayei Sara"
     val listOfPossibleSpellings5 = listOf("")
-
-
-
-
-
-
-
-    val actualSpelling36 = "Beha'aloscha"
-    val listOfPossibleSpellings36 = listOf(
+    val actualSpelling6 = "Toldos"
+    val actualSpelling7 = "Vayeitzei"
+    val actualSpelling8 = "Vayishlach"
+    val actualSpelling9 = "Vayeshev"
+    val actualSpelling10 = "Mikeitz"
+    val actualSpelling11 = "Vayigash"
+    val actualSpelling12 = "Vayechi"
+    val actualSpelling13 = "Shemos"
+    val actualSpelling14 = "Va'eira"
+    val actualSpelling15 = "Bo"
+    val actualSpelling16 = "Beshalach"
+    val actualSpelling17 = "Yisro"
+    val actualSpelling18 = "Mishpatim"
+    val actualSpelling19 = "Terumah"
+    val actualSpelling20 = "Tetzaveh"
+    val actualSpelling21 = "Ki Sisa"
+    val actualSpelling22 = "Vayakhail"
+    val actualSpelling23 = "Pekudei"
+    val actualSpelling24 = "Sefer Vayikra"
+    val actualSpelling25 = "Vayikra"
+    val actualSpelling26 = "Tzav"
+    val actualSpelling27 = "Shemini"
+    val actualSpelling28 = "Tazria"
+    val actualSpelling29 = "Metzora"
+    val actualSpelling30 = "Acharei Mos"
+    val actualSpelling31 = "Kedoshim"
+    val actualSpelling32 = "Emor"
+    val actualSpelling33 = "Behar"
+    val actualSpelling34 = "Bechukosai"
+    val actualSpelling35 = "Bamidbar"
+    val actualSpelling36 = "Naso"
+    val actualSpelling37 = "Beha'aloscha"
+    val listOfPossibleSpellings37 = listOf(
             "Bihaaloscha", "Behaaloscha",
             "Biha'aloscha", "Beha'aloscha",
             "Bihaalos'cha", "Behaalos'cha",
@@ -177,11 +200,32 @@ fun main() {
             "Bihaalohschah", "Behaalohschah",
             "Biha'alohschah", "Beha'alohschah",
             "Bihaalohs'chah", "Behaalohs'chah", "Biha'alohs'chah", "Beha'alohs'chah", "Bihalohschah", "Behalohschah", "Biha'lohschah", "Beha'lohschah", "Bihalohs'chah", "Behalohs'chah", "Biha'lohs'chah", "Beha'lohs'chah", "Bihaalosicha", "Biha'alosicha", "Behaalosicha", "Beha'alosicha", "Bihalosicha", "Behalosicha", "Biha'losicha", "Beha'losicha", "Bihaalosichah", "Biha'alosichah", "Behaalosichah", "Beha'alosichah", "Bihalosichah", "Behalosichah", "Biha'losichah", "Beha'losichah", "Bihaalowsicha", "Behaalowsicha", "Biha'alowsicha", "Beha'alowsicha", "Bihalowsicha", "Behalowsicha", "Biha'lowsicha", "Beha'lowsicha", "Bihaalowsichah", "Behaalowsichah", "Biha'alowsichah", "Beha'alowsichah", "Bihalowsichah", "Behalowsichah", "Biha'lowsichah", "Beha'lowsichah", "Bihaalohsicha", "Behaalohsicha", "Biha'alohsicha", "Beha'alohsicha", "Bihalohsicha", "Behalohsicha", "Biha'lohsicha", "Beha'lohsicha", "Bihaalohsichah", "Biha'alohsichah", "Behaalohsichah", "Beha'alohsichah", "Bihalohsichah", "Behalohsichah", "Biha'lohsichah", "Beha'lohsichah", "Bihaalotcha", "Behaalotcha", "Biha'alotcha", "Beha'alotcha", "Bihaalot'cha", "Behaalot'cha", "Biha'alot'cha", "Beha'alot'cha", "Bihalotcha", "Behalotcha", "Biha'lotcha", "Beha'lotcha", "Bihalot'cha", "Behalot'cha", "Biha'lot'cha", "Beha'lot'cha", "Bihaalotchah", "Behaalotchah", "Biha'alotchah", "Beha'alotchah", "Bihaalot'chah", "Behaalot'chah", "Biha'alot'chah", "Beha'alot'chah", "Bihalotchah", "Behalotchah", "Biha'lotchah", "Beha'lotchah", "Bihalot'chah", "Behalot'chah", "Biha'lot'chah", "Beha'lot'chah", "Bihaalowtcha", "Behaalowtcha", "Biha'alowtcha", "Beha'alowtcha", "Bihaalowt'cha", "Behaalowt'cha", "Biha'alowt'cha", "Beha'alowt'cha", "Bihalowtcha", "Behalowtcha", "Biha'lowtcha", "Beha'lowtcha", "Bihalowt'cha", "Behalowt'cha", "Biha'lowt'cha", "Beha'lowt'cha", "Bihaalowtchah", "Behaalowtchah", "Biha'alowtchah", "Beha'alowtchah", "Bihaalowt'chah", "Behaalowt'chah", "Biha'alowt'chah", "Beha'alowt'chah", "Bihalowtchah", "Behalowtchah", "Biha'lowtchah", "Beha'lowtchah", "Bihalowt'chah", "Behalowt'chah", "Biha'lowt'chah", "Beha'lowt'chah", "Bihaalohtcha", "Behaalohtcha", "Biha'alohtcha", "Beha'alohtcha", "Bihaaloht'cha", "Behaaloht'cha", "Biha'aloht'cha", "Beha'aloht'cha", "Bihalohtcha", "Behalohtcha", "Biha'lohtcha", "Beha'lohtcha", "Bihaloht'cha", "Behaloht'cha", "Biha'loht'cha", "Beha'loht'cha", "Bihaalohtchah", "Behaalohtchah", "Biha'alohtchah", "Beha'alohtchah", "Bihaaloht'chah", "Behaaloht'chah", "Biha'aloht'chah", "Beha'aloht'chah", "Bihalohtchah", "Behalohtchah", "Biha'lohtchah", "Beha'lohtchah", "Bihaloht'chah", "Behaloht'chah", "Biha'loht'chah", "Beha'loht'chah", "Bihaaloticha", "Behaaloticha", "Biha'aloticha", "Beha'aloticha", "Bihaloticha", "Behaloticha", "Biha'loticha", "Beha'loticha", "Bihaalotichah", "Behaalotichah", "Biha'alotichah", "Beha'alotichah", "Bihalotichah", "Behalotichah", "Biha'lotichah", "Beha'lotichah", "Bihaalowticha", "Behaalowticha", "Biha'alowticha", "Beha'alowticha", "Bihalowticha", "Behalowticha", "Biha'lowticha", "Beha'lowticha", "Bihaalowtichah", "Behaalowtichah", "Biha'alowtichah", "Beha'alowtichah", "Bihalowtichah", "Behalowtichah", "Biha'lowtichah", "Beha'lowtichah", "Bihaalohticha", "Biha'alohticha", "Behaalohticha", "Beha'alohticha", "Bihalohticha", "Behalohticha", "Biha'lohticha", "Beha'lohticha", "Bihaalohtichah", "Biha'alohtichah", "Behaalohtichah", "Beha'alohtichah", "Bihalohtichah", "Behalohtichah", "Biha'lohtichah", "Beha'lohtichah")
-    val correctSpelling36: Map<String, String> = listOfPossibleSpellings36.associateWith {
-        actualSpelling36
+    val correctSpelling37: Map<String, String> = listOfPossibleSpellings37.associateWith {
+        actualSpelling37
     }
+    val actualSpelling38 = "Shelach"
+    val actualSpelling39 = "Korach"
+    val actualSpelling40 = "Chukas"
+    val actualSpelling41 = "Balak"
+    val actualSpelling42 = "Pinchas"
+    val actualSpelling43 = "Mattos"
+    val actualSpelling44 = "Massai"
+    val actualSpelling45 = "Devarim"
+    val actualSpelling46 = "Va'eschanan"
+    val actualSpelling47 = "Eikev"
+    val actualSpelling48 = "Re'eh"
+    val actualSpelling49 = "Shoftim"
+    val actualSpelling50 = "Ki Setzei"
+    val actualSpelling51 = "Ki Savo"
+    val actualSpelling52 = "Nitzavim"
+    val actualSpelling53 = "Vayelech"
+    val actualSpelling54 = "Ha'azinu"
+    val actualSpelling55 = "V'Zos HaBracha"
 
-    val listOfListsOfPossibleSpellings= listOf(
+
+
+
+    val listOfListsOfPossibleSpellings = listOf(
 
             listOfPossibleSpellings1,
             listOfPossibleSpellings2,
@@ -189,30 +233,30 @@ fun main() {
             listOfPossibleSpellings4,
             listOfPossibleSpellings5,
 
-            listOfPossibleSpellings36
+            listOfPossibleSpellings37
     )
 
-  val mapOfPossibleSpellingListToCorrectSpellingMap=mapOf(
-          listOfPossibleSpellings1 to correctSpelling1,
-          listOfPossibleSpellings2 to correctSpelling2,
-          listOfPossibleSpellings3 to correctSpelling3,
-          listOfPossibleSpellings4 to correctSpelling4,
-          listOfPossibleSpellings36 to correctSpelling36)
+    val mapOfPossibleSpellingListToCorrectSpellingMap = mapOf(
+            listOfPossibleSpellings1 to correctSpelling1,
+            listOfPossibleSpellings2 to correctSpelling2,
+            listOfPossibleSpellings3 to correctSpelling3,
+            listOfPossibleSpellings4 to correctSpelling4,
+            listOfPossibleSpellings37 to correctSpelling37)
 
 
 
-mapOfPossibleSpellingListToCorrectSpellingMap.forEach { (listOfPossibleSpellings, correctSpelling) ->
-    val shiurTitleDelimited =givenShiurTitle.split(" ", "-", "_")
-    //Solution to two-word parshiyos problem:
-    //Loop through lists of possible spellings(returns list): Loop through List(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
+    mapOfPossibleSpellingListToCorrectSpellingMap.forEach { (listOfPossibleSpellings, correctSpelling) ->
+        val shiurTitleDelimited = givenShiurTitle.split(" ", "-", "_")
+        //Solution to two-word parshiyos problem:
+        //Loop through list of lists of possible spellings(returns list of possible spelling): Loop through list of possible spellings(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
 
 
-    for (word in shiurTitleDelimited
-    //TODO DOES NOT WORD FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
-    )
-        if (listOfPossibleSpellings.indexOf(word) != -1) {
-            properParshaName = correctSpelling[word].toString()
-        }
-}
+        for (word in shiurTitleDelimited
+        //TODO DOES NOT WORK FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
+        )
+            if (listOfPossibleSpellings.indexOf(word) != -1) {
+                properParshaName = correctSpelling[word].toString()
+            }
+    }
     println(properParshaName)
 }

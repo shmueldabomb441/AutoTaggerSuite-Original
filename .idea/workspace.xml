@@ -6,10 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Cleaned up comments">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" afterDir="false" />
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +45,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/com/company/GeneralTagger.java" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/com/company" />
   </component>
@@ -185,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592602904406</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)">
+      <created>1592605199244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592605199244</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -193,7 +198,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="ParshaTaggerV3 works fully for 1 parsha" />
     <MESSAGE value="Cleaned up comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up comments" />
+    <MESSAGE value="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Currently functional for one-word parshiyos. Have begun implementing two-word parshiyos (have written suggested solution in comments on line 206-207)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -216,34 +222,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592604255343">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592605211600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592604255343" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592604255342">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592605211600" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592605211599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592604255342" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592604255342">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592605211599" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592605211599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592604255342" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592604255343">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592605211599" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592605211599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592604255343" />
-    <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592533169907">
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592605211599" />
+    <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592758497988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="1366" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592533169907" />
+    <state x="0" y="0" width="1366" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592758497988" />
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592602090756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602090756" />
-    <state x="378" y="186" width="722" height="355" key="com.intellij.ide.util.TipDialog" timestamp="1583975406842">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583975406842" />
     <state x="390" y="97" width="585" height="592" key="find.popup" timestamp="1592424120792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
