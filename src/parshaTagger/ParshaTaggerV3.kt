@@ -481,13 +481,49 @@ object Spellings{
             "Chayai Soru",
             "Chayai Soruh",
 
-            "Chayai Suru",
-            "Chayei Suruh",
-            "Chayai Suruh",
-            "Chayei Suru",
-            "Chayei Suruh",
-            "Chayai Suru",
-            "Chayai Suruh"
+            "Hayai Suru",
+            "Hayei Suruh",
+            "Hayai Suruh",
+            "Hayei Suru",
+            "Hayei Suruh",
+            "Hayai Suru",
+            "Hayai Suruh",
+
+
+
+
+            "Hayai Sara",
+            "Hayei Sarah",
+            "Hayai Sarah",
+            "Hayei Soro",
+            "Hayei Soroh",
+            "Hayai Soro",
+            "Hayai Soroh",
+
+            "Hayai Sura",
+            "Hayei Surah",
+            "Hayai Surah",
+            "Hayei Suro",
+            "Hayei Suroh",
+            "Hayai Suro",
+            "Hayai Suroh",
+
+
+            "Hayai Saru",
+            "Hayei Saruh",
+            "Hayai Saruh",
+            "Hayei Soru",
+            "Hayei Soruh",
+            "Hayai Soru",
+            "Hayai Soruh",
+
+            "Hayai Suru",
+            "Hayei Suruh",
+            "Hayai Suruh",
+            "Hayei Suru",
+            "Hayei Suruh",
+            "Hayai Suru",
+            "Hayai Suruh"
 
     )
     val correctSpelling5: Map<String, String> = listOfPossibleSpellings5.associateWith {actualSpelling5}
