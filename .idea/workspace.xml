@@ -15,40 +15,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Expanded spellings of lech lecha">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added spellings for all 55 parshiyos">
+      <change afterPath="$PROJECT_DIR$/src/parshaTagger/GenerateVariableNames.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/DisplayDifferentFonts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTagger$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTagger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerJava.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerJavaCodeStyleTestDummy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerVersion1025.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerVersion923.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GetFileSize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GetRunningProcessesUsingExecTASKLIST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/HowBigIsEachMethodOfGeneralTaggerInCharacters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/InitialAttemptAtSingleton.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/PrintListOfAvailableFontsForJavaOnComputer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ReingoldTaggerLegacyVersion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/RoughDraftForRejectionNotificationLogic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/StopWatch$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/StopWatch$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/StopWatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/TDPushEnder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/test1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/whoKnows.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
@@ -110,9 +81,9 @@
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ParshaTaggerV3Kt">
-    <configuration name="ForRandomCodeTests5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.ForRandomCodeTests5" />
+  <component name="RunManager" selected="Kotlin.GenerateVariableNamesKt">
+    <configuration name="InitialAttemptAtSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.InitialAttemptAtSingleton" />
       <module name="JAudioTagger" />
       <extension name="coverage">
         <pattern>
@@ -124,15 +95,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InitialAttemptAtSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.InitialAttemptAtSingleton" />
+    <configuration name="GenerateVariableNamesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GeneralTagger.GeneralTagger" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="parshaTagger.GenerateVariableNamesKt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,19 +148,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ForRandomCodeTests5" />
       <item itemvalue="Application.InitialAttemptAtSingleton" />
       <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
       <item itemvalue="Kotlin.RandomTestsKt" />
       <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
+      <item itemvalue="Kotlin.GenerateVariableNamesKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GenerateVariableNamesKt" />
         <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
         <item itemvalue="Kotlin.RandomTestsKt" />
         <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
         <item itemvalue="Application.InitialAttemptAtSingleton" />
-        <item itemvalue="Application.ForRandomCodeTests5" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592760918385</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added spellings for all 55 parshiyos">
+      <created>1592796260829</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592796260829</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +251,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -284,7 +263,8 @@
     <MESSAGE value="Renamed package to com.GeneralTagger, and in the process (by accident) optimized imports, probably among other things)" />
     <MESSAGE value="Extracted list of spellings into an object called Spellings so that the main method would be cleaner" />
     <MESSAGE value="Expanded spellings of lech lecha" />
-    <option name="LAST_COMMIT_MESSAGE" value="Expanded spellings of lech lecha" />
+    <MESSAGE value="Added spellings for all 55 parshiyos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spellings for all 55 parshiyos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -307,22 +287,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592759955315">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592846767366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592759955315" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592759955314">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592846767366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592759955314" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592759955314">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592846767366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592759955314" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592759955314">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592846767366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592759955314" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592758497988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -347,10 +327,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592581111923" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592604659139">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592846218722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592604659139" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592846218722" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAudioTagger$GeneralTagger.ic" NAME="GeneralTagger Coverage Results" MODIFIED="1578229830532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
