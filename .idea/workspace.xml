@@ -15,12 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added spellings for all 55 parshiyos">
-      <change afterPath="$PROJECT_DIR$/src/parshaTagger/GenerateVariableNames.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" afterDir="false" />
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added Teimani spelling for chayei sarah">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/GenerateVariableNames.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/GenerateVariableNames.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +79,7 @@
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.GenerateVariableNamesKt">
+  <component name="RunManager" selected="Kotlin.ParshaTaggerV3Kt">
     <configuration name="InitialAttemptAtSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.InitialAttemptAtSingleton" />
       <module name="JAudioTagger" />
@@ -156,8 +154,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.GenerateVariableNamesKt" />
         <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
+        <item itemvalue="Kotlin.GenerateVariableNamesKt" />
         <item itemvalue="Kotlin.RandomTestsKt" />
         <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
         <item itemvalue="Application.InitialAttemptAtSingleton" />
@@ -238,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592796260829</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added placeholders for all lists and maps and added teimani spellings of lech licha">
+      <created>1592847297420</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592847297420</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Teimani spelling for chayei sarah">
+      <created>1592847406741</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592847406741</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +276,9 @@
     <MESSAGE value="Extracted list of spellings into an object called Spellings so that the main method would be cleaner" />
     <MESSAGE value="Expanded spellings of lech lecha" />
     <MESSAGE value="Added spellings for all 55 parshiyos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added spellings for all 55 parshiyos" />
+    <MESSAGE value="Added placeholders for all lists and maps and added teimani spellings of lech licha" />
+    <MESSAGE value="Added Teimani spelling for chayei sarah" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Teimani spelling for chayei sarah" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -275,6 +289,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602085881" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592849411727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1592849411727" />
     <state x="441" y="233" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592434385902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -287,22 +305,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592846767366">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592849343856">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592846767366">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592849343856" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592849343856">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592846767366">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592849343856" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592849343856">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592846767366">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592849343856" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592849343856">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592846767366" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592849343856" />
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592758497988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -327,10 +345,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592581111923" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592846218722">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592849396010">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592846218722" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592849396010" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAudioTagger$GeneralTagger.ic" NAME="GeneralTagger Coverage Results" MODIFIED="1578229830532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
