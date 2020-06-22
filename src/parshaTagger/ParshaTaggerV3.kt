@@ -27,7 +27,7 @@ package parshaTagger
 
 
 object Spellings{
-    val actualSpelling1 = "Bereishis"
+    const val actualSpelling1 = "Bereishis"
     val listOfPossibleSpellings1 = listOf(
 
 
@@ -81,7 +81,7 @@ object Spellings{
     val correctSpelling1: Map<String, String> = listOfPossibleSpellings1.associateWith {
         actualSpelling1
     }
-    val actualSpelling2 = "Noach"
+    const val actualSpelling2 = "Noach"
     val listOfPossibleSpellings2 = listOf(
             "No'ach", "Now'ach",
             "Noach", "Nowach",
@@ -96,7 +96,7 @@ object Spellings{
     val correctSpelling2: Map<String, String> = listOfPossibleSpellings2.associateWith {
         actualSpelling2
     }
-    val actualSpelling3 = "Lech Lecha"
+    const val actualSpelling3 = "Lech Lecha"
     val listOfPossibleSpellings3 = listOf(
             "Leich Licha",
             "Lech Licha",
@@ -253,7 +253,7 @@ object Spellings{
     val correctSpelling3: Map<String, String> = listOfPossibleSpellings3.associateWith {
         actualSpelling3
     }
-    val actualSpelling4 = "Vayeira"
+    const val actualSpelling4 = "Vayeira"
     val listOfPossibleSpellings4 = listOf(
             "Vayeirah",
             "Vayera",
@@ -269,40 +269,40 @@ object Spellings{
     val correctSpelling4: Map<String, String> = listOfPossibleSpellings4.associateWith {
         actualSpelling4
     }
-    val actualSpelling5 = "Chayei Sara"
+    const val actualSpelling5 = "Chayei Sara"
     val listOfPossibleSpellings5 = listOf("")
-    val actualSpelling6 = "Toldos"
-    val actualSpelling7 = "Vayeitzei"
-    val actualSpelling8 = "Vayishlach"
-    val actualSpelling9 = "Vayeshev"
-    val actualSpelling10 = "Mikeitz"
-    val actualSpelling11 = "Vayigash"
-    val actualSpelling12 = "Vayechi"
-    val actualSpelling13 = "Shemos"
-    val actualSpelling14 = "Va'eira"
-    val actualSpelling15 = "Bo"
-    val actualSpelling16 = "Beshalach"
-    val actualSpelling17 = "Yisro"
-    val actualSpelling18 = "Mishpatim"
-    val actualSpelling19 = "Terumah"
-    val actualSpelling20 = "Tetzaveh"
-    val actualSpelling21 = "Ki Sisa"
-    val actualSpelling22 = "Vayakhail"
-    val actualSpelling23 = "Pekudei"
-    val actualSpelling24 = "Sefer Vayikra"
-    val actualSpelling25 = "Vayikra"
-    val actualSpelling26 = "Tzav"
-    val actualSpelling27 = "Shemini"
-    val actualSpelling28 = "Tazria"
-    val actualSpelling29 = "Metzora"
-    val actualSpelling30 = "Acharei Mos"
-    val actualSpelling31 = "Kedoshim"
-    val actualSpelling32 = "Emor"
-    val actualSpelling33 = "Behar"
-    val actualSpelling34 = "Bechukosai"
-    val actualSpelling35 = "Bamidbar"
-    val actualSpelling36 = "Naso"
-    val actualSpelling37 = "Beha'aloscha"
+    const val actualSpelling6 = "Toldos"
+    const val actualSpelling7 = "Vayeitzei"
+    const val actualSpelling8 = "Vayishlach"
+    const val actualSpelling9 = "Vayeshev"
+    const val actualSpelling10 = "Mikeitz"
+    const val actualSpelling11 = "Vayigash"
+    const val actualSpelling12 = "Vayechi"
+    const val actualSpelling13 = "Shemos"
+    const val actualSpelling14 = "Va'eira"
+    const val actualSpelling15 = "Bo"
+    const val actualSpelling16 = "Beshalach"
+    const val actualSpelling17 = "Yisro"
+    const val actualSpelling18 = "Mishpatim"
+    const val actualSpelling19 = "Terumah"
+    const val actualSpelling20 = "Tetzaveh"
+    const val actualSpelling21 = "Ki Sisa"
+    const val actualSpelling22 = "Vayakhail"
+    const val actualSpelling23 = "Pekudei"
+    const val actualSpelling24 = "Sefer Vayikra"
+    const val actualSpelling25 = "Vayikra"
+    const val actualSpelling26 = "Tzav"
+    const val actualSpelling27 = "Shemini"
+    const val actualSpelling28 = "Tazria"
+    const val actualSpelling29 = "Metzora"
+    const val actualSpelling30 = "Acharei Mos"
+    const val actualSpelling31 = "Kedoshim"
+    const val actualSpelling32 = "Emor"
+    const val actualSpelling33 = "Behar"
+    const val actualSpelling34 = "Bechukosai"
+    const val actualSpelling35 = "Bamidbar"
+    const val actualSpelling36 = "Naso"
+    const val actualSpelling37 = "Beha'aloscha"
     val listOfPossibleSpellings37 = listOf(
             "Bihaaloscha", "Behaaloscha",
             "Biha'aloscha", "Beha'aloscha",
@@ -350,24 +350,24 @@ object Spellings{
     val correctSpelling37: Map<String, String> = listOfPossibleSpellings37.associateWith {
         actualSpelling37
     }
-    val actualSpelling38 = "Shelach"
-    val actualSpelling39 = "Korach"
-    val actualSpelling40 = "Chukas"
-    val actualSpelling41 = "Balak"
-    val actualSpelling42 = "Pinchas"
-    val actualSpelling43 = "Mattos"
-    val actualSpelling44 = "Massai"
-    val actualSpelling45 = "Devarim"
-    val actualSpelling46 = "Va'eschanan"
-    val actualSpelling47 = "Eikev"
-    val actualSpelling48 = "Re'eh"
-    val actualSpelling49 = "Shoftim"
-    val actualSpelling50 = "Ki Setzei"
-    val actualSpelling51 = "Ki Savo"
-    val actualSpelling52 = "Nitzavim"
-    val actualSpelling53 = "Vayelech"
-    val actualSpelling54 = "Ha'azinu"
-    val actualSpelling55 = "V'Zos HaBracha"
+    const val actualSpelling38 = "Shelach"
+    const val actualSpelling39 = "Korach"
+    const val actualSpelling40 = "Chukas"
+    const val actualSpelling41 = "Balak"
+    const val actualSpelling42 = "Pinchas"
+    const val actualSpelling43 = "Mattos"
+    const val actualSpelling44 = "Massai"
+    const val actualSpelling45 = "Devarim"
+    const val actualSpelling46 = "Va'eschanan"
+    const val actualSpelling47 = "Eikev"
+    const val actualSpelling48 = "Re'eh"
+    const val actualSpelling49 = "Shoftim"
+    const val actualSpelling50 = "Ki Setzei"
+    const val actualSpelling51 = "Ki Savo"
+    const val actualSpelling52 = "Nitzavim"
+    const val actualSpelling53 = "Vayelech"
+    const val actualSpelling54 = "Ha'azinu"
+    const val actualSpelling55 = "V'Zos HaBracha"
 
 
 

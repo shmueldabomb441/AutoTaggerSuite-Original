@@ -15,8 +15,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Extracted list of spellings into an object called Spellings so that the main method would be cleaner">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Expanded spellings of lech lecha">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/DisplayDifferentFonts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ForRandomCodeTests7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTagger$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTagger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerJava.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerJavaCodeStyleTestDummy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerVersion1025.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GeneralTaggerVersion923.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GetFileSize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/GetRunningProcessesUsingExecTASKLIST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/HowBigIsEachMethodOfGeneralTaggerInCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/InitialAttemptAtSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/PrintListOfAvailableFontsForJavaOnComputer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/ReingoldTaggerLegacyVersion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/RoughDraftForRejectionNotificationLogic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/StopWatch$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/StopWatch$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/StopWatch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/TDPushEnder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/company/whoKnows.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592760011371</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Expanded spellings of lech lecha">
+      <created>1592760918385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592760918385</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +283,8 @@
     <MESSAGE value="Added all correct spellings and clarified some comments" />
     <MESSAGE value="Renamed package to com.GeneralTagger, and in the process (by accident) optimized imports, probably among other things)" />
     <MESSAGE value="Extracted list of spellings into an object called Spellings so that the main method would be cleaner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extracted list of spellings into an object called Spellings so that the main method would be cleaner" />
+    <MESSAGE value="Expanded spellings of lech lecha" />
+    <option name="LAST_COMMIT_MESSAGE" value="Expanded spellings of lech lecha" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
