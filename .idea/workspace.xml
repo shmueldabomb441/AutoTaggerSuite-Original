@@ -15,9 +15,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="New bug: Always goes to V'zos Habracha, even after I tried taking the space out of any two word string in the file. &#10;&#10;Put in spellings for a bunch of parshiyos.">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Just backing up files which were unversioned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -256,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592849873413</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="As far as I can tell, the following version has solved the previous bug and is 100% functional. Just needs more spellings.">
+      <created>1592855903744</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1592855903744</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Just backing up files which were unversioned">
+      <created>1592855942880</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1592855942880</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +298,9 @@
     <MESSAGE value="Added placeholders for all lists and maps and added teimani spellings of lech licha" />
     <MESSAGE value="Added Teimani spelling for chayei sarah" />
     <MESSAGE value="New bug: Always goes to V'zos Habracha, even after I tried taking the space out of any two word string in the file. &#10;&#10;Put in spellings for a bunch of parshiyos." />
-    <option name="LAST_COMMIT_MESSAGE" value="New bug: Always goes to V'zos Habracha, even after I tried taking the space out of any two word string in the file. &#10;&#10;Put in spellings for a bunch of parshiyos." />
+    <MESSAGE value="As far as I can tell, the following version has solved the previous bug and is 100% functional. Just needs more spellings." />
+    <MESSAGE value="Just backing up files which were unversioned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just backing up files which were unversioned" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -312,22 +327,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1592855495543">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1592863896012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592855495543" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1592855495542">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1592863896012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592855495542" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1592855495542">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1592863896012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592855495542" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1592855495543">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1592863896012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592855495543" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1592863896012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1592863896012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1592863896012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1592863896012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592863896012" />
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592758497988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -348,10 +379,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1592434578277" />
-    <state x="339" y="164" key="run.anything.popup" timestamp="1592581111923">
+    <state x="339" y="164" key="run.anything.popup" timestamp="1592866171698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592581111923" />
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592866171698" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592852466532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
