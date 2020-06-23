@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package parshaTagger
 
 
@@ -25,6 +27,7 @@ package parshaTagger
 //TODO DOES NOT WORK FOR TWO WORD PARSHIYOS, e.g. "Lech Lecha"
 
 
+@Suppress("MemberVisibilityCanBePrivate")
 object Spellings {
 
 
@@ -819,8 +822,6 @@ object Spellings {
             "V'eiroh",
 
 
-
-
             "Waeira",
             "Waaira",
             "W'aira",
@@ -903,7 +904,6 @@ object Spellings {
             "Yitroh",
             "Yeetro",
             "Yeetroh",
-
 
 
             "Yithrow",
@@ -1053,9 +1053,6 @@ object Spellings {
             "Key Theesah",
 
 
-
-
-
             "Kee Seessa",
             "Kee Seessah",
             "Ki Seessa",
@@ -1084,18 +1081,6 @@ object Spellings {
             "Key Theessah",
 
 
-
-
-
-
-
-
-
-
-
-
-
-
             "Kee Seesu",
             "Kee Seesuh",
             "Ki Seesu",
@@ -1122,9 +1107,6 @@ object Spellings {
             "Key Thisu",
             "Key Theesu",
             "Key Theesuh",
-
-
-
 
 
             "Kee Seessu",
@@ -1224,33 +1206,124 @@ object Spellings {
             "Saz",
             "Zav",
             "Saw",
-            "Zaw"
+            "Zaw",
+            "Tsav",
+            "Tsaw"
     )
     val correctSpelling26: Map<String, String> = listOfPossibleSpellings26.associateWith { actualSpelling26 }
 
 
     const val actualSpelling27 = "Shemini"
-    val listOfPossibleSpellings27 = listOf("asasasasasasasefesfe")
+    val listOfPossibleSpellings27 = listOf(actualSpelling27,
+            "Shmini",
+            "Shminee",
+            "Shmeeni",
+            "Sh'mini",
+            "Sh'minee",
+            "Shmeenee",
+            "Shemeenee",
+            "Sheminee",
+            "Shemeeni"
+    )
     val correctSpelling27: Map<String, String> = listOfPossibleSpellings27.associateWith { actualSpelling27 }
 
 
     const val actualSpelling28 = "Tazria"
-    val listOfPossibleSpellings28 = listOf("asasasasasasasefesfe")
+    val listOfPossibleSpellings28 = listOf(actualSpelling28,
+            "Tasria"
+    )
     val correctSpelling28: Map<String, String> = listOfPossibleSpellings28.associateWith { actualSpelling28 }
 
 
     const val actualSpelling29 = "Metzora"
-    val listOfPossibleSpellings29 = listOf("asasasasasasasefesfe")
+    val listOfPossibleSpellings29 = listOf(actualSpelling29,
+            "Metzorah",
+            "Mitzora",
+            "Mitzorah",
+            "M'tzora",
+            "M'tzorah",
+
+            "Metzoruh",
+            "Mitzoru",
+            "Mitzoruh",
+            "M'tzoru",
+            "M'tzoruh",
+
+
+            "Mezorah",
+            "Mizora",
+            "Mizorah",
+            "M'zora",
+            "M'zorah",
+
+            "Mezoruh",
+            "Mizoru",
+            "Mizoruh",
+            "M'zoru",
+            "M'zoruh",
+
+
+            "Messorah",
+            "Missora",
+            "Missorah",
+            "M'ssora",
+            "M'ssorah",
+
+            "Messoruh",
+            "Missoru",
+            "Missoruh",
+            "M'ssoru",
+            "M'ssoruh"
+    )
     val correctSpelling29: Map<String, String> = listOfPossibleSpellings29.associateWith { actualSpelling29 }
 
 
     const val actualSpelling30a = "Acharei Mos"
-    val listOfPossibleSpellings30a = listOf("asasasasasasasefesfe")
+    val listOfPossibleSpellings30a = listOf(actualSpelling30a,
+            "Achrei Mos",
+            "Achrei Mose",
+            "Acharei Mose",
+            "Achrai Mos",
+            "Acharai Mos",
+            "Acharai Mose",
+            "Achrai Mose",
+
+
+            "Achrei Mot",
+            "Achrei Mote",
+            "Acharei Mote",
+            "Achrai Mot",
+            "Acharai Mot",
+            "Acharai Mote",
+            "Achrai Mote",
+
+
+            "Achrei Moth",
+            "Acharei Moth",
+            "Achrai Moth",
+            "Acharai Moth",
+
+
+            "Ach'rei Mos",
+            "Ach'rei Mose",
+            "Ach'rai Mos",
+            "Ach'rai Mose",
+            "Ach'rei Mot",
+            "Ach'rei Mote",
+            "Ach'rai Mot",
+            "Ach'rai Mote",
+            "Ach'rei Moth",
+            "Ach'rai Moth"
+    )
     val correctSpelling30a: Map<String, String> = listOfPossibleSpellings30a.associateWith { actualSpelling30a }
 
 
     const val actualSpelling31 = "Kedoshim"
-    val listOfPossibleSpellings31 = listOf("asasasasasasasefesfe")
+    val listOfPossibleSpellings31 = listOf(actualSpelling31,
+            "Kedosheem",
+            "Kidoshim",
+            "Kidosheem"
+    )
     val correctSpelling31: Map<String, String> = listOfPossibleSpellings31.associateWith { actualSpelling31 }
 
 
@@ -1417,66 +1490,6 @@ object Spellings {
     val correctSpelling55a: Map<String, String> = listOfPossibleSpellings55a.associateWith { actualSpelling55a }
 
 
-    val listOfListsOfPossibleTwoWordSpellings = listOf(
-            listOfPossibleSpellings3a,
-            listOfPossibleSpellings5a,
-            listOfPossibleSpellings21a,
-            listOfPossibleSpellings30a,
-            listOfPossibleSpellings50a,
-            listOfPossibleSpellings51a,
-            listOfPossibleSpellings55a
-    )
-    val listOfListsOfPossibleSpellings = listOf(
-
-            listOfPossibleSpellings1,
-            listOfPossibleSpellings2,
-            listOfPossibleSpellings4,
-            listOfPossibleSpellings6,
-            listOfPossibleSpellings7,
-            listOfPossibleSpellings8,
-            listOfPossibleSpellings9,
-            listOfPossibleSpellings10,
-            listOfPossibleSpellings11,
-            listOfPossibleSpellings12,
-            listOfPossibleSpellings13,
-            listOfPossibleSpellings14,
-            listOfPossibleSpellings15,
-            listOfPossibleSpellings16,
-            listOfPossibleSpellings17,
-            listOfPossibleSpellings18,
-            listOfPossibleSpellings19,
-            listOfPossibleSpellings20,
-            listOfPossibleSpellings22,
-            listOfPossibleSpellings23,
-//"Sefer Vayikra" by accident
-            listOfPossibleSpellings25,
-            listOfPossibleSpellings26,
-            listOfPossibleSpellings27,
-            listOfPossibleSpellings28,
-            listOfPossibleSpellings29,
-            listOfPossibleSpellings31,
-            listOfPossibleSpellings32,
-            listOfPossibleSpellings33,
-            listOfPossibleSpellings34,
-            listOfPossibleSpellings35,
-            listOfPossibleSpellings36,
-            listOfPossibleSpellings37,
-            listOfPossibleSpellings38,
-            listOfPossibleSpellings39,
-            listOfPossibleSpellings40,
-            listOfPossibleSpellings41,
-            listOfPossibleSpellings42,
-            listOfPossibleSpellings43,
-            listOfPossibleSpellings44,
-            listOfPossibleSpellings45,
-            listOfPossibleSpellings46,
-            listOfPossibleSpellings47,
-            listOfPossibleSpellings48,
-            listOfPossibleSpellings49,
-            listOfPossibleSpellings52,
-            listOfPossibleSpellings53,
-            listOfPossibleSpellings54
-    )
 
     val mapOfPossibleSpellingsListToCorrectSpellingMap = mapOf(
             listOfPossibleSpellings1 to correctSpelling1,
@@ -1537,45 +1550,29 @@ object Spellings {
             listOfPossibleSpellings51a to correctSpelling51a,
             listOfPossibleSpellings55a to correctSpelling55a
     )
-  /*  val mapOfPossibleTwoWordSpellingListToCorrectSpellingMap = mapOf(
-
-    )*/
 }
 
 
 fun main() {
-    val givenShiurTitle = "parshas Hayei Soruh 5780-finding your Potential In A Chaotic World"
+    val givenShiurTitle = "parshas leich chah 5780-finding your Potential In A Chaotic World"
     var capitalizedShiurTitle = ""
     givenShiurTitle.split(" ", ",", "-", "_", ";").forEach { capitalizedShiurTitle += it.capitalize() + " " }
     println(capitalizedShiurTitle)
     var properParshaName = ""//this is what the album should correctly be
+    var matchFound=false
 
-    figureOutParsha@ while (true) {
-        /*twoWordParshiyos@ while (true) {
-            for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleTwoWordSpellingListToCorrectSpellingMap) {
-                for (spelling in listOfPossibleSpellings) {
-                    println(spelling)
-                    if (capitalizedShiurTitle.contains(spelling)) {
-                        properParshaName = correctSpelling[spelling].toString()
-                        println("Double Parsha Proper spelling is: ${correctSpelling[spelling]}")
-                        break@figureOutParsha
-                    }
-                }
-            }
-            break
-        }*/
-
-        for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleSpellingsListToCorrectSpellingMap) {
-            for (spelling in listOfPossibleSpellings) {
-                if (capitalizedShiurTitle.contains(spelling)) {
-                    properParshaName = correctSpelling[spelling].toString()
-                    println("Proper spelling is: ${correctSpelling[spelling]}")
-                    break@figureOutParsha
-                }
+    outerLoop@
+    for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleSpellingsListToCorrectSpellingMap) {
+        for (spelling in listOfPossibleSpellings) {
+            if (capitalizedShiurTitle.contains(spelling)) {
+                matchFound=true
+                properParshaName = correctSpelling[spelling].toString()
+                println("Proper spelling is: ${correctSpelling[spelling]}")
+                break@outerLoop
             }
         }
-        break
     }
+if(!matchFound) println("Match not found.")
     println(properParshaName)
 }
 

@@ -15,9 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added several spellings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592947585596</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added several spellings">
+      <created>1592952883917</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1592952883917</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,7 +325,8 @@
     <MESSAGE value="Just backing up files which were unversioned" />
     <MESSAGE value="Added several parshaiyos spellings and may have refactored slightly to accomodate the check for two-word parshiyos" />
     <MESSAGE value="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class" />
+    <MESSAGE value="Added several spellings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added several spellings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -344,22 +353,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592947588740">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592955138985">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592947588740" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592947588732">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592955138985" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592955138984">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592947588732" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592947588732">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592955138984" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592955138984">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592947588732" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592947588732">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592955138984" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592955138985">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592947588732" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592955138985" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1592877913308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -396,10 +405,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1592434578277" />
-    <state x="339" y="164" key="run.anything.popup" timestamp="1592866171698">
+    <state x="339" y="164" key="run.anything.popup" timestamp="1592954315392">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592866171698" />
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592954315392" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592852466532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
