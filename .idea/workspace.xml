@@ -15,12 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added several parshaiyos spellings and may have refactored slightly to accomodate the check for two-word parshiyos">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592877881469</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class">
+      <created>1592947585596</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592947585596</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,7 +316,8 @@
     <MESSAGE value="As far as I can tell, the following version has solved the previous bug and is 100% functional. Just needs more spellings." />
     <MESSAGE value="Just backing up files which were unversioned" />
     <MESSAGE value="Added several parshaiyos spellings and may have refactored slightly to accomodate the check for two-word parshiyos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added several parshaiyos spellings and may have refactored slightly to accomodate the check for two-word parshiyos" />
+    <MESSAGE value="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -338,22 +344,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592947436120">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592947588740">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592947436120" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592947436120">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592947588740" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592947588732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592947436120" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592947436120">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592947588732" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592947588732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592947436120" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592947436120">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592947588732" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592947588732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592947436120" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592947588732" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1592877913308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
