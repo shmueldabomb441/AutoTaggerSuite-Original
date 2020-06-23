@@ -41,41 +41,26 @@ object Spellings {
             "Beraishees", "Bereishees",
             "Biraisheet", "Bireisheet",
             "Beraisheet", "Bereisheet",
-
-
             "Buraishis", "Bureishis",
-            "Buraishis", "Bureishis",
-
-            "Buraishit", "Bureishit",
             "Buraishit", "Bureishit",
 
             "Buraishees", "Bureishees",
-            "Buraishees", "Bureishees",
-            "Buraisheet", "Bureisheet",
             "Buraisheet", "Bureisheet",
 
 
             "Boraishis", "Boreishis",
-            "Boraishis", "Boreishis",
 
-            "Boraishit", "Boreishit",
             "Boraishit", "Boreishit",
 
             "Boraishees", "Boreishees",
-            "Boraishees", "Boreishees",
-            "Boraisheet", "Boreisheet",
             "Boraisheet", "Boreisheet",
 
 
             "Baraishis", "Bareishis",
-            "Baraishis", "Bareishis",
 
-            "Baraishit", "Bareishit",
             "Baraishit", "Bareishit",
 
             "Baraishees", "Bareishees",
-            "Baraishees", "Bareishees",
-            "Baraisheet", "Bareisheet",
             "Baraisheet", "Bareisheet",
 
             "Biraishith",
@@ -609,7 +594,6 @@ object Spellings {
 
             "Vayishlakh",
             "Vayeeshlakh",
-            "Vayeeshlakh",
 
 
             "Vayishlah",
@@ -617,7 +601,6 @@ object Spellings {
             "Vayeeshlah",
 
             "Vayishlahkh",
-            "Vayeeshlahkh",
             "Vayeeshlahkh"
     )
     val correctSpelling8: Map<String, String> = listOfPossibleSpellings8.associateWith { actualSpelling8 }
@@ -930,77 +913,77 @@ object Spellings {
 
 
     const val actualSpelling21a = "Ki Sisa"
-    val listOfPossibleSpellings21a = listOf("")
+    val listOfPossibleSpellings21a = listOf("asasasasasasasefesfe")
     val correctSpelling21a: Map<String, String> = listOfPossibleSpellings21a.associateWith { actualSpelling21a }
 
 
     const val actualSpelling22 = "Vayakhail"
-    val listOfPossibleSpellings22 = listOf("")
+    val listOfPossibleSpellings22 = listOf("asasasasasasasefesfe")
     val correctSpelling22: Map<String, String> = listOfPossibleSpellings22.associateWith { actualSpelling22 }
 
 
     const val actualSpelling23 = "Pekudei"
-    val listOfPossibleSpellings23 = listOf("")
+    val listOfPossibleSpellings23 = listOf("asasasasasasasefesfe")
     val correctSpelling23: Map<String, String> = listOfPossibleSpellings23.associateWith { actualSpelling23 }
 
 
     const val actualSpelling25 = "Vayikra"
-    val listOfPossibleSpellings25 = listOf("")
+    val listOfPossibleSpellings25 = listOf("asasasasasasasefesfe")
     val correctSpelling25: Map<String, String> = listOfPossibleSpellings25.associateWith { actualSpelling25 }
 
 
     const val actualSpelling26 = "Tzav"
-    val listOfPossibleSpellings26 = listOf("")
+    val listOfPossibleSpellings26 = listOf("asasasasasasasefesfe")
     val correctSpelling26: Map<String, String> = listOfPossibleSpellings26.associateWith { actualSpelling26 }
 
 
     const val actualSpelling27 = "Shemini"
-    val listOfPossibleSpellings27 = listOf("")
+    val listOfPossibleSpellings27 = listOf("asasasasasasasefesfe")
     val correctSpelling27: Map<String, String> = listOfPossibleSpellings27.associateWith { actualSpelling27 }
 
 
     const val actualSpelling28 = "Tazria"
-    val listOfPossibleSpellings28 = listOf("")
+    val listOfPossibleSpellings28 = listOf("asasasasasasasefesfe")
     val correctSpelling28: Map<String, String> = listOfPossibleSpellings28.associateWith { actualSpelling28 }
 
 
     const val actualSpelling29 = "Metzora"
-    val listOfPossibleSpellings29 = listOf("")
+    val listOfPossibleSpellings29 = listOf("asasasasasasasefesfe")
     val correctSpelling29: Map<String, String> = listOfPossibleSpellings29.associateWith { actualSpelling29 }
 
 
     const val actualSpelling30a = "Acharei Mos"
-    val listOfPossibleSpellings30a = listOf("")
+    val listOfPossibleSpellings30a = listOf("asasasasasasasefesfe")
     val correctSpelling30a: Map<String, String> = listOfPossibleSpellings30a.associateWith { actualSpelling30a }
 
 
     const val actualSpelling31 = "Kedoshim"
-    val listOfPossibleSpellings31 = listOf("")
+    val listOfPossibleSpellings31 = listOf("asasasasasasasefesfe")
     val correctSpelling31: Map<String, String> = listOfPossibleSpellings31.associateWith { actualSpelling31 }
 
 
     const val actualSpelling32 = "Emor"
-    val listOfPossibleSpellings32 = listOf("")
+    val listOfPossibleSpellings32 = listOf("asasasasasasasefesfe")
     val correctSpelling32: Map<String, String> = listOfPossibleSpellings32.associateWith { actualSpelling32 }
 
 
     const val actualSpelling33 = "Behar"
-    val listOfPossibleSpellings33 = listOf("")
+    val listOfPossibleSpellings33 = listOf("asasasasasasasefesfe")
     val correctSpelling33: Map<String, String> = listOfPossibleSpellings33.associateWith { actualSpelling33 }
 
 
     const val actualSpelling34 = "Bechukosai"
-    val listOfPossibleSpellings34 = listOf("")
+    val listOfPossibleSpellings34 = listOf("asasasasasasasefesfe")
     val correctSpelling34: Map<String, String> = listOfPossibleSpellings34.associateWith { actualSpelling34 }
 
 
     const val actualSpelling35 = "Bamidbar"
-    val listOfPossibleSpellings35 = listOf("")
+    val listOfPossibleSpellings35 = listOf("asasasasasasasefesfe")
     val correctSpelling35: Map<String, String> = listOfPossibleSpellings35.associateWith { actualSpelling35 }
 
 
     const val actualSpelling36 = "Naso"
-    val listOfPossibleSpellings36 = listOf("")
+    val listOfPossibleSpellings36 = listOf("asasasasasasasefesfe")
     val correctSpelling36: Map<String, String> = listOfPossibleSpellings36.associateWith { actualSpelling36 }
 
 
@@ -1053,92 +1036,92 @@ object Spellings {
 
 
     const val actualSpelling38 = "Shelach"
-    val listOfPossibleSpellings38 = listOf("")
+    val listOfPossibleSpellings38 = listOf("asasasasasasasefesfe")
     val correctSpelling38: Map<String, String> = listOfPossibleSpellings38.associateWith { actualSpelling38 }
 
 
     const val actualSpelling39 = "Korach"
-    val listOfPossibleSpellings39 = listOf("")
+    val listOfPossibleSpellings39 = listOf("asasasasasasasefesfe")
     val correctSpelling39: Map<String, String> = listOfPossibleSpellings39.associateWith { actualSpelling39 }
 
 
     const val actualSpelling40 = "Chukas"
-    val listOfPossibleSpellings40 = listOf("")
+    val listOfPossibleSpellings40 = listOf("asasasasasasasefesfe")
     val correctSpelling40: Map<String, String> = listOfPossibleSpellings40.associateWith { actualSpelling40 }
 
 
     const val actualSpelling41 = "Balak"
-    val listOfPossibleSpellings41 = listOf("")
+    val listOfPossibleSpellings41 = listOf("asasasasasasasefesfe")
     val correctSpelling41: Map<String, String> = listOfPossibleSpellings41.associateWith { actualSpelling41 }
 
 
     const val actualSpelling42 = "Pinchas"
-    val listOfPossibleSpellings42 = listOf("")
+    val listOfPossibleSpellings42 = listOf("asasasasasasasefesfe")
     val correctSpelling42: Map<String, String> = listOfPossibleSpellings42.associateWith { actualSpelling42 }
 
 
     const val actualSpelling43 = "Mattos"
-    val listOfPossibleSpellings43 = listOf("")
+    val listOfPossibleSpellings43 = listOf("asasasasasasasefesfe")
     val correctSpelling43: Map<String, String> = listOfPossibleSpellings43.associateWith { actualSpelling43 }
 
 
     const val actualSpelling44 = "Massai"
-    val listOfPossibleSpellings44 = listOf("")
+    val listOfPossibleSpellings44 = listOf("asasasasasasasefesfe")
     val correctSpelling44: Map<String, String> = listOfPossibleSpellings44.associateWith { actualSpelling44 }
 
 
     const val actualSpelling45 = "Devarim"
-    val listOfPossibleSpellings45 = listOf("")
+    val listOfPossibleSpellings45 = listOf("asasasasasasasefesfe")
     val correctSpelling45: Map<String, String> = listOfPossibleSpellings45.associateWith { actualSpelling45 }
 
 
     const val actualSpelling46 = "Va'eschanan"
-    val listOfPossibleSpellings46 = listOf("")
+    val listOfPossibleSpellings46 = listOf("asasasasasasasefesfe")
     val correctSpelling46: Map<String, String> = listOfPossibleSpellings46.associateWith { actualSpelling46 }
 
 
     const val actualSpelling47 = "Eikev"
-    val listOfPossibleSpellings47 = listOf("")
+    val listOfPossibleSpellings47 = listOf("asasasasasasasefesfe")
     val correctSpelling47: Map<String, String> = listOfPossibleSpellings47.associateWith { actualSpelling47 }
 
 
     const val actualSpelling48 = "Re'eh"
-    val listOfPossibleSpellings48 = listOf("")
+    val listOfPossibleSpellings48 = listOf("asasasasasasasefesfe")
     val correctSpelling48: Map<String, String> = listOfPossibleSpellings48.associateWith { actualSpelling48 }
 
 
     const val actualSpelling49 = "Shoftim"
-    val listOfPossibleSpellings49 = listOf("")
+    val listOfPossibleSpellings49 = listOf("asasasasasasasefesfe")
     val correctSpelling49: Map<String, String> = listOfPossibleSpellings49.associateWith { actualSpelling49 }
 
 
     const val actualSpelling50a = "Ki Setzei"
-    val listOfPossibleSpellings50a = listOf("")
+    val listOfPossibleSpellings50a = listOf("asasasasasasasefesfe")
     val correctSpelling50a: Map<String, String> = listOfPossibleSpellings50a.associateWith { actualSpelling50a }
 
 
     const val actualSpelling51a = "Ki Savo"
-    val listOfPossibleSpellings51a = listOf("")
+    val listOfPossibleSpellings51a = listOf("asasasasasasasefesfe")
     val correctSpelling51a: Map<String, String> = listOfPossibleSpellings51a.associateWith { actualSpelling51a }
 
 
     const val actualSpelling52 = "Nitzavim"
-    val listOfPossibleSpellings52 = listOf("")
+    val listOfPossibleSpellings52 = listOf("asasasasasasasefesfe")
     val correctSpelling52: Map<String, String> = listOfPossibleSpellings52.associateWith { actualSpelling52 }
 
 
     const val actualSpelling53 = "Vayelech"
-    val listOfPossibleSpellings53 = listOf("")
+    val listOfPossibleSpellings53 = listOf("asasasasasasasefesfe")
     val correctSpelling53: Map<String, String> = listOfPossibleSpellings53.associateWith { actualSpelling53 }
 
 
     const val actualSpelling54 = "Ha'azinu"
-    val listOfPossibleSpellings54 = listOf("")
+    val listOfPossibleSpellings54 = listOf("asasasasasasasefesfe")
     val correctSpelling54: Map<String, String> = listOfPossibleSpellings54.associateWith { actualSpelling54 }
 
 
     const val actualSpelling55a = "V'Zos HaBracha"
-    val listOfPossibleSpellings55a = listOf("")
+    val listOfPossibleSpellings55a = listOf("asasasasasasasefesfe")
     val correctSpelling55a: Map<String, String> = listOfPossibleSpellings55a.associateWith { actualSpelling55a }
 
 
@@ -1203,7 +1186,7 @@ object Spellings {
             listOfPossibleSpellings54
     )
 
-    val mapOfPossibleOneWordSpellingListToCorrectSpellingMap = mapOf(
+    val mapOfPossibleSpellingsListToCorrectSpellingMap = mapOf(
             listOfPossibleSpellings1 to correctSpelling1,
             listOfPossibleSpellings2 to correctSpelling2,
             listOfPossibleSpellings4 to correctSpelling4,
@@ -1251,9 +1234,9 @@ object Spellings {
             listOfPossibleSpellings49 to correctSpelling49,
             listOfPossibleSpellings52 to correctSpelling52,
             listOfPossibleSpellings53 to correctSpelling53,
-            listOfPossibleSpellings54 to correctSpelling54
-    )
-    val mapOfPossibleTwoWordSpellingListToCorrectSpellingMap = mapOf(
+            listOfPossibleSpellings54 to correctSpelling54,
+
+
             listOfPossibleSpellings3a to correctSpelling3a,
             listOfPossibleSpellings5a to correctSpelling5a,
             listOfPossibleSpellings21a to correctSpelling21a,
@@ -1262,31 +1245,35 @@ object Spellings {
             listOfPossibleSpellings51a to correctSpelling51a,
             listOfPossibleSpellings55a to correctSpelling55a
     )
+  /*  val mapOfPossibleTwoWordSpellingListToCorrectSpellingMap = mapOf(
+
+    )*/
 }
 
 
 fun main() {
-    val givenShiurTitle = "parshas mikeis lichah 5780- finding your Potential In A Chaotic World"
+    val givenShiurTitle = "parshas Hayei Soruh 5780-finding your Potential In A Chaotic World"
     var capitalizedShiurTitle = ""
     givenShiurTitle.split(" ", ",", "-", "_", ";").forEach { capitalizedShiurTitle += it.capitalize() + " " }
-
+    println(capitalizedShiurTitle)
     var properParshaName = ""//this is what the album should correctly be
 
     figureOutParsha@ while (true) {
-        twoWordParshiyos@ while (true) {
+        /*twoWordParshiyos@ while (true) {
             for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleTwoWordSpellingListToCorrectSpellingMap) {
                 for (spelling in listOfPossibleSpellings) {
+                    println(spelling)
                     if (capitalizedShiurTitle.contains(spelling)) {
                         properParshaName = correctSpelling[spelling].toString()
-                        println("Proper spelling is: ${correctSpelling[spelling]}")
+                        println("Double Parsha Proper spelling is: ${correctSpelling[spelling]}")
                         break@figureOutParsha
                     }
                 }
-               break@twoWordParshiyos
             }
-        }
+            break
+        }*/
 
-        for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleOneWordSpellingListToCorrectSpellingMap) {
+        for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleSpellingsListToCorrectSpellingMap) {
             for (spelling in listOfPossibleSpellings) {
                 if (capitalizedShiurTitle.contains(spelling)) {
                     properParshaName = correctSpelling[spelling].toString()
@@ -1295,6 +1282,7 @@ fun main() {
                 }
             }
         }
+        break
     }
     println(properParshaName)
 }
