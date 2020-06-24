@@ -15,11 +15,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added several spellings">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="1. Introduced variable &quot;matchFound&quot;&#10;2. Cleaned up formatting&#10;3. Removed redundant comments&#10;4. Added spellings">
+      <change afterPath="$PROJECT_DIR$/B'Shalach 5780.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAL Behar 5780 Yovel.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +71,13 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/com/company" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.company" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy" />
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\lib" />
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src" />
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
@@ -73,10 +86,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.ParshaTaggerV3Kt">
@@ -292,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592952883917</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="1. Introduced variable &quot;matchFound&quot;&#10;2. Cleaned up formatting&#10;3. Removed redundant comments&#10;4. Added spellings">
+      <created>1592955403602</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1592955403602</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,7 +344,8 @@
     <MESSAGE value="Added several parshaiyos spellings and may have refactored slightly to accomodate the check for two-word parshiyos" />
     <MESSAGE value="Currently fully functional for one and two word parshiyos. &#10;1. Undid distinction between map of two-word spellings (to correct spelling) and map of one-word spellings (id.).&#10;2. Undid loop for two word spellings and one word Spellings.class" />
     <MESSAGE value="Added several spellings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added several spellings" />
+    <MESSAGE value="1. Introduced variable &quot;matchFound&quot;&#10;2. Cleaned up formatting&#10;3. Removed redundant comments&#10;4. Added spellings" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Introduced variable &quot;matchFound&quot;&#10;2. Cleaned up formatting&#10;3. Removed redundant comments&#10;4. Added spellings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
@@ -353,22 +372,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1592955138985">
+    <state width="1323" height="244" key="GridCell.Tab.0.bottom" timestamp="1592964574782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592955138985" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1592955138984">
+    <state width="1323" height="244" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592964574782" />
+    <state width="1323" height="244" key="GridCell.Tab.0.center" timestamp="1592964574782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592955138984" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1592955138984">
+    <state width="1323" height="244" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592964574782" />
+    <state width="1323" height="244" key="GridCell.Tab.0.left" timestamp="1592964574782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592955138984" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1592955138985">
+    <state width="1323" height="244" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592964574782" />
+    <state width="1323" height="244" key="GridCell.Tab.0.right" timestamp="1592964574782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592955138985" />
+    <state width="1323" height="244" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592964574782" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1592877913308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -409,10 +428,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592954315392" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592852466532">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592964951287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592852466532" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592964951287" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAudioTagger$GeneralTagger.ic" NAME="GeneralTagger Coverage Results" MODIFIED="1578229830532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
