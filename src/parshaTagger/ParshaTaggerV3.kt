@@ -2,6 +2,11 @@
 
 package parshaTagger
 
+import java.io.File
+import org.jaudiotagger.audio.AudioFileIO
+import org.jaudiotagger.audio.mp3.MP3File
+import org.jaudiotagger.tag.FieldKey
+
 
 //Local Knowledge: Map<PossibleSpellings, Actual Spelling>//use listOfPossibleSpellings.associateWith{actualSpellings}
 
@@ -21,6 +26,10 @@ package parshaTagger
 //TODO add yeshivish spelling for all parshiyos
 //TODO add chassidish spelling for all parshiyos?
 //TODO add "q" in place of koof
+//TODO:
+//B'Shalach 5780
+//
+//Match not found.
 
 //Solution to two-word parshiyos problem:
 //Loop through list of lists of possible spellings(returns list of possible spelling): Loop through list of possible spellings(returns spelling): if givenShiurTitle contains it (i.e. spelling), shiurTitleDelimited =givenShiurTitle.split(it, " ", "-", "_")
@@ -28,6 +37,9 @@ package parshaTagger
 
 
 @Suppress("MemberVisibilityCanBePrivate")
+
+var rejects = mutableMapOf("Rejected shiur" to "Rejection Reason")
+
 object Spellings {
 
 
@@ -1490,7 +1502,6 @@ object Spellings {
     val correctSpelling55a: Map<String, String> = listOfPossibleSpellings55a.associateWith { actualSpelling55a }
 
 
-
     val mapOfPossibleSpellingsListToCorrectSpellingMap = mapOf(
             listOfPossibleSpellings1 to correctSpelling1,
             listOfPossibleSpellings2 to correctSpelling2,
@@ -1554,25 +1565,90 @@ object Spellings {
 
 
 fun main() {
-    val givenShiurTitle = "parshas leich chah 5780-finding your Potential In A Chaotic World"
+    println(rejects)
+    println()
+    val listOfMp3s: MutableList<File> = mutableListOf()
+    val files = File(System.getProperty("user.dir")).listFiles() ?: arrayOf(File(""))
+    var thereWereNoFilesInDirectory = false
+    thereWereNoFilesInDirectory = findMP3sAndAddThemToListOfMp3s(files, thereWereNoFilesInDirectory, listOfMp3s)
+    if (thereWereNoFilesInDirectory) TODO("There were no files in directory. Make sure to implement a message saying so.")
+
+    processShiurim@ for (file in listOfMp3s) {
+
+
+        val f = AudioFileIO.read(file) as MP3File
+        val tag = f.tag
+        val title = tag.getFirst(FieldKey.TITLE)
+
+        //Set album to correct parsha or add to rejects
+        if (getParsha(title, dontPrintToConsole = true) != null) tag.setField(FieldKey.ALBUM, getParsha(title))
+        else rejects[title] = "No Recognized Parsha Found"
+
+//        TODO("Insert here: code to look for year, and set Fieldkey.CONDUCTOR to 'Parsha \$year' and FieldKey.YEAR to year")
+        f.commit()
+    }
+    println()
+    println(rejects)
+}
+
+private fun findMP3sAndAddThemToListOfMp3s(files: Array<File>, thereWereNoFilesInDirectory: Boolean, listOfMp3s: MutableList<File>): Boolean {
+    /*
+    @returns a side effect of adding files to listOfMp3s, and explicitly returns true if there were no files and false if there were files
+    */
+    var thereWereNoFilesInDirectory1 = thereWereNoFilesInDirectory
+    for (file in files) {
+        if (file.path == "") {
+            thereWereNoFilesInDirectory1 = true
+            println("Empty")
+            break
+        }
+        if (!file.isFile) continue
+        val bits = file.name.split("\\.".toRegex()).toTypedArray()
+        val endsInMp3 = bits[bits.size - 1].equals("mp3", ignoreCase = true)
+        if (endsInMp3) listOfMp3s.add(file)
+    }
+    return thereWereNoFilesInDirectory1
+}
+
+private fun getParsha(givenShiurTitle: String): String? {
     var capitalizedShiurTitle = ""
     givenShiurTitle.split(" ", ",", "-", "_", ";").forEach { capitalizedShiurTitle += it.capitalize() + " " }
     println(capitalizedShiurTitle)
+    println()
     var properParshaName = ""//this is what the album should correctly be
-    var matchFound=false
+    var matchFound = false
 
     outerLoop@
     for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleSpellingsListToCorrectSpellingMap) {
         for (spelling in listOfPossibleSpellings) {
             if (capitalizedShiurTitle.contains(spelling)) {
-                matchFound=true
+                matchFound = true
                 properParshaName = correctSpelling[spelling].toString()
                 println("Proper spelling is: ${correctSpelling[spelling]}")
+                println()
                 break@outerLoop
             }
         }
     }
-if(!matchFound) println("Match not found.")
-    println(properParshaName)
+    return if (!matchFound) null else properParshaName
+}
+
+private fun getParsha(givenShiurTitle: String, dontPrintToConsole: Boolean): String? {
+    var capitalizedShiurTitle = ""
+    givenShiurTitle.split(" ", ",", "-", "_", ";").forEach { capitalizedShiurTitle += it.capitalize() + " " }
+    var properParshaName = ""//this is what the album should correctly be
+    var matchFound = false
+
+    outerLoop@
+    for ((listOfPossibleSpellings, correctSpelling) in Spellings.mapOfPossibleSpellingsListToCorrectSpellingMap) {
+        for (spelling in listOfPossibleSpellings) {
+            if (capitalizedShiurTitle.contains(spelling)) {
+                matchFound = true
+                properParshaName = correctSpelling[spelling].toString()
+                break@outerLoop
+            }
+        }
+    }
+    return if (!matchFound) null else properParshaName
 }
 
