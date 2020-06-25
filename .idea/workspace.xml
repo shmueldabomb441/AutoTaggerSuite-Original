@@ -15,8 +15,34 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="1. Integrated parsha finding algorithm into real data/actually reading local MP3 files data to identify whether it contains a recognized parsha or not&#10;2. Refactored what is now getParsha() into its own function(with two versions: 1. an overloaded version which doesn't print its findings to the console and accepts a dummy parameter called dontPrintToConsole of type boolean, 2. and one which does print its findings to the console)&#10;3. Introduced a mutable map for rejects(rejected shiur title -&gt; rejection reason)&#10;4. Added function called findMP3sAndAddThemToListOfMp3s which finds all MP3 files in current directory and adds them to a list of files which it is given as a parameter, and returns true if there were no files at all in the given directory">
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Fully functional! Still need to finish up spellings&#10;&#10;1. Extracted spellings to a separate file so that I can call them without having to always preface it with &quot;Spellings.&quot;&#10;2. added check for date&#10;3. added setField for date and series&#10;4. added check for two parshiyos in one title and the 7 double parshiyos">
+      <change afterPath="$PROJECT_DIR$/Year.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV4Kt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/SpellingsKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV4.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parshaTagger/Spellings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B'Shalach 5780.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/B'Shalach 5780.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAL Behar 5780 Yovel.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/RAL Behar 5780 Yovel.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Speaker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Speaker.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/GenerateVariableNamesKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/GenerateVariableNames.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV2.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +84,11 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/com/company" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="parshaTagger" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy" />
@@ -73,24 +100,13 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.company" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ParshaTaggerV3Kt">
-    <configuration name="InitialAttemptAtSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.GeneralTagger.InitialAttemptAtSingleton" />
-      <module name="JAudioTagger" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GeneralTagger.GeneralTagger" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.RandomTestsKt">
     <configuration name="GenerateVariableNamesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
       <option name="VM_PARAMETERS" />
@@ -130,6 +146,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParshaTaggerV4Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="JAudioTagger" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="parshaTagger.ParshaTaggerV4Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RandomTestsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
       <option name="VM_PARAMETERS" />
@@ -144,19 +173,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.InitialAttemptAtSingleton" />
       <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
       <item itemvalue="Kotlin.RandomTestsKt" />
       <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
       <item itemvalue="Kotlin.GenerateVariableNamesKt" />
+      <item itemvalue="Kotlin.ParshaTaggerV4Kt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
         <item itemvalue="Kotlin.RandomTestsKt" />
+        <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
+        <item itemvalue="Kotlin.ParshaTaggerV4Kt" />
         <item itemvalue="Kotlin.GenerateVariableNamesKt" />
         <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
-        <item itemvalue="Application.InitialAttemptAtSingleton" />
       </list>
     </recent_temporary>
   </component>
@@ -304,8 +333,25 @@
       <option name="project" value="LOCAL" />
       <updated>1592965747804</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixed spacing and nothing else.">
+      <created>1592965786716</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1592965786716</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -340,16 +386,23 @@
     <MESSAGE value="Added several spellings" />
     <MESSAGE value="1. Introduced variable &quot;matchFound&quot;&#10;2. Cleaned up formatting&#10;3. Removed redundant comments&#10;4. Added spellings" />
     <MESSAGE value="1. Integrated parsha finding algorithm into real data/actually reading local MP3 files data to identify whether it contains a recognized parsha or not&#10;2. Refactored what is now getParsha() into its own function(with two versions: 1. an overloaded version which doesn't print its findings to the console and accepts a dummy parameter called dontPrintToConsole of type boolean, 2. and one which does print its findings to the console)&#10;3. Introduced a mutable map for rejects(rejected shiur title -&gt; rejection reason)&#10;4. Added function called findMP3sAndAddThemToListOfMp3s which finds all MP3 files in current directory and adds them to a list of files which it is given as a parameter, and returns true if there were no files at all in the given directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Integrated parsha finding algorithm into real data/actually reading local MP3 files data to identify whether it contains a recognized parsha or not&#10;2. Refactored what is now getParsha() into its own function(with two versions: 1. an overloaded version which doesn't print its findings to the console and accepts a dummy parameter called dontPrintToConsole of type boolean, 2. and one which does print its findings to the console)&#10;3. Introduced a mutable map for rejects(rejected shiur title -&gt; rejection reason)&#10;4. Added function called findMP3sAndAddThemToListOfMp3s which finds all MP3 files in current directory and adds them to a list of files which it is given as a parameter, and returns true if there were no files at all in the given directory" />
+    <MESSAGE value="Fixed spacing and nothing else." />
+    <MESSAGE value="Fully functional! Still need to finish up spellings&#10;&#10;1. Extracted spellings to a separate file so that I can call them without having to always preface it with &quot;Spellings.&quot;&#10;2. added check for date&#10;3. added setField for date and series&#10;4. added check for two parshiyos in one title and the 7 double parshiyos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully functional! Still need to finish up spellings&#10;&#10;1. Extracted spellings to a separate file so that I can call them without having to always preface it with &quot;Spellings.&quot;&#10;2. added check for date&#10;3. added setField for date and series&#10;4. added check for two parshiyos in one title and the 7 double parshiyos" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="42" key="#Inspections" timestamp="1593007350008">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1593007350008" />
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1592533513395" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592602085881">
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593040273855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593040273855" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602085881" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592849411727">
       <screen x="0" y="0" width="1366" height="728" />
@@ -359,6 +412,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="233" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1592434385902" />
+    <state x="1625" y="-11" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1593040056715">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1625" y="-11" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593040056715" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1593039204084" />
     <state x="462" y="118" key="FileChooserDialogImpl" timestamp="1592602520260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -367,22 +425,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="215" key="GridCell.Tab.0.bottom" timestamp="1592965158475">
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom" timestamp="1593053548947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592965158475" />
-    <state width="1323" height="215" key="GridCell.Tab.0.center" timestamp="1592965158475">
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
+    <state width="1323" height="191" key="GridCell.Tab.0.center" timestamp="1593053548947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592965158475" />
-    <state width="1323" height="215" key="GridCell.Tab.0.left" timestamp="1592965158475">
+    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
+    <state width="1323" height="191" key="GridCell.Tab.0.left" timestamp="1593053548947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592965158475" />
-    <state width="1323" height="215" key="GridCell.Tab.0.right" timestamp="1592965158475">
+    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right" timestamp="1593053548947">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592965158475" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1592877913308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -403,10 +465,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592758497988" />
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592602090756">
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593038744601">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602090756" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1593038744601" />
     <state x="390" y="97" width="585" height="592" key="find.popup" timestamp="1592424120792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,14 +481,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1592434578277" />
-    <state x="339" y="164" key="run.anything.popup" timestamp="1592954315392">
+    <state x="339" y="164" key="run.anything.popup" timestamp="1593040329408">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592954315392" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592964951287">
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593040329408" />
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593017451512" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593051866414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592964951287" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593051866414" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593038596042" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JAudioTagger$GeneralTagger.ic" NAME="GeneralTagger Coverage Results" MODIFIED="1578229830532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
