@@ -15,12 +15,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Renamed to parshatagger.jar">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ParshaTagger_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ParshaTagger_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/ParshaTagger.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/ParshaTagger.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTagger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTagger.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" afterDir="false" />
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="updated jar">
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/ParshaTagger.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ParshaTagger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ParshaTagger.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593141686277</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added spaces and formatted rejected list printing">
+      <created>1593184630347</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1593184630347</updated>
+    </task>
+    <task id="LOCAL-00025" summary="updated jar">
+      <created>1593184664068</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1593184664068</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -383,7 +394,9 @@
     <MESSAGE value="Added some TODO() calls to V3. Just wanted to commit V4(which was legacy simple getParsha() version)" />
     <MESSAGE value="Finally Fully Functional!!!!" />
     <MESSAGE value="Renamed to parshatagger.jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed to parshatagger.jar" />
+    <MESSAGE value="added spaces and formatted rejected list printing" />
+    <MESSAGE value="updated jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated jar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1593007350008">

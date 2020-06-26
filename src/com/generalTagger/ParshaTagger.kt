@@ -210,6 +210,7 @@ class ParshaTagger {
                     if (!dontPrintToConsole) {
                         println("Proper spelling is: ${mapOfPossibleSpellingToCorrectSpelling[spelling]}")
                         println()
+                        println()
                     }
                     break@outerLoop
                 }
