@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="LastTryForGeneralTagger:jar" />
+      <artifact name="ParshaTagger:jar" />
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
@@ -15,34 +15,96 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Fully functional! Still need to finish up spellings&#10;&#10;1. Extracted spellings to a separate file so that I can call them without having to always preface it with &quot;Spellings.&quot;&#10;2. added check for date&#10;3. added setField for date and series&#10;4. added check for two parshiyos in one title and the 7 double parshiyos">
-      <change afterPath="$PROJECT_DIR$/Year.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV4Kt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/SpellingsKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV4.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parshaTagger/Spellings.kt" afterDir="false" />
+    <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="Added some TODO() calls to V3. Just wanted to commit V4(which was legacy simple getParsha() version)">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ParshaTagger_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/generalTagger/ParshaTaggerRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/generalTagger/Spellings.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parshaTagger/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTagger.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parshaTagger/RandomTests1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Daily_Halacha_Tagger_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LastTryForGeneralTagger_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AutoTagger_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B'Shalach 5780.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/B'Shalach 5780.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAL Behar 5780 Yovel.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/RAL Behar 5780 Yovel.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Speaker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Speaker.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B'Shalach 5780.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/B'Shalach 5780.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/RAL Acharei Mos 5780 The First Rashi; The Nature of Being M'Zarez (From a Q &amp; A on Corona for YGW Girls Division).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/RAL Bamidbar 5780 Becoming Shluchei Hashem.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAL Behar 5780 Yovel.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/RAL Behar 5780 Yovel.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/Va'eira 5780 Va'ydaber Hashem el Moshe leimor - What does it mean (KBY).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/Yesodei HaTorah II 0488 - 0490 Terumah (Ibn Ezra, Ran) (Feb. 22, 2019).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/Yesodei HaTorah II 0513 - 0517 T'tzaveh (Abarbanel, Ramban, R' Bachaye, Akeida) (5780).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/Yesodei HaTorah II 0659 - 0661 Acharei Mos; Se'ir L'Azazel &amp; Sheidim (Chinuch, Abarbanel, Ramban) (5780).mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/GenerateVariableNamesKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV1Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV2Kt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/DisplayDifferentFonts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/DisplayDifferentFonts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ForRandomCodeTests7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTagger$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTagger$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTagger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTagger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerJavaCodeStyleTestDummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerJavaCodeStyleTestDummy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerVersion1025.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerVersion1025.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerVersion923.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GeneralTaggerVersion923.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GetFileSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GetFileSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GetRunningProcessesUsingExecTASKLIST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/GetRunningProcessesUsingExecTASKLIST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/HowBigIsEachMethodOfGeneralTaggerInCharacters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/HowBigIsEachMethodOfGeneralTaggerInCharacters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/InitialAttemptAtSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/InitialAttemptAtSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/PrintListOfAvailableFontsForJavaOnComputer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/PrintListOfAvailableFontsForJavaOnComputer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ReingoldTaggerLegacyVersion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ReingoldTaggerLegacyVersion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/RoughDraftForRejectionNotificationLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/RoughDraftForRejectionNotificationLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/StopWatch$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/StopWatch$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/StopWatch$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/StopWatch$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/StopWatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/StopWatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/TDPushEnder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/TDPushEnder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/whoKnows.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/whoKnows.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV3Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerV4Kt.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/RandomTestsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/Spellings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/GenerateVariableNames.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV1.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV2.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/SpellingsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/SpellingsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/FindObjectsInArrayMissingFromOtherArray_Before_VS_After.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ForRandomCodeTests7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ForRandomCodeTests7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GeneralTagger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GeneralTagger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GeneralTaggerJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GeneralTaggerJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GeneralTaggerJavaCodeStyleTestDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GeneralTaggerJavaCodeStyleTestDummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GeneralTaggerVersion1025.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GeneralTaggerVersion1025.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GeneralTaggerVersion923.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GeneralTaggerVersion923.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GetFileSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GetFileSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/GetRunningProcessesUsingExecTASKLIST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/GetRunningProcessesUsingExecTASKLIST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/HowBigIsEachMethodOfGeneralTaggerInCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/HowBigIsEachMethodOfGeneralTaggerInCharacters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/InitialAttemptAtSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/InitialAttemptAtSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/PrintListOfAvailableFontsForJavaOnComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/PrintListOfAvailableFontsForJavaOnComputer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/ReingoldTaggerLegacyVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ReingoldTaggerLegacyVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/RoughDraftForRejectionNotificationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/RoughDraftForRejectionNotificationLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/TDPushEnder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/TDPushEnder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/test1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/test1.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/whoKnows.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/whoKnows.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GeneralTagger/whoKnows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/whoKnows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/generalTagger/ParshaTagger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTaggerV4.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/RandomTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/Spellings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/Spellings.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,119 +135,112 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.20229885" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/com/company/GeneralTagger.java" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/com/company" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateKotlinClassDialog.RecentsKey">
-      <recent name="parshaTagger" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\out\artifacts\ParshaTagger_jar" />
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\out\artifacts\ParshaTagger_jar" />
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\com\generalTagger" />
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\com\GeneralTagger" />
       <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy" />
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\lib" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\Testing" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="parshaTagger" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.RandomTestsKt">
-    <configuration name="GenerateVariableNamesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.ParshaTaggerKt">
+    <configuration name="ParshaTaggerRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.generalTagger.ParshaTaggerRunner" />
+      <module name="JAudioTagger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.generalTagger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JAudioTagger.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/JAudioTagger.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ParshaTaggerKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="parshaTagger.GenerateVariableNamesKt" />
+      <option name="MAIN_CLASS_NAME" value="com.generalTagger.ParshaTaggerKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParshaTaggerV1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="ParshaTaggerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="parshaTagger.ParshaTaggerV1Kt" />
+      <option name="MAIN_CLASS_NAME" value="parshaTagger.ParshaTaggerKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParshaTaggerV3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="RandomTests1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="parshaTagger.ParshaTaggerV3Kt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParshaTaggerV4Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="JAudioTagger" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="parshaTagger.ParshaTaggerV4Kt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomTestsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="JAudioTagger" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="parshaTagger.RandomTestsKt" />
+      <option name="MAIN_CLASS_NAME" value="parshaTagger.RandomTests1Kt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
-      <item itemvalue="Kotlin.RandomTestsKt" />
-      <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
-      <item itemvalue="Kotlin.GenerateVariableNamesKt" />
-      <item itemvalue="Kotlin.ParshaTaggerV4Kt" />
+      <item itemvalue="Kotlin.ParshaTaggerKt" />
+      <item itemvalue="Kotlin.ParshaTaggerKt (1)" />
+      <item itemvalue="Application.ParshaTaggerRunner" />
+      <item itemvalue="JAR Application.JAudioTagger.jar" />
+      <item itemvalue="Kotlin.RandomTests1Kt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.RandomTestsKt" />
-        <item itemvalue="Kotlin.ParshaTaggerV3Kt" />
-        <item itemvalue="Kotlin.ParshaTaggerV4Kt" />
-        <item itemvalue="Kotlin.GenerateVariableNamesKt" />
-        <item itemvalue="Kotlin.ParshaTaggerV1Kt" />
+        <item itemvalue="Kotlin.ParshaTaggerKt" />
+        <item itemvalue="Kotlin.RandomTests1Kt" />
+        <item itemvalue="JAR Application.JAudioTagger.jar" />
+        <item itemvalue="Application.ParshaTaggerRunner" />
+        <item itemvalue="Kotlin.ParshaTaggerKt (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592965786716</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added some TODO() calls to V3. Just wanted to commit V4(which was legacy simple getParsha() version)">
+      <created>1593089908529</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1593089908529</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -388,17 +450,26 @@
     <MESSAGE value="1. Integrated parsha finding algorithm into real data/actually reading local MP3 files data to identify whether it contains a recognized parsha or not&#10;2. Refactored what is now getParsha() into its own function(with two versions: 1. an overloaded version which doesn't print its findings to the console and accepts a dummy parameter called dontPrintToConsole of type boolean, 2. and one which does print its findings to the console)&#10;3. Introduced a mutable map for rejects(rejected shiur title -&gt; rejection reason)&#10;4. Added function called findMP3sAndAddThemToListOfMp3s which finds all MP3 files in current directory and adds them to a list of files which it is given as a parameter, and returns true if there were no files at all in the given directory" />
     <MESSAGE value="Fixed spacing and nothing else." />
     <MESSAGE value="Fully functional! Still need to finish up spellings&#10;&#10;1. Extracted spellings to a separate file so that I can call them without having to always preface it with &quot;Spellings.&quot;&#10;2. added check for date&#10;3. added setField for date and series&#10;4. added check for two parshiyos in one title and the 7 double parshiyos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fully functional! Still need to finish up spellings&#10;&#10;1. Extracted spellings to a separate file so that I can call them without having to always preface it with &quot;Spellings.&quot;&#10;2. added check for date&#10;3. added setField for date and series&#10;4. added check for two parshiyos in one title and the 7 double parshiyos" />
+    <MESSAGE value="Added some TODO() calls to V3. Just wanted to commit V4(which was legacy simple getParsha() version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some TODO() calls to V3. Just wanted to commit V4(which was legacy simple getParsha() version)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="42" key="#Inspections" timestamp="1593007350008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1593007350008" />
+    <state x="163" y="0" key="#Project_Structure" timestamp="1593136030506">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593136030506" />
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1592533513395" />
+    <state x="250" y="154" width="976" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593135928994">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="250" y="154" width="976" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593135928994" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593040273855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -417,33 +488,34 @@
     </state>
     <state x="1625" y="-11" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593040056715" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1593039204084" />
-    <state x="462" y="118" key="FileChooserDialogImpl" timestamp="1592602520260">
+    <state x="462" y="118" key="FileChooserDialogImpl" timestamp="1593136245346">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="462" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593136245346" />
     <state x="462" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592602520260" />
     <state x="507" y="265" key="Github.CreateGistDialog" timestamp="1592602505280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="191" key="GridCell.Tab.0.bottom" timestamp="1593053548947">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1593139115854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593139115854" />
     <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="191" key="GridCell.Tab.0.center" timestamp="1593053548947">
+    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1593139115854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593139115854" />
     <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="191" key="GridCell.Tab.0.left" timestamp="1593053548947">
+    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1593139115854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593139115854" />
     <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="191" key="GridCell.Tab.0.right" timestamp="1593053548947">
+    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1593139115854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593053548947" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593139115854" />
     <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1592877913308">
       <screen x="0" y="0" width="1366" height="728" />
@@ -461,9 +533,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592877913308" />
-    <state x="0" y="0" width="1366" height="711" key="SettingsEditor" timestamp="1592758497988">
+    <state x="0" y="0" width="1292" height="728" key="SettingsEditor" timestamp="1593136421649">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="0" y="0" width="1292" height="728" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593136421649" />
     <state x="0" y="0" width="1366" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592758497988" />
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593038744601">
       <screen x="0" y="0" width="1366" height="728" />
@@ -473,23 +546,24 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="97" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1592424120792" />
-    <state x="65" y="0" key="new project wizard" timestamp="1591999118508">
+    <state x="65" y="0" key="new project wizard" timestamp="1593123815119">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593123815119" />
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1591999118508" />
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog" timestamp="1592434578277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1592434578277" />
-    <state x="339" y="164" key="run.anything.popup" timestamp="1593040329408">
+    <state x="339" y="164" key="run.anything.popup" timestamp="1593099598383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="164" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593040329408" />
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593099598383" />
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593017451512" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593051866414">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593136173728">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593051866414" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593136173728" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593038596042" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

@@ -1,1546 +1,1871 @@
 package parshaTagger
 
 
-
-    val actualSpelling1 = "Bereishis"
-    val listOfPossibleSpellings1 = listOf(actualSpelling1,
-
-            "Bereshis", "Bereshit",
-            "Bereshith", "Bereshees",
-            "Beresheet", "Beresheeth",
-
-            "Biraishis", "Bireishis",
-            "Beraishis", "Bereishis",
-
-            "Biraishit", "Bireishit",
-            "Beraishit", "Bereishit",
-
-            "Biraishees", "Bireishees",
-            "Beraishees", "Bereishees",
-            "Biraisheet", "Bireisheet",
-            "Beraisheet", "Bereisheet",
-            "Buraishis", "Bureishis",
-            "Buraishit", "Bureishit",
-
-            "Buraishees", "Bureishees",
-            "Buraisheet", "Bureisheet",
-
-
-            "Boraishis", "Boreishis",
-
-            "Boraishit", "Boreishit",
-
-            "Boraishees", "Boreishees",
-            "Boraisheet", "Boreisheet",
-
-
-            "Baraishis", "Bareishis",
-
-            "Baraishit", "Bareishit",
-
-            "Baraishees", "Bareishees",
-            "Baraisheet", "Bareisheet",
-
-            "Biraishith",
-            "Bireishith",
-            "Beraishith",
-            "Bereishith",
-            "Biraisheeth",
-            "Bireisheeth",
-            "Beraisheeth",
-            "Bereisheeth",
-            "Buraishith",
-            "Bureishith",
-            "Buraishith",
-            "Bureishith",
-            "Buraisheeth",
-            "Bureisheeth",
-            "Buraisheeth",
-            "Bureisheeth",
-            "Boraishith",
-            "Boreishith",
-            "Boraishith",
-            "Boreishith",
-            "Boraisheeth",
-            "Boreisheeth",
-            "Boraisheeth",
-            "Boreisheeth",
-            "Baraishith",
-            "Bareishith",
-            "Baraishith",
-            "Bareishith",
-            "Baraisheeth",
-            "Bareisheeth",
-            "Baraisheeth",
-            "Bareisheeth",
-
-
-            "B'raishis",
-            "B'reishis",
-            "B'raishit",
-            "B'reishit",
-            "B'raishees",
-            "B'reishees",
-            "B'raisheet",
-            "B'reisheet",
-            "B'raishith",
-            "B'reishith",
-            "B'raisheeth",
-            "B'reisheeth"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling1: Map<String, String> = listOfPossibleSpellings1.associateWith { actualSpelling1 }
-
-
-    val actualSpelling2 = "Noach"
-    val listOfPossibleSpellings2 = listOf(actualSpelling2,
-            "No'ach", "Now'ach",
-            "Noach", "Nowach",
-            "Noah", "Nowah",
-            "Noakh", "Nowakh", "Now'ach",
-
-            "No'ach", "Noh'ach",
-            "Noach", "Nohach",
-            "Noah", "Nohah",
-            "Noakh", "Nohakh"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling2: Map<String, String> = listOfPossibleSpellings2.associateWith { actualSpelling2 }
-
-
-    val actualSpelling3a = "Lech Lecha"
-    val listOfPossibleSpellings3a = listOf(actualSpelling3a,
-            "Leich Licha",
-            "Lech Licha",
-            "Laich Licha",
-            "Leich Lecha",
-            "Laich Lecha",
-            "Lekh Lekha",
-            "Lekh Lekhah",
-
-            "Leikh Likha",
-            "Lekh Likha",
-            "Laikh Likha",
-            "Leikh Lekha",
-            "Laikh Lekha",
-
-            "Leich Lichah",
-            "Lech Lichah",
-            "Laich Lichah",
-            "Leich Lechah",
-            "Laich Lechah",
-
-            "Leikh Likhah",
-            "Lekh Likhah",
-            "Laikh Likhah",
-            "Leikh Lekhah",
-            "Laikh Lekhah",
-
-            "Leich Licho",
-            "Lech Licho",
-            "Laich Licho",
-            "Leich Lecho",
-            "Laich Lecho",
-
-            "Leikh Likho",
-            "Lekh Likho",
-            "Laikh Likho",
-            "Leikh Lekho",
-            "Laikh Lekho",
-
-
-            "Leich Lichoh",
-            "Lech Lichoh",
-            "Laich Lichoh",
-            "Leich Lechoh",
-            "Laich Lechoh",
-
-            "Leikh Likhoh",
-            "Lekh Likhoh",
-            "Laikh Likhoh",
-            "Leikh Lekhoh",
-            "Laikh Lekhoh",
-
-
-            "Leich Lucha",
-            "Lech Lucha",
-            "Laich Lucha",
-            "Leich Lucha",
-            "Laich Lucha",
-
-            "Leikh Lukha",
-            "Lekh Lukha",
-            "Laikh Lukha",
-            "Leikh Lukha",
-            "Laikh Lukha",
-
-            "Leich Luchah",
-            "Lech Luchah",
-            "Laich Luchah",
-            "Leich Luchah",
-            "Laich Luchah",
-
-            "Leikh Lukhah",
-            "Lekh Lukhah",
-            "Laikh Lukhah",
-            "Leikh Lukhah",
-            "Laikh Lukhah",
-
-            "Leich Lucho",
-            "Lech Lucho",
-            "Laich Lucho",
-            "Leich Lucho",
-            "Laich Lucho",
-
-            "Leikh Lukho",
-            "Lekh Lukho",
-            "Laikh Lukho",
-            "Leikh Lukho",
-            "Laikh Lukho",
-
-
-            "Leich Luchoh",
-            "Lech Luchoh",
-            "Laich Luchoh",
-            "Leich Luchoh",
-            "Laich Luchoh",
-
-            "Leikh Lukhoh",
-            "Lekh Lukhoh",
-            "Laikh Lukhoh",
-            "Leikh Lukhoh",
-            "Laikh Lukhoh",
-
-
-            "Leich Locha",
-            "Lech Locha",
-            "Laich Locha",
-            "Leich Locha",
-            "Laich Locha",
-
-            "Leikh Lokha",
-            "Lekh Lokha",
-            "Laikh Lokha",
-            "Leikh Lokha",
-            "Laikh Lokha",
-
-            "Leich Lochah",
-            "Lech Lochah",
-            "Laich Lochah",
-            "Leich Lochah",
-            "Laich Lochah",
-
-            "Leikh Lokhah",
-            "Lekh Lokhah",
-            "Laikh Lokhah",
-            "Leikh Lokhah",
-            "Laikh Lokhah",
-
-            "Leich Locho",
-            "Lech Locho",
-            "Laich Locho",
-            "Leich Locho",
-            "Laich Locho",
-
-            "Leikh Lokho",
-            "Lekh Lokho",
-            "Laikh Lokho",
-            "Leikh Lokho",
-            "Laikh Lokho",
-
-
-            "Leich Lochoh",
-            "Lech Lochoh",
-            "Laich Lochoh",
-            "Leich Lochoh",
-            "Laich Lochoh",
-
-            "Leikh Lokhoh",
-            "Lekh Lokhoh",
-            "Laikh Lokhoh",
-            "Leikh Lokhoh",
-            "Laikh Lokhoh",
-
-
-            "Leih Liha",
-            "Leh Liha",
-            "Laih Liha",
-            "Leih Leha",
-            "Laih Leha",
-
-            "Leih Liha",
-            "Leh Liha",
-            "Laih Liha",
-            "Leih Leha",
-            "Laih Leha",
-
-            "Leih Lihah",
-            "Leh Lihah",
-            "Laih Lihah",
-            "Leih Lehah",
-            "Laih Lehah",
-
-            "Leih Lihah",
-            "Leh Lihah",
-            "Laih Lihah",
-            "Leih Lehah",
-            "Laih Lehah",
-
-            "Leih Liho",
-            "Leh Liho",
-            "Laih Liho",
-            "Leih Leho",
-            "Laih Leho",
-
-            "Leih Liho",
-            "Leh Liho",
-            "Laih Liho",
-            "Leih Leho",
-            "Laih Leho",
-
-
-            "Leih Lihoh",
-            "Leh Lihoh",
-            "Laih Lihoh",
-            "Leih Lehoh",
-            "Laih Lehoh",
-
-            "Leih Lihoh",
-            "Leh Lihoh",
-            "Laih Lihoh",
-            "Leih Lehoh",
-            "Laih Lehoh",
-
-
-            "Leih Luha",
-            "Leh Luha",
-            "Laih Luha",
-            "Leih Luha",
-            "Laih Luha",
-
-            "Leih Luha",
-            "Leh Luha",
-            "Laih Luha",
-            "Leih Luha",
-            "Laih Luha",
-
-            "Leih Luhah",
-            "Leh Luhah",
-            "Laih Luhah",
-            "Leih Luhah",
-            "Laih Luhah",
-
-            "Leih Luhah",
-            "Leh Luhah",
-            "Laih Luhah",
-            "Leih Luhah",
-            "Laih Luhah",
-
-            "Leih Luho",
-            "Leh Luho",
-            "Laih Luho",
-            "Leih Luho",
-            "Laih Luho",
-
-            "Leih Luho",
-            "Leh Luho",
-            "Laih Luho",
-            "Leih Luho",
-            "Laih Luho",
-
-
-            "Leih Luhoh",
-            "Leh Luhoh",
-            "Laih Luhoh",
-            "Leih Luhoh",
-            "Laih Luhoh",
-
-            "Leih Luhoh",
-            "Leh Luhoh",
-            "Laih Luhoh",
-            "Leih Luhoh",
-            "Laih Luhoh",
-
-
-            "Leih Loha",
-            "Leh Loha",
-            "Laih Loha",
-            "Leih Loha",
-            "Laih Loha",
-
-            "Leih Loha",
-            "Leh Loha",
-            "Laih Loha",
-            "Leih Loha",
-            "Laih Loha",
-
-            "Leih Lohah",
-            "Leh Lohah",
-            "Laih Lohah",
-            "Leih Lohah",
-            "Laih Lohah",
-
-            "Leih Lohah",
-            "Leh Lohah",
-            "Laih Lohah",
-            "Leih Lohah",
-            "Laih Lohah",
-
-            "Leih Loho",
-            "Leh Loho",
-            "Laih Loho",
-            "Leih Loho",
-            "Laih Loho",
-
-            "Leih Loho",
-            "Leh Loho",
-            "Laih Loho",
-            "Leih Loho",
-            "Laih Loho",
-
-
-            "Leih Lohoh",
-            "Leh Lohoh",
-            "Laih Lohoh",
-            "Leih Lohoh",
-            "Laih Lohoh",
-
-            "Leih Lohoh",
-            "Leh Lohoh",
-            "Laih Lohoh",
-            "Leih Lohoh",
-            "Laih Lohoh",
-
-
-            "Leich L'cha",
-            "Lech L'cha",
-            "Laich L'cha",
-            "Leikh L'kha",
-            "Lekh L'kha",
-            "Laikh L'kha",
-            "Leich L'chah",
-            "Lech L'chah",
-            "Laich L'chah",
-            "Leikh L'khah",
-            "Lekh L'khah",
-            "Laikh L'khah",
-            "Leich L'cho",
-            "Lech L'cho",
-            "Laich L'cho",
-            "Leikh L'kho",
-            "Lekh L'kho",
-            "Laikh L'kho",
-            "Leich L'choh",
-            "Lech L'choh",
-            "Laich L'choh",
-            "Leikh L'khoh",
-            "Lekh L'khoh",
-            "Laikh L'khoh",
-            "Leih L'ha",
-            "Leh L'ha",
-            "Laih L'ha",
-            "Leih L'ha",
-            "Leh L'ha",
-            "Laih L'ha",
-            "Leih L'hah",
-            "Leh L'hah",
-            "Laih L'hah",
-            "Leih L'hah",
-            "Leh L'hah",
-            "Laih L'hah",
-            "Leih L'ho",
-            "Leh L'ho",
-            "Laih L'ho",
-            "Leih L'ho",
-            "Leh L'ho",
-            "Laih L'ho",
-            "Leih L'hoh",
-            "Leh L'hoh",
-            "Laih L'hoh",
-            "Leih L'hoh",
-            "Leh L'hoh",
-            "Laih L'hoh"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling3a: Map<String, String> = listOfPossibleSpellings3a.associateWith { actualSpelling3a }
-
-
-    val actualSpelling4 = "Vayeira"
-    val listOfPossibleSpellings4 = listOf(actualSpelling4,
-            "Vayeirah",
-            "Vayera",
-            "Vayaira",
-            "Vayerah",
-            "Vayairah",
-            "Vayeiruh",
-            "Vayeru",
-            "Vayairu",
-            "Vayeruh",
-            "Vayairuh",
-
-
-            "Vahyeirah",
-            "Vahyera",
-            "Vahyaira",
-            "Vahyerah",
-            "Vahyairah",
-            "Vahyeiruh",
-            "Vahyeru",
-            "Vahyairu",
-            "Vahyeruh",
-            "Vahyairuh",
-
-
-            "Vuyeirah",
-            "Vuyera",
-            "Vuyaira",
-            "Vuyerah",
-            "Vuyairah",
-            "Vuyeiruh",
-            "Vuyeru",
-            "Vuyairu",
-            "Vuyeruh",
-            "Vuyairuh",
-
-
-            "Vuhyeirah",
-            "Vuhyera",
-            "Vuhyaira",
-            "Vuhyerah",
-            "Vuhyairah",
-            "Vuhyeiruh",
-            "Vuhyeru",
-            "Vuhyairu",
-            "Vuhyeruh",
-            "Vuhyairuh"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling4: Map<String, String> = listOfPossibleSpellings4.associateWith { actualSpelling4 }
-
-
-    val actualSpelling5a = "Chayei Sara"
-    val listOfPossibleSpellings5a = listOf(actualSpelling5a,
-            "Chayai Sara",
-            "Chayei Sarah",
-            "Chayai Sarah",
-            "Chayei Soro",
-            "Chayei Soroh",
-            "Chayai Soro",
-            "Chayai Soroh",
-
-            "Chayai Sura",
-            "Chayei Surah",
-            "Chayai Surah",
-            "Chayei Suro",
-            "Chayei Suroh",
-            "Chayai Suro",
-            "Chayai Suroh",
-
-
-            "Chayai Saru",
-            "Chayei Saruh",
-            "Chayai Saruh",
-            "Chayei Soru",
-            "Chayei Soruh",
-            "Chayai Soru",
-            "Chayai Soruh",
-            "Chayyei Sarah",
-
-            "Hayai Suru",
-            "Hayei Suruh",
-            "Hayai Suruh",
-            "Hayei Suru",
-            "Hayei Suruh",
-            "Hayai Suru",
-            "Hayai Suruh",
-
-
-            "Hayai Sara",
-            "Hayei Sarah",
-            "Hayai Sarah",
-            "Hayei Soro",
-            "Hayei Soroh",
-            "Hayai Soro",
-            "Hayai Soroh",
-
-            "Hayai Sura",
-            "Hayei Surah",
-            "Hayai Surah",
-            "Hayei Suro",
-            "Hayei Suroh",
-            "Hayai Suro",
-            "Hayai Suroh",
-
-
-            "Hayai Saru",
-            "Hayei Saruh",
-            "Hayai Saruh",
-            "Hayei Soru",
-            "Hayei Soruh",
-            "Hayai Soru",
-            "Hayai Soruh",
-
-            "Hayai Suru",
-            "Hayei Suruh",
-            "Hayai Suruh",
-            "Hayei Suru",
-            "Hayei Suruh",
-            "Hayai Suru",
-            "Hayai Suruh",
-            "Hayyei Sarah"
-
-    )
-    val mapOfPossibleSpellingToCorrectSpelling5a: Map<String, String> = listOfPossibleSpellings5a.associateWith { actualSpelling5a }
-
-
-    val actualSpelling6 = "Toldos"
-    val listOfPossibleSpellings6 = listOf(actualSpelling6,
-            "Tolidos",
-            "Tolidot",
-            "Toledos",
-            "Toledot",
-            "Toledoth",
-            "Toldos",
-            "Toldot",
-            "Tolidoth",
-            "Toldoth",
-
-
-            "Tol'dos",
-            "Tol'dot",
-            "Tol'doth"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling6: Map<String, String> = listOfPossibleSpellings6.associateWith { actualSpelling6 }
-
-
-    val actualSpelling7 = "Vayeitzei"
-    val listOfPossibleSpellings7 = listOf(actualSpelling7,
-            "Vayetzei",
-            "Vayetzai",
-            "Vayeitzai",
-
-            "Vayetsei",
-            "Vayetsai",
-            "Vayeisai",
-            "Vayeisei",
-            "Vayeissai",
-            "Vayeissei",
-
-
-            "Vayezei",
-            "Vayezai",
-            "Vayeizai",
-            "Vayeizei",
-
-
-            "Vayetze",
-            "Vayetse",
-            "Vayeise",
-            "Vayeisse",
-
-
-            "Vayeze",
-            "Vayeize"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling7: Map<String, String> = listOfPossibleSpellings7.associateWith { actualSpelling7 }
-
-
-    val actualSpelling8 = "Vayishlach"
-    val listOfPossibleSpellings8 = listOf(actualSpelling8,
-            "Vayishlah",
-            "Vayeeshlach",
-            "Vayeeshlah",
-
-            "Vayishlakh",
-            "Vayeeshlakh",
-
-
-            "Vayishlah",
-            "Vayeeshlahch",
-            "Vayeeshlah",
-
-            "Vayishlahkh",
-            "Vayeeshlahkh"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling8: Map<String, String> = listOfPossibleSpellings8.associateWith { actualSpelling8 }
-
-
-    val actualSpelling9 = "Vayeshev"
-    val listOfPossibleSpellings9 = listOf(actualSpelling9,
-            "Vayeishev",
-            "Vayaishev"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling9: Map<String, String> = listOfPossibleSpellings9.associateWith { actualSpelling9 }
-
-
-    val actualSpelling10 = "Mikeitz"
-    val listOfPossibleSpellings10 = listOf(actualSpelling10,
-            "Meekaitz",
-            "Meekais",
-            "Meekaiz",
-            "Meekeitz",
-            "Meekeis",
-            "Meekeiz",
-            "Mikais",
-            "Mikaiz",
-            "Mikeis",
-            "Mikeiz",
-            "Meekaiss",
-            "Meekeiss",
-            "Mikaiss",
-            "Mikeiss",
-
-
-            "Miqeitz",
-            "Meeqaitz",
-            "Meeqais",
-            "Meeqaiz",
-            "Meeqeitz",
-            "Meeqeis",
-            "Meeqeiz",
-            "Miqais",
-            "Miqaiz",
-            "Miqeis",
-            "Miqeiz",
-            "Meeqaiss",
-            "Meeqeiss",
-            "Miqaiss",
-            "Miqeiss",
-
-
-            "Meekkaitz",
-            "Meekkais",
-            "Meekkaiz",
-            "Meekkeitz",
-            "Meekkeis",
-            "Meekkeiz",
-            "Mikkais",
-            "Mikkaiz",
-            "Mikkeis",
-            "Mikkeiz",
-            "Meekkaiss",
-            "Meekkeiss",
-            "Mikkaiss",
-            "Mikkeiss"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling10: Map<String, String> = listOfPossibleSpellings10.associateWith { actualSpelling10 }
-
-
-    val actualSpelling11 = "Vayigash"
-    val listOfPossibleSpellings11 = listOf(actualSpelling11,
-            "Vayeegash",
-            "Vayeegahsh",
-            "Vayigahsh"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling11: Map<String, String> = listOfPossibleSpellings11.associateWith { actualSpelling11 }
-
-
-    val actualSpelling12 = "Vayechi"
-    val listOfPossibleSpellings12 = listOf(actualSpelling12,
-            "Vayechee",
-            "Vayichi",
-            "Vayichee",
-            "Vay'chi",
-            "Vay'chee",
-            "Vayehee",
-            "Vayihi",
-            "Vayihee",
-            "Vay'hi",
-            "Vay'hee",
-            "Vayehi"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling12: Map<String, String> = listOfPossibleSpellings12.associateWith { actualSpelling12 }
-
-
-    val actualSpelling13 = "Shemos"
-    val listOfPossibleSpellings13 = listOf(actualSpelling13,
-            "Shimos",
-            "Shimoth",
-            "Shemot",
-            "Shemoth",
-            "Sh'mot",
-            "Sh'mos",
-            "Sh'moth"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling13: Map<String, String> = listOfPossibleSpellings13.associateWith { actualSpelling13 }
-
-
-    val actualSpelling14 = "Va'eira"
-    val listOfPossibleSpellings14 = listOf(actualSpelling14,
-            "Vaeira",
-            "Vaaira",
-            "V'aira",
-            "V'eira",
-            "Vaeirah",
-            "Vaairah",
-            "V'airah",
-            "V'eirah",
-            "Va'era",
-            "Va'erah",
-
-            "Vaeiru",
-            "Vaairu",
-            "V'airu",
-            "V'eiru",
-            "Vaeiruh",
-            "Vaairuh",
-            "V'airuh",
-            "V'eiruh",
-
-            "Vaeiro",
-            "Vaairo",
-            "V'airo",
-            "V'eiro",
-            "Vaeiroh",
-            "Vaairoh",
-            "V'airoh",
-            "V'eiroh",
-
-
-            "Waeira",
-            "Waaira",
-            "W'aira",
-            "W'eira",
-            "Waeirah",
-            "Waairah",
-            "W'airah",
-            "W'eirah",
-
-
-            "Waeiru",
-            "Waairu",
-            "W'airu",
-            "W'eiru",
-            "Waeiruh",
-            "Waairuh",
-            "W'airuh",
-            "W'eiruh",
-
-            "Waeiro",
-            "Waairo",
-            "W'airo",
-            "W'eiro",
-            "Waeiroh",
-            "Waairoh",
-            "W'airoh",
-            "W'eiroh"
-
-    )
-    val mapOfPossibleSpellingToCorrectSpelling14: Map<String, String> = listOfPossibleSpellings14.associateWith { actualSpelling14 }
-
-
-    val actualSpelling15 = "Bo"
-    val listOfPossibleSpellings15 = listOf(actualSpelling15,
-            "Boh",
-            "Bow"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling15: Map<String, String> = listOfPossibleSpellings15.associateWith { actualSpelling15 }
-
-
-    val actualSpelling16 = "Beshalach"
-    val listOfPossibleSpellings16 = listOf(actualSpelling16,
-            "Bishalach",
-            "B'shalach",
-            "Beshalah",
-            "Bishalah",
-            "B'shalah",
-            "Bishahlahch",
-            "B'shahlahch",
-            "Beshahlah",
-            "Bishahlah",
-            "B'ishahlah",
-            "Beshallach",
-            "Bishallach",
-            "Bishallach",
-
-
-            "Beshallah",
-            "Bishallah",
-            "Bishallah",
-
-
-            "Beshahllah",
-            "Bishahllah",
-            "Bishahllah"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling16: Map<String, String> = listOfPossibleSpellings16.associateWith { actualSpelling16 }
-
-
-    val actualSpelling17 = "Yisro"
-    val listOfPossibleSpellings17 = listOf(actualSpelling17,
-            "Yithro",
-            "Yeesro",
-            "Yeethro",
-            "Yisroh",
-            "Yithroh",
-            "Yeethroh",
-            "Yeesroh",
-            "Yitro",
-            "Yitroh",
-            "Yeetro",
-            "Yeetroh",
-
-
-            "Yithrow",
-            "Yeesrow",
-            "Yeethrow",
-            "Yisrow",
-            "Yithrow",
-            "Yeethrow",
-            "Yeesrow",
-            "Yitrow",
-            "Yitrow",
-            "Yeetrow",
-            "Yeetrow"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling17: Map<String, String> = listOfPossibleSpellings17.associateWith { actualSpelling17 }
-
-
-    val actualSpelling18 = "Mishpatim"
-    val listOfPossibleSpellings18 = listOf(actualSpelling18,
-            "Meeshpattim",
-            "Meeshpatim",
-            "Meeshputeem",
-            "Meeshpatteem",
-            "Meeshpateem",
-            "Mishputtim",
-            "Mishputim",
-            "Mishpateem",
-            "Mishpatteem",
-            "Mishputteem",
-            "Mishputeem",
-
-
-            "M'shputtim",
-            "M'shputim",
-            "M'shpateem",
-            "M'shpatteem",
-            "M'shputteem",
-            "M'shputeem"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling18: Map<String, String> = listOfPossibleSpellings18.associateWith { actualSpelling18 }
-
-
-    val actualSpelling19 = "Terumah"
-    val listOfPossibleSpellings19 = listOf(actualSpelling19,
-            "Tirumah",
-            "Tiruma",
-            "Teruma",
-            "Tirooma",
-            "Tiroomah",
-
-            "Tirumuh",
-            "Tirumu",
-            "Terumu",
-            "Tiroomu",
-            "Tiroomuh",
-            "Terooma",
-            "Teroomah",
-            "Teroomuh",
-            "Teroomu",
-            "Truma",
-            "Trooma",
-            "Trumah",
-            "Troomah",
-            "Troomu",
-            "Troomuh",
-            "Trumuh",
-            "T'ruma",
-            "T'rumuh",
-            "T'rumah",
-            "T'rumu",
-            "T'roomu",
-            "T'rooma",
-            "T'roomuh",
-            "T'roomah"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling19: Map<String, String> = listOfPossibleSpellings19.associateWith { actualSpelling19 }
-
-
-    val actualSpelling20 = "Tetzaveh"
-    val listOfPossibleSpellings20 = listOf(actualSpelling20,
-            "Titzaveh",
-            "Tisaveh",
-            "Tizaveh",
-            "Tissaveh",
-            "T'tzaveh",
-            "T'saveh",
-            "T'zaveh",
-            "T'ssaveh",
-
-            "Titzave",
-            "Tisave",
-            "Tizave",
-            "Tissave",
-            "T'tzave",
-            "T'save",
-            "T'zave",
-            "T'ssave",
-
-            "Titzaweh",
-            "Tisaweh",
-            "Tizaweh",
-            "Tissaweh",
-            "T'tzaweh",
-            "T'saweh",
-            "T'zaweh",
-            "T'ssaweh",
-
-            "Titzawe",
-            "Tisawe",
-            "Tizawe",
-            "Tissawe",
-            "T'tzawe",
-            "T'sawe",
-            "T'zawe",
-            "T'ssawe"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling20: Map<String, String> = listOfPossibleSpellings20.associateWith { actualSpelling20 }
-
-
-    val actualSpelling21a = "Ki Sisa"
-    val listOfPossibleSpellings21a = listOf(actualSpelling21a,
-            "Kee Seesa",
-            "Kee Seesah",
-            "Ki Seesa",
-            "Ki Seesah",
-            "Ki Sisah",
-            "Key Sisa",
-            "Key Seesa",
-            "Key Seesah",
-
-            "Kee Teesa",
-            "Kee Teesah",
-            "Ki Teesa",
-            "Ki Teesah",
-            "Ki Tisah",
-            "Key Tisa",
-            "Key Teesa",
-            "Key Teesah",
-
-            "Kee Theesa",
-            "Kee Theesah",
-            "Ki Theesa",
-            "Ki Theesah",
-            "Ki Thisah",
-            "Key Thisa",
-            "Key Theesa",
-            "Key Theesah",
-
-
-            "Kee Seessa",
-            "Kee Seessah",
-            "Ki Seessa",
-            "Ki Seessah",
-            "Ki Sissah",
-            "Key Sissa",
-            "Key Seessa",
-            "Key Seessah",
-
-            "Kee Teessa",
-            "Kee Teessah",
-            "Ki Teessa",
-            "Ki Teessah",
-            "Ki Tissah",
-            "Key Tissa",
-            "Key Teessa",
-            "Key Teessah",
-
-            "Kee Theessa",
-            "Kee Theessah",
-            "Ki Theessa",
-            "Ki Theessah",
-            "Ki Thissah",
-            "Key Thissa",
-            "Key Theessa",
-            "Key Theessah",
-
-
-            "Kee Seesu",
-            "Kee Seesuh",
-            "Ki Seesu",
-            "Ki Seesuh",
-            "Ki Sisuh",
-            "Key Sisu",
-            "Key Seesu",
-            "Key Seesuh",
-
-            "Kee Teesu",
-            "Kee Teesuh",
-            "Ki Teesu",
-            "Ki Teesuh",
-            "Ki Tisuh",
-            "Key Tisu",
-            "Key Teesu",
-            "Key Teesuh",
-
-            "Kee Theesu",
-            "Kee Theesuh",
-            "Ki Theesu",
-            "Ki Theesuh",
-            "Ki Thisuh",
-            "Key Thisu",
-            "Key Theesu",
-            "Key Theesuh",
-
-
-            "Kee Seessu",
-            "Kee Seessuh",
-            "Ki Seessu",
-            "Ki Seessuh",
-            "Ki Sissuh",
-            "Key Sissu",
-            "Key Seessu",
-            "Key Seessuh",
-
-            "Kee Teessu",
-            "Kee Teessuh",
-            "Ki Teessu",
-            "Ki Teessuh",
-            "Ki Tissuh",
-            "Key Tissu",
-            "Key Teessu",
-            "Key Teessuh",
-
-            "Kee Theessu",
-            "Kee Theessuh",
-            "Ki Theessu",
-            "Ki Theessuh",
-            "Ki Thissuh",
-            "Key Thissu",
-            "Key Theessu",
-            "Key Theessuh"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling21a: Map<String, String> = listOfPossibleSpellings21a.associateWith { actualSpelling21a }
-
-
-    val actualSpelling22 = "Vayakhail"
-    val listOfPossibleSpellings22 = listOf(actualSpelling22,
-            "Vayakail",
-            "Vayakeil",
-            "Vayakheil",
-            "Vayakhel",
-            "Vayakel",
-
-            "Wayakail",
-            "Wayakeil",
-            "Wayakheil",
-            "Wayakhel",
-            "Wayakel"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling22: Map<String, String> = listOfPossibleSpellings22.associateWith { actualSpelling22 }
-
-
-    val actualSpelling23 = "Pekudei"
-    val listOfPossibleSpellings23 = listOf(actualSpelling23,
-            "Pekudai",
-            "Pikudai",
-            "Pikudei",
-            "P'kudei",
-            "P'kudai",
-
-            "Pekoodai",
-            "Pikoodai",
-            "Pikoodei",
-            "P'koodei",
-            "P'koodai",
-
-            "Pekuday",
-            "Pikuday",
-            "P'kuday",
-            "Pekooday",
-            "Pikooday",
-            "P'kooday"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling23: Map<String, String> = listOfPossibleSpellings23.associateWith { actualSpelling23 }
-
-
-    val actualSpelling25 = "Vayikra"
-    val listOfPossibleSpellings25 = listOf(actualSpelling25,
-            "Vayikrah",
-            "Vayeekrah",
-            "Vayeekra",
-            "Vayikruh",
-            "Vayeekruh",
-            "Vayeekru",
-            "Vayikru",
-
-            "Wayikrah",
-            "Wayeekrah",
-            "Wayeekra",
-            "Wayikruh",
-            "Wayeekruh",
-            "Wayeekru",
-            "Wayikru"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling25: Map<String, String> = listOfPossibleSpellings25.associateWith { actualSpelling25 }
-
-
-    val actualSpelling26 = "Tzav"
-    val listOfPossibleSpellings26 = listOf(actualSpelling26,
-            "Saz",
-            "Zav",
-            "Saw",
-            "Zaw",
-            "Tsav",
-            "Tsaw"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling26: Map<String, String> = listOfPossibleSpellings26.associateWith { actualSpelling26 }
-
-
-    val actualSpelling27 = "Shemini"
-    val listOfPossibleSpellings27 = listOf(actualSpelling27,
-            "Shmini",
-            "Shminee",
-            "Shmeeni",
-            "Sh'mini",
-            "Sh'minee",
-            "Shmeenee",
-            "Shemeenee",
-            "Sheminee",
-            "Shemeeni"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling27: Map<String, String> = listOfPossibleSpellings27.associateWith { actualSpelling27 }
-
-
-    val actualSpelling28 = "Tazria"
-    val listOfPossibleSpellings28 = listOf(actualSpelling28,
-            "Tasria"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling28: Map<String, String> = listOfPossibleSpellings28.associateWith { actualSpelling28 }
-
-
-    val actualSpelling29 = "Metzora"
-    val listOfPossibleSpellings29 = listOf(actualSpelling29,
-            "Metzorah",
-            "Mitzora",
-            "Mitzorah",
-            "M'tzora",
-            "M'tzorah",
-
-            "Metzoruh",
-            "Mitzoru",
-            "Mitzoruh",
-            "M'tzoru",
-            "M'tzoruh",
-
-
-            "Mezorah",
-            "Mizora",
-            "Mizorah",
-            "M'zora",
-            "M'zorah",
-
-            "Mezoruh",
-            "Mizoru",
-            "Mizoruh",
-            "M'zoru",
-            "M'zoruh"
-
-    )
-    val mapOfPossibleSpellingToCorrectSpelling29: Map<String, String> = listOfPossibleSpellings29.associateWith { actualSpelling29 }
-
-
-    val actualSpelling30a = "Acharei Mos"
-    val listOfPossibleSpellings30a = listOf(actualSpelling30a,
-            "Achrei Mos",
-            "Achrei Mose",
-            "Acharei Mose",
-            "Achrai Mos",
-            "Acharai Mos",
-            "Acharai Mose",
-            "Achrai Mose",
-
-
-            "Achrei Mot",
-            "Achrei Mote",
-            "Acharei Mote",
-            "Achrai Mot",
-            "Acharai Mot",
-            "Acharai Mote",
-            "Achrai Mote",
-
-
-            "Achrei Moth",
-            "Acharei Moth",
-            "Achrai Moth",
-            "Acharai Moth",
-
-
-            "Ach'rei Mos",
-            "Ach'rei Mose",
-            "Ach'rai Mos",
-            "Ach'rai Mose",
-            "Ach'rei Mot",
-            "Ach'rei Mote",
-            "Ach'rai Mot",
-            "Ach'rai Mote",
-            "Ach'rei Moth",
-            "Ach'rai Moth"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling30a: Map<String, String> = listOfPossibleSpellings30a.associateWith { actualSpelling30a }
-
-
-    val actualSpelling31 = "Kedoshim"
-    val listOfPossibleSpellings31 = listOf(actualSpelling31,
-            "Kedosheem",
-            "Kidoshim",
-            "Kidosheem"
-    )
-    val mapOfPossibleSpellingToCorrectSpelling31: Map<String, String> = listOfPossibleSpellings31.associateWith { actualSpelling31 }
-
-
-    val actualSpelling32 = "Emor"
-    val listOfPossibleSpellings32 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling32: Map<String, String> = listOfPossibleSpellings32.associateWith { actualSpelling32 }
-
-
-    val actualSpelling33 = "Behar"
-    val listOfPossibleSpellings33 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling33: Map<String, String> = listOfPossibleSpellings33.associateWith { actualSpelling33 }
-
-
-    val actualSpelling34 = "Bechukosai"
-    val listOfPossibleSpellings34 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling34: Map<String, String> = listOfPossibleSpellings34.associateWith { actualSpelling34 }
-
-
-    val actualSpelling35 = "Bamidbar"
-    val listOfPossibleSpellings35 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling35: Map<String, String> = listOfPossibleSpellings35.associateWith { actualSpelling35 }
-
-
-    val actualSpelling36 = "Naso"
-    val listOfPossibleSpellings36 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling36: Map<String, String> = listOfPossibleSpellings36.associateWith { actualSpelling36 }
-
-
-    val actualSpelling37 = "Beha'aloscha"
-    val listOfPossibleSpellings37 = listOf(
-            "Bihaaloscha", "Behaaloscha",
-            "Biha'aloscha", "Beha'aloscha",
-            "Bihaalos'cha", "Behaalos'cha",
-            "Biha'alos'cha", "Beha'alos'cha",
-            "Bihaloscha", "Behaloscha",
-            "Biha'loscha", "Beha'loscha",
-            "Bihalos'cha", "Behalos'cha",
-            "Biha'los'cha", "Beha'los'cha",
-            "Bihaaloschah", "Behaaloschah",
-            "Biha'aloschah", "Beha'aloschah",
-            "Bihaalos'chah", "Behaalos'chah",
-            "Biha'alos'chah", "Beha'alos'chah",
-            "Bihaloschah", "Behaloschah",
-            "Biha'loschah", "Beha'loschah",
-            "Bihalos'chah", "Behalos'chah",
-            "Biha'los'chah", "Beha'los'chah",
-            "Bihaalowscha", "Behaalowscha",
-            "Biha'alowscha", "Beha'alowscha",
-            "Bihaalows'cha", "Behaalows'cha",
-            "Biha'alows'cha", "Beha'alows'cha",
-            "Bihalowscha", "Behalowscha",
-            "Biha'lowscha", "Beha'lowscha",
-            "Bihalows'cha", "Behalows'cha",
-            "Biha'lows'cha", "Beha'lows'cha",
-            "Bihaalowschah", "Behaalowschah",
-            "Biha'alowschah", "Beha'alowschah",
-            "Bihaalows'chah", "Behaalows'chah",
-            "Biha'alows'chah", "Beha'alows'chah",
-            "Bihalowschah", "Behalowschah",
-            "Biha'lowschah", "Beha'lowschah",
-            "Bihalows'chah", "Behalows'chah",
-            "Biha'lows'chah", "Beha'lows'chah",
-            "Bihaalohscha", "Behaalohscha",
-            "Biha'alohscha", "Beha'alohscha",
-            "Bihaalohs'cha", "Behaalohs'cha",
-            "Biha'alohs'cha", "Beha'alohs'cha",
-            "Bihalohscha", "Behalohscha",
-            "Biha'lohscha", "Beha'lohscha",
-            "Bihalohs'cha", "Behalohs'cha",
-            "Biha'lohs'cha", "Beha'lohs'cha",
-            "Bihaalohschah", "Behaalohschah",
-            "Biha'alohschah", "Beha'alohschah",
-            "Bihaalohs'chah", "Behaalohs'chah", "Biha'alohs'chah", "Beha'alohs'chah", "Bihalohschah", "Behalohschah", "Biha'lohschah", "Beha'lohschah", "Bihalohs'chah", "Behalohs'chah", "Biha'lohs'chah", "Beha'lohs'chah", "Bihaalosicha", "Biha'alosicha", "Behaalosicha", "Beha'alosicha", "Bihalosicha", "Behalosicha", "Biha'losicha", "Beha'losicha", "Bihaalosichah", "Biha'alosichah", "Behaalosichah", "Beha'alosichah", "Bihalosichah", "Behalosichah", "Biha'losichah", "Beha'losichah", "Bihaalowsicha", "Behaalowsicha", "Biha'alowsicha", "Beha'alowsicha", "Bihalowsicha", "Behalowsicha", "Biha'lowsicha", "Beha'lowsicha", "Bihaalowsichah", "Behaalowsichah", "Biha'alowsichah", "Beha'alowsichah", "Bihalowsichah", "Behalowsichah", "Biha'lowsichah", "Beha'lowsichah", "Bihaalohsicha", "Behaalohsicha", "Biha'alohsicha", "Beha'alohsicha", "Bihalohsicha", "Behalohsicha", "Biha'lohsicha", "Beha'lohsicha", "Bihaalohsichah", "Biha'alohsichah", "Behaalohsichah", "Beha'alohsichah", "Bihalohsichah", "Behalohsichah", "Biha'lohsichah", "Beha'lohsichah", "Bihaalotcha", "Behaalotcha", "Biha'alotcha", "Beha'alotcha", "Bihaalot'cha", "Behaalot'cha", "Biha'alot'cha", "Beha'alot'cha", "Bihalotcha", "Behalotcha", "Biha'lotcha", "Beha'lotcha", "Bihalot'cha", "Behalot'cha", "Biha'lot'cha", "Beha'lot'cha", "Bihaalotchah", "Behaalotchah", "Biha'alotchah", "Beha'alotchah", "Bihaalot'chah", "Behaalot'chah", "Biha'alot'chah", "Beha'alot'chah", "Bihalotchah", "Behalotchah", "Biha'lotchah", "Beha'lotchah", "Bihalot'chah", "Behalot'chah", "Biha'lot'chah", "Beha'lot'chah", "Bihaalowtcha", "Behaalowtcha", "Biha'alowtcha", "Beha'alowtcha", "Bihaalowt'cha", "Behaalowt'cha", "Biha'alowt'cha", "Beha'alowt'cha", "Bihalowtcha", "Behalowtcha", "Biha'lowtcha", "Beha'lowtcha", "Bihalowt'cha", "Behalowt'cha", "Biha'lowt'cha", "Beha'lowt'cha", "Bihaalowtchah", "Behaalowtchah", "Biha'alowtchah", "Beha'alowtchah", "Bihaalowt'chah", "Behaalowt'chah", "Biha'alowt'chah", "Beha'alowt'chah", "Bihalowtchah", "Behalowtchah", "Biha'lowtchah", "Beha'lowtchah", "Bihalowt'chah", "Behalowt'chah", "Biha'lowt'chah", "Beha'lowt'chah", "Bihaalohtcha", "Behaalohtcha", "Biha'alohtcha", "Beha'alohtcha", "Bihaaloht'cha", "Behaaloht'cha", "Biha'aloht'cha", "Beha'aloht'cha", "Bihalohtcha", "Behalohtcha", "Biha'lohtcha", "Beha'lohtcha", "Bihaloht'cha", "Behaloht'cha", "Biha'loht'cha", "Beha'loht'cha", "Bihaalohtchah", "Behaalohtchah", "Biha'alohtchah", "Beha'alohtchah", "Bihaaloht'chah", "Behaaloht'chah", "Biha'aloht'chah", "Beha'aloht'chah", "Bihalohtchah", "Behalohtchah", "Biha'lohtchah", "Beha'lohtchah", "Bihaloht'chah", "Behaloht'chah", "Biha'loht'chah", "Beha'loht'chah", "Bihaaloticha", "Behaaloticha", "Biha'aloticha", "Beha'aloticha", "Bihaloticha", "Behaloticha", "Biha'loticha", "Beha'loticha", "Bihaalotichah", "Behaalotichah", "Biha'alotichah", "Beha'alotichah", "Bihalotichah", "Behalotichah", "Biha'lotichah", "Beha'lotichah", "Bihaalowticha", "Behaalowticha", "Biha'alowticha", "Beha'alowticha", "Bihalowticha", "Behalowticha", "Biha'lowticha", "Beha'lowticha", "Bihaalowtichah", "Behaalowtichah", "Biha'alowtichah", "Beha'alowtichah", "Bihalowtichah", "Behalowtichah", "Biha'lowtichah", "Beha'lowtichah", "Bihaalohticha", "Biha'alohticha", "Behaalohticha", "Beha'alohticha", "Bihalohticha", "Behalohticha", "Biha'lohticha", "Beha'lohticha", "Bihaalohtichah", "Biha'alohtichah", "Behaalohtichah", "Beha'alohtichah", "Bihalohtichah", "Behalohtichah", "Biha'lohtichah", "Beha'lohtichah")
-    val mapOfPossibleSpellingToCorrectSpelling37: Map<String, String> = listOfPossibleSpellings37.associateWith { actualSpelling37 }
-
-
-    val actualSpelling38 = "Shelach"
-    val listOfPossibleSpellings38 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling38: Map<String, String> = listOfPossibleSpellings38.associateWith { actualSpelling38 }
-
-
-    val actualSpelling39 = "Korach"
-    val listOfPossibleSpellings39 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling39: Map<String, String> = listOfPossibleSpellings39.associateWith { actualSpelling39 }
-
-
-    val actualSpelling40 = "Chukas"
-    val listOfPossibleSpellings40 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling40: Map<String, String> = listOfPossibleSpellings40.associateWith { actualSpelling40 }
-
-
-    val actualSpelling41 = "Balak"
-    val listOfPossibleSpellings41 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling41: Map<String, String> = listOfPossibleSpellings41.associateWith { actualSpelling41 }
-
-
-    val actualSpelling42 = "Pinchas"
-    val listOfPossibleSpellings42 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling42: Map<String, String> = listOfPossibleSpellings42.associateWith { actualSpelling42 }
-
-
-    val actualSpelling43 = "Mattos"
-    val listOfPossibleSpellings43 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling43: Map<String, String> = listOfPossibleSpellings43.associateWith { actualSpelling43 }
-
-
-    val actualSpelling44 = "Massai"
-    val listOfPossibleSpellings44 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling44: Map<String, String> = listOfPossibleSpellings44.associateWith { actualSpelling44 }
-
-
-    val actualSpelling45 = "Devarim"
-    val listOfPossibleSpellings45 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling45: Map<String, String> = listOfPossibleSpellings45.associateWith { actualSpelling45 }
-
-
-    val actualSpelling46 = "Va'eschanan"
-    val listOfPossibleSpellings46 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling46: Map<String, String> = listOfPossibleSpellings46.associateWith { actualSpelling46 }
-
-
-    val actualSpelling47 = "Eikev"
-    val listOfPossibleSpellings47 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling47: Map<String, String> = listOfPossibleSpellings47.associateWith { actualSpelling47 }
-
-
-    val actualSpelling48 = "Re'eh"
-    val listOfPossibleSpellings48 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling48: Map<String, String> = listOfPossibleSpellings48.associateWith { actualSpelling48 }
-
-
-    val actualSpelling49 = "Shoftim"
-    val listOfPossibleSpellings49 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling49: Map<String, String> = listOfPossibleSpellings49.associateWith { actualSpelling49 }
-
-
-    val actualSpelling50a = "Ki Setzei"
-    val listOfPossibleSpellings50a = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling50a: Map<String, String> = listOfPossibleSpellings50a.associateWith { actualSpelling50a }
-
-
-    val actualSpelling51a = "Ki Savo"
-    val listOfPossibleSpellings51a = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling51a: Map<String, String> = listOfPossibleSpellings51a.associateWith { actualSpelling51a }
-
-
-    val actualSpelling52 = "Nitzavim"
-    val listOfPossibleSpellings52 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling52: Map<String, String> = listOfPossibleSpellings52.associateWith { actualSpelling52 }
-
-
-    val actualSpelling53 = "Vayelech"
-    val listOfPossibleSpellings53 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling53: Map<String, String> = listOfPossibleSpellings53.associateWith { actualSpelling53 }
-
-
-    val actualSpelling54 = "Ha'azinu"
-    val listOfPossibleSpellings54 = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling54: Map<String, String> = listOfPossibleSpellings54.associateWith { actualSpelling54 }
-
-
-    val actualSpelling55a = "V'Zos HaBracha"
-    val listOfPossibleSpellings55a = listOf("asasasasasasasefesfe")
-    val mapOfPossibleSpellingToCorrectSpelling55a: Map<String, String> = listOfPossibleSpellings55a.associateWith { actualSpelling55a }
-
-
-    val mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling = mapOf(
-            listOfPossibleSpellings1 to mapOfPossibleSpellingToCorrectSpelling1,
-            listOfPossibleSpellings2 to mapOfPossibleSpellingToCorrectSpelling2,
-            listOfPossibleSpellings4 to mapOfPossibleSpellingToCorrectSpelling4,
-            listOfPossibleSpellings6 to mapOfPossibleSpellingToCorrectSpelling6,
-            listOfPossibleSpellings7 to mapOfPossibleSpellingToCorrectSpelling7,
-            listOfPossibleSpellings8 to mapOfPossibleSpellingToCorrectSpelling8,
-            listOfPossibleSpellings9 to mapOfPossibleSpellingToCorrectSpelling9,
-            listOfPossibleSpellings10 to mapOfPossibleSpellingToCorrectSpelling10,
-            listOfPossibleSpellings11 to mapOfPossibleSpellingToCorrectSpelling11,
-            listOfPossibleSpellings12 to mapOfPossibleSpellingToCorrectSpelling12,
-            listOfPossibleSpellings13 to mapOfPossibleSpellingToCorrectSpelling13,
-            listOfPossibleSpellings14 to mapOfPossibleSpellingToCorrectSpelling14,
-            listOfPossibleSpellings15 to mapOfPossibleSpellingToCorrectSpelling15,
-            listOfPossibleSpellings16 to mapOfPossibleSpellingToCorrectSpelling16,
-            listOfPossibleSpellings17 to mapOfPossibleSpellingToCorrectSpelling17,
-            listOfPossibleSpellings18 to mapOfPossibleSpellingToCorrectSpelling18,
-            listOfPossibleSpellings19 to mapOfPossibleSpellingToCorrectSpelling19,
-            listOfPossibleSpellings20 to mapOfPossibleSpellingToCorrectSpelling20,
-            listOfPossibleSpellings22 to mapOfPossibleSpellingToCorrectSpelling22,
-            listOfPossibleSpellings23 to mapOfPossibleSpellingToCorrectSpelling23,
+const val actualSpeling1 = "Bereishis"
+val listOfPossibleSpelings1 = listOf(
+        "bereishis",
+
+        "bereshis", "bereshit",
+        "bereshith", "bereshees",
+        "beresheet", "beresheeth",
+
+        "biraishis", "bireishis",
+        "beraishis", "bereishis",
+
+        "biraishit", "bireishit",
+        "beraishit", "bereishit",
+
+        "biraishees", "bireishees",
+        "beraishees", "bereishees",
+        "biraisheet", "bireisheet",
+        "beraisheet", "bereisheet",
+        "buraishis", "bureishis",
+        "buraishit", "bureishit",
+
+        "buraishees", "bureishees",
+        "buraisheet", "bureisheet",
+
+
+        "boraishis", "boreishis",
+
+        "boraishit", "boreishit",
+
+        "boraishees", "boreishees",
+        "boraisheet", "boreisheet",
+
+
+        "baraishis", "bareishis",
+
+        "baraishit", "bareishit",
+
+        "baraishees", "bareishees",
+        "baraisheet", "bareisheet",
+
+        "biraishith",
+        "bireishith",
+        "beraishith",
+        "bereishith",
+        "biraisheeth",
+        "bireisheeth",
+        "beraisheeth",
+        "bereisheeth",
+        "buraishith",
+        "bureishith",
+        "buraishith",
+        "bureishith",
+        "buraisheeth",
+        "bureisheeth",
+        "buraisheeth",
+        "bureisheeth",
+        "boraishith",
+        "boreishith",
+        "boraishith",
+        "boreishith",
+        "boraisheeth",
+        "boreisheeth",
+        "boraisheeth",
+        "boreisheeth",
+        "baraishith",
+        "bareishith",
+        "baraishith",
+        "bareishith",
+        "baraisheeth",
+        "bareisheeth",
+        "baraisheeth",
+        "bareisheeth",
+
+
+        "b'raishis",
+        "b'reishis",
+        "b'raishit",
+        "b'reishit",
+        "b'raishees",
+        "b'reishees",
+        "b'raisheet",
+        "b'reisheet",
+        "b'raishith",
+        "b'reishith",
+        "b'raisheeth",
+        "b'reisheeth"
+)
+val mapOfPossibleSpelingToCorrectSpeling1: Map<String, String> = listOfPossibleSpelings1.associateWith { actualSpeling1 }
+
+
+const val actualSpeling2 = "Noach"
+val listOfPossibleSpelings2 = listOf(
+        "noach",
+        "no'ach", "now'ach",
+        "noach", "nowach",
+        "noah", "nowah",
+        "noakh", "nowakh", "now'ach",
+
+        "no'ach", "noh'ach",
+        "noach", "nohach",
+        "noah", "nohah",
+        "noakh", "nohakh"
+)
+val mapOfPossibleSpelingToCorrectSpeling2: Map<String, String> = listOfPossibleSpelings2.associateWith { actualSpeling2 }
+
+
+const val actualSpeling3a = "Lech Lecha"
+val listOfPossibleSpelings3a = listOf(
+        "lech lecha",
+        "leich licha",
+        "lech licha",
+        "laich licha",
+        "leich lecha",
+        "laich lecha",
+        "lekh lekha",
+        "lekh lekhah",
+
+        "leikh likha",
+        "lekh likha",
+        "laikh likha",
+        "leikh lekha",
+        "laikh lekha",
+
+        "leich lichah",
+        "lech lichah",
+        "laich lichah",
+        "leich lechah",
+        "laich lechah",
+
+        "leikh likhah",
+        "lekh likhah",
+        "laikh likhah",
+        "leikh lekhah",
+        "laikh lekhah",
+
+        "leich licho",
+        "lech licho",
+        "laich licho",
+        "leich lecho",
+        "laich lecho",
+
+        "leikh likho",
+        "lekh likho",
+        "laikh likho",
+        "leikh lekho",
+        "laikh lekho",
+
+
+        "leich lichoh",
+        "lech lichoh",
+        "laich lichoh",
+        "leich lechoh",
+        "laich lechoh",
+
+        "leikh likhoh",
+        "lekh likhoh",
+        "laikh likhoh",
+        "leikh lekhoh",
+        "laikh lekhoh",
+
+
+        "leich lucha",
+        "lech lucha",
+        "laich lucha",
+        "leich lucha",
+        "laich lucha",
+
+        "leikh lukha",
+        "lekh lukha",
+        "laikh lukha",
+        "leikh lukha",
+        "laikh lukha",
+
+        "leich luchah",
+        "lech luchah",
+        "laich luchah",
+        "leich luchah",
+        "laich luchah",
+
+        "leikh lukhah",
+        "lekh lukhah",
+        "laikh lukhah",
+        "leikh lukhah",
+        "laikh lukhah",
+
+        "leich lucho",
+        "lech lucho",
+        "laich lucho",
+        "leich lucho",
+        "laich lucho",
+
+        "leikh lukho",
+        "lekh lukho",
+        "laikh lukho",
+        "leikh lukho",
+        "laikh lukho",
+
+
+        "leich luchoh",
+        "lech luchoh",
+        "laich luchoh",
+        "leich luchoh",
+        "laich luchoh",
+
+        "leikh lukhoh",
+        "lekh lukhoh",
+        "laikh lukhoh",
+        "leikh lukhoh",
+        "laikh lukhoh",
+
+
+        "leich locha",
+        "lech locha",
+        "laich locha",
+        "leich locha",
+        "laich locha",
+
+        "leikh lokha",
+        "lekh lokha",
+        "laikh lokha",
+        "leikh lokha",
+        "laikh lokha",
+
+        "leich lochah",
+        "lech lochah",
+        "laich lochah",
+        "leich lochah",
+        "laich lochah",
+
+        "leikh lokhah",
+        "lekh lokhah",
+        "laikh lokhah",
+        "leikh lokhah",
+        "laikh lokhah",
+
+        "leich locho",
+        "lech locho",
+        "laich locho",
+        "leich locho",
+        "laich locho",
+
+        "leikh lokho",
+        "lekh lokho",
+        "laikh lokho",
+        "leikh lokho",
+        "laikh lokho",
+
+
+        "leich lochoh",
+        "lech lochoh",
+        "laich lochoh",
+        "leich lochoh",
+        "laich lochoh",
+
+        "leikh lokhoh",
+        "lekh lokhoh",
+        "laikh lokhoh",
+        "leikh lokhoh",
+        "laikh lokhoh",
+
+
+        "leih liha",
+        "leh liha",
+        "laih liha",
+        "leih leha",
+        "laih leha",
+
+        "leih liha",
+        "leh liha",
+        "laih liha",
+        "leih leha",
+        "laih leha",
+
+        "leih lihah",
+        "leh lihah",
+        "laih lihah",
+        "leih lehah",
+        "laih lehah",
+
+        "leih lihah",
+        "leh lihah",
+        "laih lihah",
+        "leih lehah",
+        "laih lehah",
+
+        "leih liho",
+        "leh liho",
+        "laih liho",
+        "leih leho",
+        "laih leho",
+
+        "leih liho",
+        "leh liho",
+        "laih liho",
+        "leih leho",
+        "laih leho",
+
+
+        "leih lihoh",
+        "leh lihoh",
+        "laih lihoh",
+        "leih lehoh",
+        "laih lehoh",
+
+        "leih lihoh",
+        "leh lihoh",
+        "laih lihoh",
+        "leih lehoh",
+        "laih lehoh",
+
+
+        "leih luha",
+        "leh luha",
+        "laih luha",
+        "leih luha",
+        "laih luha",
+
+        "leih luha",
+        "leh luha",
+        "laih luha",
+        "leih luha",
+        "laih luha",
+
+        "leih luhah",
+        "leh luhah",
+        "laih luhah",
+        "leih luhah",
+        "laih luhah",
+
+        "leih luhah",
+        "leh luhah",
+        "laih luhah",
+        "leih luhah",
+        "laih luhah",
+
+        "leih luho",
+        "leh luho",
+        "laih luho",
+        "leih luho",
+        "laih luho",
+
+        "leih luho",
+        "leh luho",
+        "laih luho",
+        "leih luho",
+        "laih luho",
+
+
+        "leih luhoh",
+        "leh luhoh",
+        "laih luhoh",
+        "leih luhoh",
+        "laih luhoh",
+
+        "leih luhoh",
+        "leh luhoh",
+        "laih luhoh",
+        "leih luhoh",
+        "laih luhoh",
+
+
+        "leih loha",
+        "leh loha",
+        "laih loha",
+        "leih loha",
+        "laih loha",
+
+        "leih loha",
+        "leh loha",
+        "laih loha",
+        "leih loha",
+        "laih loha",
+
+        "leih lohah",
+        "leh lohah",
+        "laih lohah",
+        "leih lohah",
+        "laih lohah",
+
+        "leih lohah",
+        "leh lohah",
+        "laih lohah",
+        "leih lohah",
+        "laih lohah",
+
+        "leih loho",
+        "leh loho",
+        "laih loho",
+        "leih loho",
+        "laih loho",
+
+        "leih loho",
+        "leh loho",
+        "laih loho",
+        "leih loho",
+        "laih loho",
+
+
+        "leih lohoh",
+        "leh lohoh",
+        "laih lohoh",
+        "leih lohoh",
+        "laih lohoh",
+
+        "leih lohoh",
+        "leh lohoh",
+        "laih lohoh",
+        "leih lohoh",
+        "laih lohoh",
+
+
+        "leich l'cha",
+        "lech l'cha",
+        "laich l'cha",
+        "leikh l'kha",
+        "lekh l'kha",
+        "laikh l'kha",
+        "leich l'chah",
+        "lech l'chah",
+        "laich l'chah",
+        "leikh l'khah",
+        "lekh l'khah",
+        "laikh l'khah",
+        "leich l'cho",
+        "lech l'cho",
+        "laich l'cho",
+        "leikh l'kho",
+        "lekh l'kho",
+        "laikh l'kho",
+        "leich l'choh",
+        "lech l'choh",
+        "laich l'choh",
+        "leikh l'khoh",
+        "lekh l'khoh",
+        "laikh l'khoh",
+        "leih l'ha",
+        "leh l'ha",
+        "laih l'ha",
+        "leih l'ha",
+        "leh l'ha",
+        "laih l'ha",
+        "leih l'hah",
+        "leh l'hah",
+        "laih l'hah",
+        "leih l'hah",
+        "leh l'hah",
+        "laih l'hah",
+        "leih l'ho",
+        "leh l'ho",
+        "laih l'ho",
+        "leih l'ho",
+        "leh l'ho",
+        "laih l'ho",
+        "leih l'hoh",
+        "leh l'hoh",
+        "laih l'hoh",
+        "leih l'hoh",
+        "leh l'hoh",
+        "laih l'hoh"
+)
+val mapOfPossibleSpelingToCorrectSpeling3a: Map<String, String> = listOfPossibleSpelings3a.associateWith { actualSpeling3a }
+
+
+const val actualSpeling4 = "Vayeira"
+val listOfPossibleSpelings4 = listOf(
+        "vayeira",
+        "vayeirah",
+        "vayera",
+        "vayaira",
+        "vayerah",
+        "vayairah",
+        "vayeiruh",
+        "vayeru",
+        "vayairu",
+        "vayeruh",
+        "vayairuh",
+
+
+        "vahyeirah",
+        "vahyera",
+        "vahyaira",
+        "vahyerah",
+        "vahyairah",
+        "vahyeiruh",
+        "vahyeru",
+        "vahyairu",
+        "vahyeruh",
+        "vahyairuh",
+
+
+        "vuyeirah",
+        "vuyera",
+        "vuyaira",
+        "vuyerah",
+        "vuyairah",
+        "vuyeiruh",
+        "vuyeru",
+        "vuyairu",
+        "vuyeruh",
+        "vuyairuh",
+
+
+        "vuhyeirah",
+        "vuhyera",
+        "vuhyaira",
+        "vuhyerah",
+        "vuhyairah",
+        "vuhyeiruh",
+        "vuhyeru",
+        "vuhyairu",
+        "vuhyeruh",
+        "vuhyairuh"
+)
+val mapOfPossibleSpelingToCorrectSpeling4: Map<String, String> = listOfPossibleSpelings4.associateWith { actualSpeling4 }
+
+
+const val actualSpeling5a = "Chayei Sara"
+val listOfPossibleSpelings5a = listOf(
+        "chayei sara",
+        "chayai sara",
+        "chayei sarah",
+        "chayai sarah",
+        "chayei soro",
+        "chayei soroh",
+        "chayai soro",
+        "chayai soroh",
+
+        "chayai sura",
+        "chayei surah",
+        "chayai surah",
+        "chayei suro",
+        "chayei suroh",
+        "chayai suro",
+        "chayai suroh",
+
+
+        "chayai saru",
+        "chayei saruh",
+        "chayai saruh",
+        "chayei soru",
+        "chayei soruh",
+        "chayai soru",
+        "chayai soruh",
+        "chayyei sarah",
+
+        "hayai suru",
+        "hayei suruh",
+        "hayai suruh",
+        "hayei suru",
+        "hayei suruh",
+        "hayai suru",
+        "hayai suruh",
+
+
+        "hayai sara",
+        "hayei sarah",
+        "hayai sarah",
+        "hayei soro",
+        "hayei soroh",
+        "hayai soro",
+        "hayai soroh",
+
+        "hayai sura",
+        "hayei surah",
+        "hayai surah",
+        "hayei suro",
+        "hayei suroh",
+        "hayai suro",
+        "hayai suroh",
+
+
+        "hayai saru",
+        "hayei saruh",
+        "hayai saruh",
+        "hayei soru",
+        "hayei soruh",
+        "hayai soru",
+        "hayai soruh",
+
+        "hayai suru",
+        "hayei suruh",
+        "hayai suruh",
+        "hayei suru",
+        "hayei suruh",
+        "hayai suru",
+        "hayai suruh",
+        "hayyei sarah"
+
+)
+val mapOfPossibleSpelingToCorrectSpeling5a: Map<String, String> = listOfPossibleSpelings5a.associateWith { actualSpeling5a }
+
+
+const val actualSpeling6 = "Toldos"
+val listOfPossibleSpelings6 = listOf(
+        "toldos",
+        "tolidos",
+        "tolidot",
+        "toledos",
+        "toledot",
+        "toledoth",
+        "toldos",
+        "toldot",
+        "tolidoth",
+        "toldoth",
+
+
+        "tol'dos",
+        "tol'dot",
+        "tol'doth"
+)
+val mapOfPossibleSpelingToCorrectSpeling6: Map<String, String> = listOfPossibleSpelings6.associateWith { actualSpeling6 }
+
+
+const val actualSpeling7 = "Vayeitzei"
+val listOfPossibleSpelings7 = listOf(
+        "vayeitzei",
+        "vayetzei",
+        "vayetzai",
+        "vayeitzai",
+
+        "vayetsei",
+        "vayetsai",
+        "vayeisai",
+        "vayeisei",
+        "vayeissai",
+        "vayeissei",
+
+
+        "vayezei",
+        "vayezai",
+        "vayeizai",
+        "vayeizei",
+
+
+        "vayetze",
+        "vayetse",
+        "vayeise",
+        "vayeisse",
+
+
+        "vayeze",
+        "vayeize"
+)
+val mapOfPossibleSpelingToCorrectSpeling7: Map<String, String> = listOfPossibleSpelings7.associateWith { actualSpeling7 }
+
+
+const val actualSpeling8 = "Vayishlach"
+val listOfPossibleSpelings8 = listOf(
+        "vayishlach",
+        "vayishlah",
+        "vayeeshlach",
+        "vayeeshlah",
+
+        "vayishlakh",
+        "vayeeshlakh",
+
+
+        "vayishlah",
+        "vayeeshlahch",
+        "vayeeshlah",
+
+        "vayishlahkh",
+        "vayeeshlahkh"
+)
+val mapOfPossibleSpelingToCorrectSpeling8: Map<String, String> = listOfPossibleSpelings8.associateWith { actualSpeling8 }
+
+
+const val actualSpeling9 = "Vayeshev"
+val listOfPossibleSpelings9 = listOf(
+        "vayeshev",
+        "vayeishev",
+        "vayaishev"
+)
+val mapOfPossibleSpelingToCorrectSpeling9: Map<String, String> = listOfPossibleSpelings9.associateWith { actualSpeling9 }
+
+
+const val actualSpeling10 = "Mikeitz"
+val listOfPossibleSpelings10 = listOf(
+        "mikeitz",
+        "meekaitz",
+        "meekais",
+        "meekaiz",
+        "meekeitz",
+        "meekeis",
+        "meekeiz",
+        "mikais",
+        "mikaiz",
+        "mikeis",
+        "mikeiz",
+        "meekaiss",
+        "meekeiss",
+        "mikaiss",
+        "mikeiss",
+
+
+        "miqeitz",
+        "meeqaitz",
+        "meeqais",
+        "meeqaiz",
+        "meeqeitz",
+        "meeqeis",
+        "meeqeiz",
+        "miqais",
+        "miqaiz",
+        "miqeis",
+        "miqeiz",
+        "meeqaiss",
+        "meeqeiss",
+        "miqaiss",
+        "miqeiss",
+
+
+        "meekkaitz",
+        "meekkais",
+        "meekkaiz",
+        "meekkeitz",
+        "meekkeis",
+        "meekkeiz",
+        "mikkais",
+        "mikkaiz",
+        "mikkeis",
+        "mikkeiz",
+        "meekkaiss",
+        "meekkeiss",
+        "mikkaiss",
+        "mikkeiss"
+)
+val mapOfPossibleSpelingToCorrectSpeling10: Map<String, String> = listOfPossibleSpelings10.associateWith { actualSpeling10 }
+
+
+const val actualSpeling11 = "Vayigash"
+val listOfPossibleSpelings11 = listOf(
+        "vayigash",
+        "vayeegash",
+        "vayeegahsh",
+        "vayigahsh"
+)
+val mapOfPossibleSpelingToCorrectSpeling11: Map<String, String> = listOfPossibleSpelings11.associateWith { actualSpeling11 }
+
+
+const val actualSpeling12 = "Vayechi"
+val listOfPossibleSpelings12 = listOf(
+        "vayechi",
+        "vayechee",
+        "vayichi",
+        "vayichee",
+        "vay'chi",
+        "vay'chee",
+        "vayehee",
+        "vayihi",
+        "vayihee",
+        "vay'hi",
+        "vay'hee",
+        "vayehi"
+)
+val mapOfPossibleSpelingToCorrectSpeling12: Map<String, String> = listOfPossibleSpelings12.associateWith { actualSpeling12 }
+
+
+const val actualSpeling13 = "Shemos"
+val listOfPossibleSpelings13 = listOf(
+        "shemos",
+        "shimos",
+        "shimoth",
+        "shemot",
+        "shemoth",
+        "sh'mot",
+        "sh'mos",
+        "sh'moth"
+)
+val mapOfPossibleSpelingToCorrectSpeling13: Map<String, String> = listOfPossibleSpelings13.associateWith { actualSpeling13 }
+
+
+const val actualSpeling14 = "Va'eira"
+val listOfPossibleSpelings14 = listOf(
+        "va'eira",
+        "vaeira",
+        "vaaira",
+        "v'aira",
+        "v'eira",
+        "vaeirah",
+        "vaairah",
+        "v'airah",
+        "v'eirah",
+        "va'era",
+        "va'erah",
+
+        "vaeiru",
+        "vaairu",
+        "v'airu",
+        "v'eiru",
+        "vaeiruh",
+        "vaairuh",
+        "v'airuh",
+        "v'eiruh",
+
+        "vaeiro",
+        "vaairo",
+        "v'airo",
+        "v'eiro",
+        "vaeiroh",
+        "vaairoh",
+        "v'airoh",
+        "v'eiroh",
+
+        "waeira",
+        "waaira",
+        "w'aira",
+        "w'eira",
+        "waeirah",
+        "waairah",
+        "w'airah",
+        "w'eirah",
+
+
+        "waeiru",
+        "waairu",
+        "w'airu",
+        "w'eiru",
+        "waeiruh",
+        "waairuh",
+        "w'airuh",
+        "w'eiruh",
+
+        "waeiro",
+        "waairo",
+        "w'airo",
+        "w'eiro",
+        "waeiroh",
+        "waairoh",
+        "w'airoh",
+        "w'eiroh"
+
+)
+val mapOfPossibleSpelingToCorrectSpeling14: Map<String, String> = listOfPossibleSpelings14.associateWith { actualSpeling14 }
+
+
+const val actualSpeling15 = "Bo"
+val listOfPossibleSpelings15 = listOf(
+        "bo",
+        "boh",
+        "bow"
+)
+val mapOfPossibleSpelingToCorrectSpeling15: Map<String, String> = listOfPossibleSpelings15.associateWith { actualSpeling15 }
+
+
+const val actualSpeling16 = "Beshalach"
+val listOfPossibleSpelings16 = listOf(
+        "beshalach",
+        "bishalach",
+        "b'shalach",
+        "beshalah",
+        "bishalah",
+        "b'shalah",
+        "bishahlahch",
+        "b'shahlahch",
+        "beshahlah",
+        "bishahlah",
+        "b'ishahlah",
+        "beshalach",
+        "bishalach",
+        "bishalach",
+
+
+        "beshalah",
+        "bishalah",
+        "bishalah",
+
+
+        "beshahlah",
+        "bishahlah",
+        "bishahlah"
+
+)
+val mapOfPossibleSpelingToCorrectSpeling16: Map<String, String> = listOfPossibleSpelings16.associateWith { actualSpeling16 }
+
+
+const val actualSpeling17 = "Yisro"
+val listOfPossibleSpelings17 = listOf(
+        "yisro",
+        "yithro",
+        "yeesro",
+        "yeethro",
+        "yisroh",
+        "yithroh",
+        "yeethroh",
+        "yeesroh",
+        "yitro",
+        "yitroh",
+        "yeetro",
+        "yeetroh",
+
+
+        "yithrow",
+        "yeesrow",
+        "yeethrow",
+        "yisrow",
+        "yithrow",
+        "yeethrow",
+        "yeesrow",
+        "yitrow",
+        "yitrow",
+        "yeetrow",
+        "yeetrow"
+)
+val mapOfPossibleSpelingToCorrectSpeling17: Map<String, String> = listOfPossibleSpelings17.associateWith { actualSpeling17 }
+
+
+const val actualSpeling18 = "Mishpatim"
+val listOfPossibleSpelings18 = listOf(
+        "mishpatim",
+        "meeshpattim",
+        "meeshpatim",
+        "meeshputeem",
+        "meeshpatteem",
+        "meeshpateem",
+        "mishputtim",
+        "mishputim",
+        "mishpateem",
+        "mishpatteem",
+        "mishputteem",
+        "mishputeem",
+
+
+        "m'shputtim",
+        "m'shputim",
+        "m'shpateem",
+        "m'shpatteem",
+        "m'shputteem",
+        "m'shputeem"
+)
+val mapOfPossibleSpelingToCorrectSpeling18: Map<String, String> = listOfPossibleSpelings18.associateWith { actualSpeling18 }
+
+
+const val actualSpeling19 = "Terumah"
+val listOfPossibleSpelings19 = listOf(
+        "terumah",
+        "tirumah",
+        "tiruma",
+        "teruma",
+        "tirooma",
+        "tiroomah",
+
+        "tirumuh",
+        "tirumu",
+        "terumu",
+        "tiroomu",
+        "tiroomuh",
+        "terooma",
+        "teroomah",
+        "teroomuh",
+        "teroomu",
+        "truma",
+        "trooma",
+        "trumah",
+        "troomah",
+        "troomu",
+        "troomuh",
+        "trumuh",
+        "t'ruma",
+        "t'rumuh",
+        "t'rumah",
+        "t'rumu",
+        "t'roomu",
+        "t'rooma",
+        "t'roomuh",
+        "t'roomah"
+)
+val mapOfPossibleSpelingToCorrectSpeling19: Map<String, String> = listOfPossibleSpelings19.associateWith { actualSpeling19 }
+
+
+const val actualSpeling20 = "Tetzaveh"
+val listOfPossibleSpelings20 = listOf(
+        "tetzaveh",
+        "titzaveh",
+        "tisaveh",
+        "tizaveh",
+        "tissaveh",
+        "t'tzaveh",
+        "t'saveh",
+        "t'zaveh",
+        "t'ssaveh",
+
+        "titzave",
+        "tisave",
+        "tizave",
+        "tissave",
+        "t'tzave",
+        "t'save",
+        "t'zave",
+        "t'ssave",
+
+        "titzaweh",
+        "tisaweh",
+        "tizaweh",
+        "tissaweh",
+        "t'tzaweh",
+        "t'saweh",
+        "t'zaweh",
+        "t'ssaweh",
+
+        "titzawe",
+        "tisawe",
+        "tizawe",
+        "tissawe",
+        "t'tzawe",
+        "t'sawe",
+        "t'zawe",
+        "t'ssawe"
+)
+val mapOfPossibleSpelingToCorrectSpeling20: Map<String, String> = listOfPossibleSpelings20.associateWith { actualSpeling20 }
+
+
+const val actualSpeling21a = "Ki Sisa"
+val listOfPossibleSpelings21a = listOf(
+        "ki sisa",
+        "kee seesa",
+        "kee seesah",
+        "ki seesa",
+        "ki seesah",
+        "ki sisah",
+        "key sisa",
+        "key seesa",
+        "key seesah",
+
+        "kee teesa",
+        "kee teesah",
+        "ki teesa",
+        "ki teesah",
+        "ki tisah",
+        "key tisa",
+        "key teesa",
+        "key teesah",
+
+        "kee theesa",
+        "kee theesah",
+        "ki theesa",
+        "ki theesah",
+        "ki thisah",
+        "key thisa",
+        "key theesa",
+        "key theesah",
+
+
+        "kee seessa",
+        "kee seessah",
+        "ki seessa",
+        "ki seessah",
+        "ki sissah",
+        "key sissa",
+        "key seessa",
+        "key seessah",
+
+        "kee teessa",
+        "kee teessah",
+        "ki teessa",
+        "ki teessah",
+        "ki tissah",
+        "key tissa",
+        "key teessa",
+        "key teessah",
+
+        "kee theessa",
+        "kee theessah",
+        "ki theessa",
+        "ki theessah",
+        "ki thissah",
+        "key thissa",
+        "key theessa",
+        "key theessah",
+
+
+        "kee seesu",
+        "kee seesuh",
+        "ki seesu",
+        "ki seesuh",
+        "ki sisuh",
+        "key sisu",
+        "key seesu",
+        "key seesuh",
+
+        "kee teesu",
+        "kee teesuh",
+        "ki teesu",
+        "ki teesuh",
+        "ki tisuh",
+        "key tisu",
+        "key teesu",
+        "key teesuh",
+
+        "kee theesu",
+        "kee theesuh",
+        "ki theesu",
+        "ki theesuh",
+        "ki thisuh",
+        "key thisu",
+        "key theesu",
+        "key theesuh",
+
+
+        "kee seessu",
+        "kee seessuh",
+        "ki seessu",
+        "ki seessuh",
+        "ki sissuh",
+        "key sissu",
+        "key seessu",
+        "key seessuh",
+
+        "kee teessu",
+        "kee teessuh",
+        "ki teessu",
+        "ki teessuh",
+        "ki tissuh",
+        "key tissu",
+        "key teessu",
+        "key teessuh",
+
+        "kee theessu",
+        "kee theessuh",
+        "ki theessu",
+        "ki theessuh",
+        "ki thissuh",
+        "key thissu",
+        "key theessu",
+        "key theessuh"
+)
+val mapOfPossibleSpelingToCorrectSpeling21a: Map<String, String> = listOfPossibleSpelings21a.associateWith { actualSpeling21a }
+
+
+const val actualSpeling22 = "Vayakhail"
+val listOfPossibleSpelings22 = listOf(
+        "vayakhail",
+        "vayakail",
+        "vayakeil",
+        "vayakheil",
+        "vayakhel",
+        "vayakel",
+
+        "wayakail",
+        "wayakeil",
+        "wayakheil",
+        "wayakhel",
+        "wayakel"
+)
+val mapOfPossibleSpelingToCorrectSpeling22: Map<String, String> = listOfPossibleSpelings22.associateWith { actualSpeling22 }
+
+
+const val actualSpeling23 = "Pekudei"
+val listOfPossibleSpelings23 = listOf(
+        "pekudei",
+        "pekudai",
+        "pikudai",
+        "pikudei",
+        "p'kudei",
+        "p'kudai",
+
+        "pekoodai",
+        "pikoodai",
+        "pikoodei",
+        "p'koodei",
+        "p'koodai",
+
+        "pekuday",
+        "pikuday",
+        "p'kuday",
+        "pekooday",
+        "pikooday",
+        "p'kooday"
+)
+val mapOfPossibleSpelingToCorrectSpeling23: Map<String, String> = listOfPossibleSpelings23.associateWith { actualSpeling23 }
+
+
+const val actualSpeling25 = "Vayikra"
+val listOfPossibleSpelings25 = listOf(
+        "vayikra",
+        "vayikrah",
+        "vayeekrah",
+        "vayeekra",
+        "vayikruh",
+        "vayeekruh",
+        "vayeekru",
+        "vayikru",
+
+        "wayikrah",
+        "wayeekrah",
+        "wayeekra",
+        "wayikruh",
+        "wayeekruh",
+        "wayeekru",
+        "wayikru"
+)
+val mapOfPossibleSpelingToCorrectSpeling25: Map<String, String> = listOfPossibleSpelings25.associateWith { actualSpeling25 }
+
+
+const val actualSpeling26 = "Tzav"
+val listOfPossibleSpelings26 = listOf(
+        "tzav",
+        "sav",
+        "zav",
+        "saw",
+        "zaw",
+        "tsav",
+        "tsaw"
+)
+val mapOfPossibleSpelingToCorrectSpeling26: Map<String, String> = listOfPossibleSpelings26.associateWith { actualSpeling26 }
+
+
+const val actualSpeling27 = "Shemini"
+val listOfPossibleSpelings27 = listOf(
+        "shemini",
+        "shmini",
+        "shminee",
+        "shmeeni",
+        "sh'mini",
+        "sh'minee",
+        "shmeenee",
+        "shemeenee",
+        "sheminee",
+        "shemeeni"
+)
+val mapOfPossibleSpelingToCorrectSpeling27: Map<String, String> = listOfPossibleSpelings27.associateWith { actualSpeling27 }
+
+
+const val actualSpeling28 = "Tazria"
+val listOfPossibleSpelings28 = listOf(
+        "tazria",
+        "tasria",
+        "tassria"
+)
+val mapOfPossibleSpelingToCorrectSpeling28: Map<String, String> = listOfPossibleSpelings28.associateWith { actualSpeling28 }
+
+
+const val actualSpeling29 = "Metzora"
+val listOfPossibleSpelings29 = listOf(
+        "metzora",
+        "metzorah",
+        "mitzora",
+        "mitzorah",
+        "m'tzora",
+        "m'tzorah",
+
+        "metzoruh",
+        "mitzoru",
+        "mitzoruh",
+        "m'tzoru",
+        "m'tzoruh",
+
+
+        "mezorah",
+        "mizora",
+        "mizorah",
+        "m'zora",
+        "m'zorah",
+
+        "mezoruh",
+        "mizoru",
+        "mizoruh",
+        "m'zoru",
+        "m'zoruh"
+
+)
+val mapOfPossibleSpelingToCorrectSpeling29: Map<String, String> = listOfPossibleSpelings29.associateWith { actualSpeling29 }
+
+
+const val actualSpeling30a = "Acharei Mos"
+val listOfPossibleSpelings30a = listOf(
+        "acharei mos",
+        "achrei mos",
+        "achrei mose",
+        "acharei mose",
+        "achrai mos",
+        "acharai mos",
+        "acharai mose",
+        "achrai mose",
+
+
+        "achrei mot",
+        "achrei mote",
+        "acharei mote",
+        "achrai mot",
+        "acharai mot",
+        "acharai mote",
+        "achrai mote",
+
+
+        "achrei moth",
+        "acharei moth",
+        "achrai moth",
+        "acharai moth",
+
+
+        "ach'rei mos",
+        "ach'rei mose",
+        "ach'rai mos",
+        "ach'rai mose",
+        "ach'rei mot",
+        "ach'rei mote",
+        "ach'rai mot",
+        "ach'rai mote",
+        "ach'rei moth",
+        "ach'rai moth"
+)
+val mapOfPossibleSpelingToCorrectSpeling30a: Map<String, String> = listOfPossibleSpelings30a.associateWith { actualSpeling30a }
+
+
+const val actualSpeling31 = "Kedoshim"
+val listOfPossibleSpelings31 = listOf(
+        "kedoshim",
+        "kedosheem",
+        "kidoshim",
+        "kidosheem",
+        "kadoshim",
+        "kadosheem",
+        "k'doshim",
+        "k'dosheem"
+)
+val mapOfPossibleSpelingToCorrectSpeling31: Map<String, String> = listOfPossibleSpelings31.associateWith { actualSpeling31 }
+
+
+const val actualSpeling32 = "Emor"
+val listOfPossibleSpelings32 = listOf(
+        "emor",
+        "emore",
+        "ehmohre",
+        "ehmore"
+)
+val mapOfPossibleSpelingToCorrectSpeling32: Map<String, String> = listOfPossibleSpelings32.associateWith { actualSpeling32 }
+
+
+const val actualSpeling33 = "Behar"
+val listOfPossibleSpelings33 = listOf(
+        "behar",
+        "bihar")
+val mapOfPossibleSpelingToCorrectSpeling33: Map<String, String> = listOfPossibleSpelings33.associateWith { actualSpeling33 }
+
+
+const val actualSpeling34 = "Bechukosai"
+val listOfPossibleSpelings34 = listOf(
+        "bechukosai",
+        "bechukosei",
+        "bichukosai",
+        "bichukosei",
+        "behukosei",
+        "bihukosai",
+        "bihukosei",
+        "bechukkosei",
+        "bichukkosai",
+        "bichukkosei",
+        "behukkosei",
+        "bihukkosai",
+        "bihukkosei",
+
+
+        "b'chukosai",
+        "b'chukosei",
+        "b'hukosai",
+        "b'hukosei",
+        "b'chukkosai",
+        "b'chukkosei",
+        "b'hukkosai",
+        "b'hukkosei"
+)
+val mapOfPossibleSpelingToCorrectSpeling34: Map<String, String> = listOfPossibleSpelings34.associateWith { actualSpeling34 }
+
+
+const val actualSpeling35 = "Bamidbar"
+val listOfPossibleSpelings35 = listOf(
+        "bamidbar",
+        "bameedbar",
+        "bamidbur",
+        "bamidbuhr",
+        "bameedbur",
+        "bameedbuhr")
+val mapOfPossibleSpelingToCorrectSpeling35: Map<String, String> = listOfPossibleSpelings35.associateWith { actualSpeling35 }
+
+
+const val actualSpeling36 = "Naso"
+val listOfPossibleSpelings36 = listOf(
+        "naso",
+        "nasso",
+        "nusso",
+        "nuso",
+        "nuhsso",
+        "nassoh",
+        "nussoh",
+        "nusoh",
+        "nuhssoh",
+
+        "nassow",
+        "nussow",
+        "nusow",
+        "nuhssow"
+)
+val mapOfPossibleSpelingToCorrectSpeling36: Map<String, String> = listOfPossibleSpelings36.associateWith { actualSpeling36 }
+
+
+const val actualSpeling37 = "Beha'aloscha"
+val listOfPossibleSpelings37 = listOf(
+        "beha'aloscha",
+        "bihaaloscha", "behaaloscha",
+        "biha'aloscha", "beha'aloscha",
+        "bihaalos'cha", "behaalos'cha",
+        "biha'alos'cha", "beha'alos'cha",
+        "bihaloscha", "behaloscha",
+        "biha'loscha", "beha'loscha",
+        "bihalos'cha", "behalos'cha",
+        "biha'los'cha", "beha'los'cha",
+        "bihaaloschah", "behaaloschah",
+        "biha'aloschah", "beha'aloschah",
+        "bihaalos'chah", "behaalos'chah",
+        "biha'alos'chah", "beha'alos'chah",
+        "bihaloschah", "behaloschah",
+        "biha'loschah", "beha'loschah",
+        "bihalos'chah", "behalos'chah",
+        "biha'los'chah", "beha'los'chah",
+        "bihaalowscha", "behaalowscha",
+        "biha'alowscha", "beha'alowscha",
+        "bihaalows'cha", "behaalows'cha",
+        "biha'alows'cha", "beha'alows'cha",
+        "bihalowscha", "behalowscha",
+        "biha'lowscha", "beha'lowscha",
+        "bihalows'cha", "behalows'cha",
+        "biha'lows'cha", "beha'lows'cha",
+        "bihaalowschah", "behaalowschah",
+        "biha'alowschah", "beha'alowschah",
+        "bihaalows'chah", "behaalows'chah",
+        "biha'alows'chah", "beha'alows'chah",
+        "bihalowschah", "behalowschah",
+        "biha'lowschah", "beha'lowschah",
+        "bihalows'chah", "behalows'chah",
+        "biha'lows'chah", "beha'lows'chah",
+        "bihaalohscha", "behaalohscha",
+        "biha'alohscha", "beha'alohscha",
+        "bihaalohs'cha", "behaalohs'cha",
+        "biha'alohs'cha", "beha'alohs'cha",
+        "bihalohscha", "behalohscha",
+        "biha'lohscha", "beha'lohscha",
+        "bihalohs'cha", "behalohs'cha",
+        "biha'lohs'cha", "beha'lohs'cha",
+        "bihaalohschah", "behaalohschah",
+        "biha'alohschah", "beha'alohschah",
+        "bihaalohs'chah", "behaalohs'chah",
+        "biha'alohs'chah", "beha'alohs'chah",
+        "bihalohschah", "behalohschah",
+        "biha'lohschah", "beha'lohschah",
+        "bihalohs'chah", "behalohs'chah",
+        "biha'lohs'chah", "beha'lohs'chah",
+        "bihaalosicha", "biha'alosicha",
+        "behaalosicha", "beha'alosicha",
+        "bihalosicha", "behalosicha",
+        "biha'losicha", "beha'losicha",
+        "bihaalosichah", "biha'alosichah",
+        "behaalosichah", "beha'alosichah",
+        "bihalosichah", "behalosichah",
+        "biha'losichah", "beha'losichah",
+        "bihaalowsicha", "behaalowsicha",
+        "biha'alowsicha", "beha'alowsicha",
+        "bihalowsicha", "behalowsicha",
+        "biha'lowsicha", "beha'lowsicha",
+        "bihaalowsichah", "behaalowsichah",
+        "biha'alowsichah", "beha'alowsichah",
+
+        "bihalowsichah", "behalowsichah", "biha'lowsichah", "beha'lowsichah",
+        "bihaalohsicha", "behaalohsicha", "biha'alohsicha", "beha'alohsicha",
+        "bihalohsicha", "behalohsicha", "biha'lohsicha", "beha'lohsicha", "bihaalohsichah", "biha'alohsichah", "behaalohsichah", "beha'alohsichah",
+        "bihalohsichah", "behalohsichah", "biha'lohsichah", "beha'lohsichah",
+        "bihaalotcha", "behaalotcha", "biha'alotcha", "beha'alotcha", "bihaalot'cha", "behaalot'cha", "biha'alot'cha", "beha'alot'cha",
+        "bihalotcha", "behalotcha", "biha'lotcha", "beha'lotcha", "bihalot'cha", "behalot'cha", "biha'lot'cha", "beha'lot'cha",
+        "bihaalotchah", "behaalotchah", "biha'alotchah", "beha'alotchah", "bihaalot'chah", "behaalot'chah", "biha'alot'chah", "beha'alot'chah",
+        "bihalotchah", "behalotchah", "biha'lotchah", "beha'lotchah", "bihalot'chah", "behalot'chah", "biha'lot'chah", "beha'lot'chah",
+        "bihaalowtcha", "behaalowtcha", "biha'alowtcha", "beha'alowtcha", "bihaalowt'cha", "behaalowt'cha", "biha'alowt'cha", "beha'alowt'cha",
+        "bihalowtcha", "behalowtcha", "biha'lowtcha", "beha'lowtcha", "bihalowt'cha", "behalowt'cha", "biha'lowt'cha", "beha'lowt'cha",
+        "bihaalowtchah", "behaalowtchah", "biha'alowtchah", "beha'alowtchah", "bihaalowt'chah", "behaalowt'chah", "biha'alowt'chah", "beha'alowt'chah",
+        "bihalowtchah", "behalowtchah", "biha'lowtchah", "beha'lowtchah", "bihalowt'chah", "behalowt'chah", "biha'lowt'chah", "beha'lowt'chah",
+        "bihaalohtcha", "behaalohtcha", "biha'alohtcha", "beha'alohtcha", "bihaaloht'cha", "behaaloht'cha", "biha'aloht'cha", "beha'aloht'cha",
+        "bihalohtcha", "behalohtcha", "biha'lohtcha", "beha'lohtcha", "bihaloht'cha", "behaloht'cha", "biha'loht'cha", "beha'loht'cha",
+        "bihaalohtchah", "behaalohtchah", "biha'alohtchah", "beha'alohtchah", "bihaaloht'chah", "behaaloht'chah", "biha'aloht'chah", "beha'aloht'chah",
+        "bihalohtchah", "behalohtchah", "biha'lohtchah", "beha'lohtchah", "bihaloht'chah", "behaloht'chah", "biha'loht'chah", "beha'loht'chah",
+        "bihaaloticha", "behaaloticha", "biha'aloticha", "beha'aloticha",
+        "bihaloticha", "behaloticha", "biha'loticha", "beha'loticha",
+        "bihaalotichah", "behaalotichah", "biha'alotichah", "beha'alotichah",
+        "bihalotichah", "behalotichah", "biha'lotichah", "beha'lotichah",
+        "bihaalowticha", "behaalowticha", "biha'alowticha", "beha'alowticha",
+        "bihalowticha", "behalowticha", "biha'lowticha", "beha'lowticha",
+        "bihaalowtichah", "behaalowtichah", "biha'alowtichah", "beha'alowtichah",
+        "bihalowtichah", "behalowtichah", "biha'lowtichah", "beha'lowtichah", "bihaalohticha", "biha'alohticha", "behaalohticha", "beha'alohticha",
+        "bihalohticha", "behalohticha", "biha'lohticha", "beha'lohticha", "bihaalohtichah", "biha'alohtichah", "behaalohtichah", "beha'alohtichah",
+        "bihalohtichah", "behalohtichah", "biha'lohtichah", "beha'lohtichah"
+)
+val mapOfPossibleSpelingToCorrectSpeling37: Map<String, String> = listOfPossibleSpelings37.associateWith { actualSpeling37 }
+
+
+const val actualSpeling38 = "Shelach"
+val listOfPossibleSpelings38 = listOf(
+        "shelach",
+        "sh'lach",
+        "shilach"
+)
+val mapOfPossibleSpelingToCorrectSpeling38: Map<String, String> = listOfPossibleSpelings38.associateWith { actualSpeling38 }
+
+
+const val actualSpeling39 = "Korach"
+val listOfPossibleSpelings39 = listOf(
+        "korach",
+        "korah"
+)
+val mapOfPossibleSpelingToCorrectSpeling39: Map<String, String> = listOfPossibleSpelings39.associateWith { actualSpeling39 }
+
+
+const val actualSpeling40 = "Chukas"
+val listOfPossibleSpelings40 = listOf(
+        "chukas",
+        "hukas",
+        "hookas",
+        "chookas"
+)
+val mapOfPossibleSpelingToCorrectSpeling40: Map<String, String> = listOfPossibleSpelings40.associateWith { actualSpeling40 }
+
+
+const val actualSpeling41 = "Balak"
+val listOfPossibleSpelings41 = listOf(
+        "balak",
+        "buluk"
+)
+val mapOfPossibleSpelingToCorrectSpeling41: Map<String, String> = listOfPossibleSpelings41.associateWith { actualSpeling41 }
+
+
+const val actualSpeling42 = "Pinchas"
+val listOfPossibleSpelings42 = listOf(
+        "pinchas",
+        "pinchos",
+        "peenchos",
+        "peenchas",
+        "peen'chos",
+        "pin'chos",
+        "pin'chas"
+)
+val mapOfPossibleSpelingToCorrectSpeling42: Map<String, String> = listOfPossibleSpelings42.associateWith { actualSpeling42 }
+
+
+const val actualSpeling43 = "Mattos"
+val listOfPossibleSpelings43 = listOf(
+        "mattos",
+        "matose",
+        "matote",
+        "matot",
+        "mattose",
+        "mattote",
+        "mattot",
+
+        "matoth",
+        "matothe",
+        "mattoth",
+        "mattothe"
+)
+val mapOfPossibleSpelingToCorrectSpeling43: Map<String, String> = listOfPossibleSpelings43.associateWith { actualSpeling43 }
+
+
+const val actualSpeling44 = "Massai"
+val listOfPossibleSpelings44 = listOf(
+        "massai",
+        "massei",
+        "masei",
+        "mass'ai",
+        "mass'ei",
+        "mas'ei",
+        "mas'ai"
+)
+val mapOfPossibleSpelingToCorrectSpeling44: Map<String, String> = listOfPossibleSpelings44.associateWith { actualSpeling44 }
+
+
+const val actualSpeling45 = "Devarim"
+val listOfPossibleSpelings45 = listOf(
+        "devarim",
+        "divarim",
+        "devareem",
+        "divareem",
+        "d'varim",
+        "d'vareem",
+
+        "divurim",
+        "devureem",
+        "divureem",
+        "d'vurim",
+        "d'vureem",
+        "devurim"
+)
+val mapOfPossibleSpelingToCorrectSpeling45: Map<String, String> = listOfPossibleSpelings45.associateWith { actualSpeling45 }
+
+
+const val actualSpeling46 = "Va'eschanan"
+val listOfPossibleSpelings46 = listOf(
+        "va'eschanan",
+        "va'etchanan",
+        "vaetchanan",
+        "vaeschanan",
+        "va'ethanan",
+        "vaethanan")
+val mapOfPossibleSpelingToCorrectSpeling46: Map<String, String> = listOfPossibleSpelings46.associateWith { actualSpeling46 }
+
+
+const val actualSpeling47 = "Eikev"
+val listOfPossibleSpelings47 = listOf(
+        "eikev",
+        "ekev",
+        "aikev",
+        "akev"
+)
+val mapOfPossibleSpelingToCorrectSpeling47: Map<String, String> = listOfPossibleSpelings47.associateWith { actualSpeling47 }
+
+
+const val actualSpeling48 = "Re'eh"
+val listOfPossibleSpelings48 = listOf(
+        "re'eh",
+        "r'ei",
+        "riei",
+        "ri'ei",
+        "r'ai",
+        "riai",
+        "ri'ai",
+        "re'ai",
+        "re'ei")
+val mapOfPossibleSpelingToCorrectSpeling48: Map<String, String> = listOfPossibleSpelings48.associateWith { actualSpeling48 }
+
+
+const val actualSpeling49 = "Shoftim"
+val listOfPossibleSpelings49 = listOf(
+        "shoftim",
+        "shof'tim",
+        "shof'teem",
+        "shofteem"
+)
+val mapOfPossibleSpelingToCorrectSpeling49: Map<String, String> = listOfPossibleSpelings49.associateWith { actualSpeling49 }
+
+
+const val actualSpeling50a = "Ki Setzei"
+val listOfPossibleSpelings50a = listOf(
+        "ki setzei",
+        "ki seitzei",
+        "kee seitzei",
+        "ki seitzai",
+        "kee seitzai",
+
+        "ki saitzei",
+        "kee saitzei",
+        "ki saitzai",
+        "kee saitzai",
+
+
+        "ki seizei",
+        "kee seizei",
+        "ki seizai",
+        "kee seizai",
+
+        "ki saizei",
+        "kee saizei",
+        "ki saizai",
+        "kee saizai",
+
+
+        "ki seisei",
+        "kee seisei",
+        "ki seisai",
+        "kee seisai",
+
+        "ki saisei",
+        "kee saisei",
+        "ki saisai",
+        "kee saisai",
+
+
+        "ki seissei",
+        "kee seissei",
+        "ki seissai",
+        "kee seissai",
+
+        "ki saissei",
+        "kee saissei",
+        "ki saissai",
+        "kee saissai"
+)
+val mapOfPossibleSpelingToCorrectSpeling50a: Map<String, String> = listOfPossibleSpelings50a.associateWith { actualSpeling50a }
+
+
+const val actualSpeling51a = "Ki Savo"
+val listOfPossibleSpelings51a = listOf(
+        "ki savo",
+        "ki savow",
+        "kee savo",
+        "kee savow",
+        "ki tavo",
+        "kee tavo",
+        "kee thavo",
+        "ki thavo",
+
+        "ki tavow",
+        "kee tavow",
+        "kee thavow",
+        "ki thavow"
+)
+val mapOfPossibleSpelingToCorrectSpeling51a: Map<String, String> = listOfPossibleSpelings51a.associateWith { actualSpeling51a }
+
+
+const val actualSpeling52 = "Nitzavim"
+val listOfPossibleSpelings52 = listOf(
+        "neetzavim",
+        "neetzaveem",
+        "nitzavim",
+
+        "neetzuvim",
+        "neetzuveem",
+        "nitzuvim",
+
+
+        "neezavim",
+        "neezaveem",
+        "nizavim",
+
+        "neezuvim",
+        "neezuveem",
+        "nizuvim",
+
+
+        "neesavim",
+        "neesaveem",
+        "nisavim",
+
+        "neesuvim",
+        "neesuveem",
+        "nisuvim",
+
+
+        "neessavim",
+        "neessaveem",
+        "nissavim",
+
+        "neessuvim",
+        "neessuveem",
+        "nissuvim"
+)
+val mapOfPossibleSpelingToCorrectSpeling52: Map<String, String> = listOfPossibleSpelings52.associateWith { actualSpeling52 }
+
+
+const val actualSpeling53 = "Vayelech"
+val listOfPossibleSpelings53 = listOf(
+        "vayeilech",
+        "vayelech",
+        "vayailech"
+)
+val mapOfPossibleSpelingToCorrectSpeling53: Map<String, String> = listOfPossibleSpelings53.associateWith { actualSpeling53 }
+
+
+const val actualSpeling54 = "Ha'azinu"
+val listOfPossibleSpelings54 = listOf(
+        "haazinu",
+        "haazinoo",
+        "ha'azinoo",
+        "haazeenoo",
+        "ha'azeenu",
+        "ha'azinu"
+)
+val mapOfPossibleSpelingToCorrectSpeling54: Map<String, String> = listOfPossibleSpelings54.associateWith { actualSpeling54 }
+
+
+const val actualSpeling55a = "V'Zos HaBracha"
+val listOfPossibleSpelings55a = listOf(
+        "v'zos habracha",
+        "vizos habracha",
+        "v'zos habracha",
+        "vizos habracha",
+        "vezos habracha",
+
+        "v'zos haberacha",
+        "vizos haberacha",
+        "v'zos haberacha",
+        "vizos haberacha",
+        "vezos haberacha"
+)
+val mapOfPossibleSpelingToCorrectSpeling55a: Map<String, String> = listOfPossibleSpelings55a.associateWith { actualSpeling55a }
+
+
+val mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling = mapOf(
+        listOfPossibleSpelings1 to mapOfPossibleSpelingToCorrectSpeling1,
+        listOfPossibleSpelings2 to mapOfPossibleSpelingToCorrectSpeling2,
+        listOfPossibleSpelings4 to mapOfPossibleSpelingToCorrectSpeling4,
+        listOfPossibleSpelings6 to mapOfPossibleSpelingToCorrectSpeling6,
+        listOfPossibleSpelings7 to mapOfPossibleSpelingToCorrectSpeling7,
+        listOfPossibleSpelings8 to mapOfPossibleSpelingToCorrectSpeling8,
+        listOfPossibleSpelings9 to mapOfPossibleSpelingToCorrectSpeling9,
+        listOfPossibleSpelings10 to mapOfPossibleSpelingToCorrectSpeling10,
+        listOfPossibleSpelings11 to mapOfPossibleSpelingToCorrectSpeling11,
+        listOfPossibleSpelings12 to mapOfPossibleSpelingToCorrectSpeling12,
+        listOfPossibleSpelings13 to mapOfPossibleSpelingToCorrectSpeling13,
+        listOfPossibleSpelings14 to mapOfPossibleSpelingToCorrectSpeling14,
+        listOfPossibleSpelings15 to mapOfPossibleSpelingToCorrectSpeling15,
+        listOfPossibleSpelings16 to mapOfPossibleSpelingToCorrectSpeling16,
+        listOfPossibleSpelings17 to mapOfPossibleSpelingToCorrectSpeling17,
+        listOfPossibleSpelings18 to mapOfPossibleSpelingToCorrectSpeling18,
+        listOfPossibleSpelings19 to mapOfPossibleSpelingToCorrectSpeling19,
+        listOfPossibleSpelings20 to mapOfPossibleSpelingToCorrectSpeling20,
+        listOfPossibleSpelings22 to mapOfPossibleSpelingToCorrectSpeling22,
+        listOfPossibleSpelings23 to mapOfPossibleSpelingToCorrectSpeling23,
 //"Sefer Vayikra" by accident
-            listOfPossibleSpellings25 to mapOfPossibleSpellingToCorrectSpelling25,
-            listOfPossibleSpellings26 to mapOfPossibleSpellingToCorrectSpelling26,
-            listOfPossibleSpellings27 to mapOfPossibleSpellingToCorrectSpelling27,
-            listOfPossibleSpellings28 to mapOfPossibleSpellingToCorrectSpelling28,
-            listOfPossibleSpellings29 to mapOfPossibleSpellingToCorrectSpelling29,
-            listOfPossibleSpellings31 to mapOfPossibleSpellingToCorrectSpelling31,
-            listOfPossibleSpellings32 to mapOfPossibleSpellingToCorrectSpelling32,
-            listOfPossibleSpellings33 to mapOfPossibleSpellingToCorrectSpelling33,
-            listOfPossibleSpellings34 to mapOfPossibleSpellingToCorrectSpelling34,
-            listOfPossibleSpellings35 to mapOfPossibleSpellingToCorrectSpelling35,
-            listOfPossibleSpellings36 to mapOfPossibleSpellingToCorrectSpelling36,
-            listOfPossibleSpellings37 to mapOfPossibleSpellingToCorrectSpelling37,
-            listOfPossibleSpellings38 to mapOfPossibleSpellingToCorrectSpelling38,
-            listOfPossibleSpellings39 to mapOfPossibleSpellingToCorrectSpelling39,
-            listOfPossibleSpellings40 to mapOfPossibleSpellingToCorrectSpelling40,
-            listOfPossibleSpellings41 to mapOfPossibleSpellingToCorrectSpelling41,
-            listOfPossibleSpellings42 to mapOfPossibleSpellingToCorrectSpelling42,
-            listOfPossibleSpellings43 to mapOfPossibleSpellingToCorrectSpelling43,
-            listOfPossibleSpellings44 to mapOfPossibleSpellingToCorrectSpelling44,
-            listOfPossibleSpellings45 to mapOfPossibleSpellingToCorrectSpelling45,
-            listOfPossibleSpellings46 to mapOfPossibleSpellingToCorrectSpelling46,
-            listOfPossibleSpellings47 to mapOfPossibleSpellingToCorrectSpelling47,
-            listOfPossibleSpellings48 to mapOfPossibleSpellingToCorrectSpelling48,
-            listOfPossibleSpellings49 to mapOfPossibleSpellingToCorrectSpelling49,
-            listOfPossibleSpellings52 to mapOfPossibleSpellingToCorrectSpelling52,
-            listOfPossibleSpellings53 to mapOfPossibleSpellingToCorrectSpelling53,
-            listOfPossibleSpellings54 to mapOfPossibleSpellingToCorrectSpelling54,
+        listOfPossibleSpelings25 to mapOfPossibleSpelingToCorrectSpeling25,
+        listOfPossibleSpelings26 to mapOfPossibleSpelingToCorrectSpeling26,
+        listOfPossibleSpelings27 to mapOfPossibleSpelingToCorrectSpeling27,
+        listOfPossibleSpelings28 to mapOfPossibleSpelingToCorrectSpeling28,
+        listOfPossibleSpelings29 to mapOfPossibleSpelingToCorrectSpeling29,
+        listOfPossibleSpelings31 to mapOfPossibleSpelingToCorrectSpeling31,
+        listOfPossibleSpelings32 to mapOfPossibleSpelingToCorrectSpeling32,
+        listOfPossibleSpelings33 to mapOfPossibleSpelingToCorrectSpeling33,
+        listOfPossibleSpelings34 to mapOfPossibleSpelingToCorrectSpeling34,
+        listOfPossibleSpelings35 to mapOfPossibleSpelingToCorrectSpeling35,
+        listOfPossibleSpelings36 to mapOfPossibleSpelingToCorrectSpeling36,
+        listOfPossibleSpelings37 to mapOfPossibleSpelingToCorrectSpeling37,
+        listOfPossibleSpelings38 to mapOfPossibleSpelingToCorrectSpeling38,
+        listOfPossibleSpelings39 to mapOfPossibleSpelingToCorrectSpeling39,
+        listOfPossibleSpelings40 to mapOfPossibleSpelingToCorrectSpeling40,
+        listOfPossibleSpelings41 to mapOfPossibleSpelingToCorrectSpeling41,
+        listOfPossibleSpelings42 to mapOfPossibleSpelingToCorrectSpeling42,
+        listOfPossibleSpelings43 to mapOfPossibleSpelingToCorrectSpeling43,
+        listOfPossibleSpelings44 to mapOfPossibleSpelingToCorrectSpeling44,
+        listOfPossibleSpelings45 to mapOfPossibleSpelingToCorrectSpeling45,
+        listOfPossibleSpelings46 to mapOfPossibleSpelingToCorrectSpeling46,
+        listOfPossibleSpelings47 to mapOfPossibleSpelingToCorrectSpeling47,
+        listOfPossibleSpelings48 to mapOfPossibleSpelingToCorrectSpeling48,
+        listOfPossibleSpelings49 to mapOfPossibleSpelingToCorrectSpeling49,
+        listOfPossibleSpelings52 to mapOfPossibleSpelingToCorrectSpeling52,
+        listOfPossibleSpelings53 to mapOfPossibleSpelingToCorrectSpeling53,
+        listOfPossibleSpelings54 to mapOfPossibleSpelingToCorrectSpeling54,
 
 
-            listOfPossibleSpellings3a to mapOfPossibleSpellingToCorrectSpelling3a,
-            listOfPossibleSpellings5a to mapOfPossibleSpellingToCorrectSpelling5a,
-            listOfPossibleSpellings21a to mapOfPossibleSpellingToCorrectSpelling21a,
-            listOfPossibleSpellings30a to mapOfPossibleSpellingToCorrectSpelling30a,
-            listOfPossibleSpellings50a to mapOfPossibleSpellingToCorrectSpelling50a,
-            listOfPossibleSpellings51a to mapOfPossibleSpellingToCorrectSpelling51a,
-            listOfPossibleSpellings55a to mapOfPossibleSpellingToCorrectSpelling55a
-    )
-    val doubleParshiyosList = listOf(
-            actualSpelling22, actualSpelling23,
-            actualSpelling28, actualSpelling29,
-            actualSpelling30a, actualSpelling31,
-            actualSpelling33, actualSpelling34,
-            actualSpelling40, actualSpelling41,
-            actualSpelling43, actualSpelling44,
-            actualSpelling52, actualSpelling53
-    )
-val doubleParshiyosMap = mapOf(
-        actualSpelling22 to actualSpelling23,
-        actualSpelling28 to actualSpelling29,
-        actualSpelling30a to actualSpelling31,
-        actualSpelling33 to actualSpelling34,
-        actualSpelling40 to actualSpelling41,
-        actualSpelling43 to actualSpelling44,
-        actualSpelling52 to actualSpelling53
+        listOfPossibleSpelings3a to mapOfPossibleSpelingToCorrectSpeling3a,
+        listOfPossibleSpelings5a to mapOfPossibleSpelingToCorrectSpeling5a,
+        listOfPossibleSpelings21a to mapOfPossibleSpelingToCorrectSpeling21a,
+        listOfPossibleSpelings30a to mapOfPossibleSpelingToCorrectSpeling30a,
+        listOfPossibleSpelings50a to mapOfPossibleSpelingToCorrectSpeling50a,
+        listOfPossibleSpelings51a to mapOfPossibleSpelingToCorrectSpeling51a,
+        listOfPossibleSpelings55a to mapOfPossibleSpelingToCorrectSpeling55a
+)
+val doubleParshiyosList = listOf(
+        actualSpeling22, actualSpeling23,
+        actualSpeling28, actualSpeling29,
+        actualSpeling30a, actualSpeling31,
+        actualSpeling33, actualSpeling34,
+        actualSpeling40, actualSpeling41,
+        actualSpeling43, actualSpeling44,
+        actualSpeling52, actualSpeling53
 )
 val doubleParshiyosAsStringWithSemiColonInBetween = listOf(
-        "$actualSpelling22;$actualSpelling23",
-        "$actualSpelling28;$actualSpelling29",
-        "$actualSpelling30a;$actualSpelling31",
-        "$actualSpelling33;$actualSpelling34",
-        "$actualSpelling40;$actualSpelling41",
-        "$actualSpelling43;$actualSpelling44",
-        "$actualSpelling52;$actualSpelling53"
+        "$actualSpeling22;$actualSpeling23",
+        "$actualSpeling28;$actualSpeling29",
+        "$actualSpeling30a;$actualSpeling31",
+        "$actualSpeling33;$actualSpeling34",
+        "$actualSpeling40;$actualSpeling41",
+        "$actualSpeling43;$actualSpeling44",
+        "$actualSpeling52;$actualSpeling53"
 )
+
 fun doubleParshiyosMappedToDoubleParshiyosAsStringWithSemiColon(): MutableMap<String, String> {
-    var indexOfDoubleParshiyosAsStringWithSemiColonInBetween=0
-    val doubleParshiyosMappedToDoubleParshiyosAsStringWithSemiColon:MutableMap<String,String> = mutableMapOf()
-    for(doubleParshaActualSpelling in doubleParshiyosList){
-        if(doubleParshiyosList.indexOf(doubleParshaActualSpelling) % 2 == 0) indexOfDoubleParshiyosAsStringWithSemiColonInBetween++
-        doubleParshiyosMappedToDoubleParshiyosAsStringWithSemiColon[doubleParshaActualSpelling] = doubleParshiyosAsStringWithSemiColonInBetween.elementAt(indexOfDoubleParshiyosAsStringWithSemiColonInBetween-1)
+    var indexOfDoubleParshiyosAsStringWithSemiColonInBetween = 0
+    val doubleParshiyosMappedToDoubleParshiyosAsStringWithSemiColon: MutableMap<String, String> = mutableMapOf()
+    for (doubleParshaActualSpeling in doubleParshiyosList) {
+        if (doubleParshiyosList.indexOf(doubleParshaActualSpeling) % 2 == 0) indexOfDoubleParshiyosAsStringWithSemiColonInBetween++
+        doubleParshiyosMappedToDoubleParshiyosAsStringWithSemiColon[doubleParshaActualSpeling] = doubleParshiyosAsStringWithSemiColonInBetween.elementAt(indexOfDoubleParshiyosAsStringWithSemiColonInBetween - 1)
     }
     return doubleParshiyosMappedToDoubleParshiyosAsStringWithSemiColon
 }
