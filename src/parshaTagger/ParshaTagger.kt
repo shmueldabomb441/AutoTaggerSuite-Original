@@ -32,7 +32,7 @@ import kotlin.system.exitProcess
 //TODO add "q" in place of koof
 
 
-var rejects: MutableMap<String, String> = mutableMapOf("Rejected shiur " to "==============> Rejection Reason  ", "----------------------------" to "----------------------------")
+var rejects: MutableMap<String, String> = mutableMapOf("Rejected shiur" to "Rejection Reason")
 
 
 @Suppress("MemberVisibilityCanBePrivate")
@@ -40,7 +40,8 @@ var rejects: MutableMap<String, String> = mutableMapOf("Rejected shiur " to "===
 
 fun main() {
 
-    var year = File("${System.getProperty("user.dir")}\\Year.txt").readText()//I assume that this var is initialized with the year in file when checking for a date in the title and handling assignment based on what is found
+    println()
+    var year = File("${System.getProperty("user.dir")}\\Year.txt").readText()//Throughout the code I assume that this var is initialized with the year in file when checking for a date in the title and handling assignment based on what is found
     val speaker = File("${System.getProperty("user.dir")}\\Speaker.txt").readText()
     val listOfMp3s: MutableList<File> = mutableListOf()
     val files = File(System.getProperty("user.dir")).listFiles() ?: arrayOf(File(""))
@@ -66,7 +67,7 @@ fun main() {
         if (getParshaDontPrint != null && getParshaDontPrint != ""/*<- I think this means that there was a recognized parsha but there was a problem (e.g. two parshiyos)*/)
             tag.setField(FieldKey.ALBUM, getParsha(title, dontPrintToConsole = false))
         else {
-            if (title !in rejects) rejects[title] = "No Recognized Parsha Found"
+            if (title !in rejects) rejects[title] = "No Recognized Parsha Found."
             continue@processShiurim
         }
 
@@ -104,10 +105,33 @@ fun main() {
         f.commit()
     }
     println()
-    println(rejects)
+    var counter = 0
+
     println()
     println()
-    println("Rejection Reasons List: ${rejects.values.minus(rejects.values.elementAt(0)).minus(rejects.values.elementAt(1))}")
+    println("List Of Rejected Shiurim And Reasons For Rejection:")
+    println()
+    rejects.forEach {
+        if(counter==1) {println();println()}
+        println("${counter}a. ${it.key}")
+        println("${counter}b. ${it.value}")
+        println()
+        counter++
+    }
+    println()
+    println()
+//    var properlyFormattedRejectsList = rejects.values.minus(rejects.values.elementAt(0)).minus(rejects.values.elementAt(1))
+//    properlyFormattedRejectsList.forEach{it}
+    println()
+    println()
+    println("Rejection Reasons List:")
+    println()
+    var counter1 = 1
+     printReasons@for(it in rejects) {
+         if(it.value=="Rejection Reason") continue@printReasons
+         println("$counter1. ${it.value}")
+         counter1++
+    }
 }
 
 private fun findMP3sAndAddThemToListOfMp3s(files: Array<File>, thereWereNoFilesInDirectory: Boolean, listOfMp3s: MutableList<File>): Boolean {

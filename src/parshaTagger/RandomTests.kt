@@ -6,7 +6,7 @@ import java.util.regex.Pattern
 fun main() {
 
     val year = "5780"
-    val title = "Behar 5780 1927"
+    val title = "Behar"
     //Don't know if this finds the amount of matches of regex in title: "(57|19|20)\\d\\d".toRegex().findAll(title).toList().size>1
     println("(57|19|20)\\d\\d".toRegex().findAll(title).toList().size>1)
     val regexForYear = "(57|19|20)\\d\\d".toRegex()
@@ -14,7 +14,7 @@ fun main() {
     val indexOfMatchesInTitle = indexOf(Pattern.compile(regexForYear.toString()), title)
     println(regexForYear.find(title)?.value)
     println(indexOfMatchesInTitle)
-    println(numberOfMatchesInTitle)
+    println("NUmber of matches: $numberOfMatchesInTitle")
     println()
     regexForYear.findAll(title).forEach{println(it.value)}
     val datesFound= mutableListOf<String>()

@@ -162,6 +162,7 @@ class ParshaTagger {
                     if (!dontPrintToConsole) {
                         println("Proper spelling is: $properParshaName")
                         println()
+                        println()
                     }
                     break@outerLoop
                 }
