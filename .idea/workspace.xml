@@ -16,8 +16,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="264c44bb-ddc7-42b0-bb3c-1511656d5ab6" name="Default Changelist" comment="updated jar">
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/ParshaTagger.jar" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/generalTagger/SimpleAutoTagger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coverArtTagger/WriteSpeakerImageWithoutHardcodedFilePaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Shmuel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/ParshaTagger.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/ParshaTagger.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/META-INF/JAudioTagger.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ParshaTagger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ParshaTagger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/com/GeneralTagger/ParshaTaggerKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/ParshaTaggerKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/SpellingsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAudioTagger/parshaTagger/SpellingsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/generalTagger/ParshaTagger.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/ParshaTagger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/ParshaTagger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parshaTagger/Spellings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/parshaTagger/Spellings.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,21 +61,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/generalTagger/ParshaTaggerFromGeneralTagger.kt" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20229885" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/com/company/GeneralTagger.java" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/com/generalTagger/ParshaTaggerFromGeneralTagger.kt" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/src/com/company" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\out\artifacts\ParshaTagger_jar" />
-      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
-      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="parshaTagger" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company" />
@@ -77,13 +85,17 @@
       <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="coverArtTagger" />
       <recent name="com.company" />
     </key>
-    <key name="CreateKotlinClassDialog.RecentsKey">
-      <recent name="parshaTagger" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\out\artifacts\ParshaTagger_jar" />
+      <recent name="C:\Users\Shmuel\Downloads\good version of JAudioTagger\JAudioTagger - Copy\src\ParshaTagger" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger\src\com\company" />
+      <recent name="C:\Users\mglazer\IdeaProjects\JAudioTagger" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.RandomTestsKt">
+  <component name="RunManager" selected="Application.WriteSpeakerImageWithoutHardcodedFilePaths">
     <configuration name="ParshaTaggerRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.generalTagger.ParshaTaggerRunner" />
       <module name="JAudioTagger" />
@@ -97,9 +109,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JAudioTagger.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ParshaTagger_jar/JAudioTagger.jar" />
-      <method v="2" />
+    <configuration name="WriteSpeakerImageWithoutHardcodedFilePaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="coverArtTagger.WriteSpeakerImageWithoutHardcodedFilePaths" />
+      <module name="JAudioTagger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coverArtTagger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ParshaTaggerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="JAudioTagger" />
@@ -142,18 +163,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.ParshaTaggerRunner" />
-      <item itemvalue="JAR Application.JAudioTagger.jar" />
+      <item itemvalue="Application.WriteSpeakerImageWithoutHardcodedFilePaths" />
       <item itemvalue="Kotlin.ParshaTaggerKt" />
       <item itemvalue="Kotlin.RandomTests1Kt" />
       <item itemvalue="Kotlin.RandomTestsKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.RandomTestsKt" />
+        <item itemvalue="Application.WriteSpeakerImageWithoutHardcodedFilePaths" />
         <item itemvalue="Kotlin.ParshaTaggerKt" />
-        <item itemvalue="Kotlin.RandomTests1Kt" />
-        <item itemvalue="JAR Application.JAudioTagger.jar" />
         <item itemvalue="Application.ParshaTaggerRunner" />
+        <item itemvalue="Kotlin.RandomTestsKt" />
+        <item itemvalue="Kotlin.RandomTests1Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -343,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593184664068</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="updated jar">
+      <created>1593184740067</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1593184740067</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -403,18 +431,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1593007350008" />
-    <state x="163" y="0" key="#Project_Structure" timestamp="1593181853692">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1593203811537">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593181853692" />
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1593203811537" />
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog" timestamp="1592533513395">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="101" key="#com.intellij.ide.util.ExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1592533513395" />
-    <state x="250" y="154" width="976" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593135928994">
+    <state x="250" y="154" width="976" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593203801422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="250" y="154" width="976" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593135928994" />
+    <state x="250" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1593203801422" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593040273855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -428,60 +458,60 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="233" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1592434385902" />
-    <state x="1625" y="-11" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1593040056715">
-      <screen x="1366" y="0" width="1920" height="1040" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1593993313453">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1625" y="-11" width="1182" height="544" maximized="true" key="DiffContextDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593040056715" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1593039204084" />
-    <state x="462" y="118" key="FileChooserDialogImpl" timestamp="1593136245346">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1593993313453" />
+    <state x="462" y="118" key="FileChooserDialogImpl" timestamp="1593993197118">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593136245346" />
-    <state x="462" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592602520260" />
+    <state x="462" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593993197118" />
     <state x="507" y="265" key="Github.CreateGistDialog" timestamp="1592602505280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="265" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1592602505280" />
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1593184328511">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1594088843559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593184328511" />
-    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1593184328511">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593187548408" />
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594088843559" />
+    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1594088843559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593184328511" />
-    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1593184328511">
+    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593187548408" />
+    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594088843559" />
+    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1594088843558">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593184328511" />
-    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1593184328511">
+    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593187548408" />
+    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594088843558" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1594088843559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593184328511" />
-    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593038884792" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1593182174239">
+    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593187548408" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594088843559" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1593204124463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593182174239" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592877913308" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1593182174239">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593204124463" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1593204124463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593182174239" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592877913308" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1593182174239">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1593204124463" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1593204124462">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593182174239" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592877913308" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1593182174239">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1593204124462" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1593204124463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593182174239" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592877913308" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1593204124463" />
     <state x="0" y="0" width="1292" height="728" key="SettingsEditor" timestamp="1593136421649">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -495,20 +525,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="97" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1592424120792" />
-    <state x="65" y="0" key="new project wizard" timestamp="1593123815119">
+    <state x="65" y="0" key="new project wizard" timestamp="1593990126008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593123815119" />
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1591999118508" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1593990126008" />
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog" timestamp="1592434578277">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="406" y="135" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1592434578277" />
-    <state x="339" y="164" key="run.anything.popup" timestamp="1593099598383">
+    <state x="339" y="164" key="run.anything.popup" timestamp="1593990067027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="164" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1593099598383" />
-    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593017451512" />
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593990067027" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593136173728">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

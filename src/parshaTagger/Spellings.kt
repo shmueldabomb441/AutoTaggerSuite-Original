@@ -86,8 +86,23 @@ val listOfPossibleSpelings1 = listOf(
         "b'raishith",
         "b'reishith",
         "b'raisheeth",
-        "b'reisheeth"
-)
+        "b'reisheeth",
+
+        "breishis",
+        "braishis",
+        "breishees",
+        "braishees",
+
+        "breishit",
+        "braishit",
+        "breisheet",
+        "braisheet",
+
+        "breishith",
+        "braishith",
+        "breisheeth",
+        "braisheeth"
+        )
 val mapOfPossibleSpelingToCorrectSpeling1: Map<String, String> = listOfPossibleSpelings1.associateWith { actualSpeling1 }
 
 
@@ -1361,7 +1376,19 @@ val listOfPossibleSpelings34 = listOf(
         "b'chukkosai",
         "b'chukkosei",
         "b'hukkosai",
-        "b'hukkosei"
+        "b'hukkosei",
+
+        "bchukosai",
+        "bchukosei",
+        "bhukosai",
+        "bhukosei",
+        "bchukkosai",
+        "bchukkosei",
+        "bhukkosai",
+        "bhukkosei",
+        "bechukosi",
+        "bchukosi",
+        "bichukosi"
 )
 val mapOfPossibleSpelingToCorrectSpeling34: Map<String, String> = listOfPossibleSpelings34.associateWith { actualSpeling34 }
 

@@ -5,13 +5,14 @@
 *
 * */
 package parshaTagger
-
+import parshaTagger.Files.speaker
+import parshaTagger.Files.year
 import java.io.File
 import org.jaudiotagger.audio.AudioFileIO
 import org.jaudiotagger.audio.mp3.MP3File
 import org.jaudiotagger.tag.FieldKey
-import java.util.regex.Pattern
 import kotlin.system.exitProcess
+import kotlin.system.measureNanoTime
 
 
 //Local Knowledge: Map<PossibleSpellings, ActualSpelling>
@@ -36,83 +37,138 @@ var rejects: MutableMap<String, String> = mutableMapOf("Rejected shiur" to "Reje
 
 
 @Suppress("MemberVisibilityCanBePrivate")
+object Files {
+    val yearFile = File("${System.getProperty("user.dir")}\\Year.txt")
+    val speakerFile = File("${System.getProperty("user.dir")}\\Speaker.txt")
 
+    init {
+        yearFile.createNewFile()
+        speakerFile.createNewFile()
+    }
+
+    val year = yearFile.readText()//Throughout the code I assume that this var is initialized with the year in file when checking for a date in the title and handling assignment based on what is found
+    val speaker = speakerFile.readText()
+}
 
 fun main() {
-
-    println()
-    var year = File("${System.getProperty("user.dir")}\\Year.txt").readText()//Throughout the code I assume that this var is initialized with the year in file when checking for a date in the title and handling assignment based on what is found
-    val speaker = File("${System.getProperty("user.dir")}\\Speaker.txt").readText()
+    println("Year In File: \"$year\"")
+    var timeToProcessShiurim: Long = 0
     val listOfMp3s: MutableList<File> = mutableListOf()
-    val files = File(System.getProperty("user.dir")).listFiles() ?: arrayOf(File(""))
-    var thereWereNoFilesInDirectory = false
-    thereWereNoFilesInDirectory = findMP3sAndAddThemToListOfMp3s(files, thereWereNoFilesInDirectory, listOfMp3s)
-    if (thereWereNoFilesInDirectory) {
-        println("There were no files in directory. Please try again...")
-        exitProcess(666)
-    }
-    if (speaker == "") {
-        println("There was no speaker provided. Please try again...")
-        exitProcess(666)
-    }
-    processShiurim@ for (file in listOfMp3s) {
+    val timeToCompleteProgram = measureNanoTime {
+        println()
 
-
-        val f = AudioFileIO.read(file) as MP3File
-        val tag = f.tag
-        val title = tag.getFirst(FieldKey.TITLE)
-
-        //Set album to correct parsha or add to rejects
-        val getParshaDontPrint = getParsha(title, dontPrintToConsole = true)
-        if (getParshaDontPrint != null && getParshaDontPrint != ""/*<- I think this means that there was a recognized parsha but there was a problem (e.g. two parshiyos)*/)
-            tag.setField(FieldKey.ALBUM, getParsha(title, dontPrintToConsole = false))
-        else {
-            if (title !in rejects) rejects[title] = "No Recognized Parsha Found."
-            continue@processShiurim
+        val files = File(System.getProperty("user.dir")).listFiles() ?: arrayOf(File(""))
+        var thereWereNoFilesInDirectory = false
+        thereWereNoFilesInDirectory = findMP3sAndAddThemToListOfMp3s(files, thereWereNoFilesInDirectory, listOfMp3s)
+        if (thereWereNoFilesInDirectory) {
+            println("There were no files in directory. Please try again...")
+            exitProcess(666)
         }
+        if (speaker == "") {
+            println("There was no speaker provided. Please try again...")
+            exitProcess(666)
+        }
+        var numberOfShiurimAlbumed = 0
+        var numberOfShiurimDated = 0
+        timeToProcessShiurim = measureNanoTime {
+            processShiurim@ for (file in listOfMp3s) {
 
-        checkForDate@ while (true) {
-            val yearGivenInFile = year != ""
-            //Don't know if this finds the amount of matches of regex in title: "(57|19|20)\\d\\d".toRegex().findAll(title).toList().size>1
-            val regexForYear = "(57|19|20)\\d\\d".toRegex()
-            val numberOfMatchesInTitle = regexForYear.findAll(title).toList().size
 
-            if (numberOfMatchesInTitle == 0 && yearGivenInFile) break@checkForDate
-            else if (numberOfMatchesInTitle == 0 && !yearGivenInFile) {
-                rejects[title] = "Parsha Found In Title But No Date Given In File Nor In Title.";continue@processShiurim
-            } else {
-                val yearInTitle = regexForYear.find(title)!!.value
-                if (numberOfMatchesInTitle == 1 && !yearGivenInFile) year = yearInTitle
-                else if (numberOfMatchesInTitle == 1 && yearGivenInFile && yearInTitle == year/*if year in title and file are the same*/) break@checkForDate/*because year was already read from file*/
-                else if (numberOfMatchesInTitle == 1 && yearGivenInFile && yearInTitle != year) {
-                    rejects[title] = "Parsha Found In Title But Also Found Different Year In Title($yearInTitle) Than In File($year). Unable To Determine Correct Year."
-                    continue@processShiurim
-                } else if (numberOfMatchesInTitle > 1) {
-                    /*there are 2+ dates in title*/
-                    val datesFound = mutableListOf<String>()
-                    regexForYear.findAll(title).forEach { datesFound += it.value }
-                    rejects[title] = "Parsha Found In Title But Also Found Two Or More Years In Title: $datesFound. Unable To Determine Correct Year."
+                val f = AudioFileIO.read(file) as MP3File
+                val tag = f.tag
+                val title = tag.getFirst(FieldKey.TITLE)
+
+                //Set album to correct parsha or add to rejects
+                val getParshaDontPrint = getParsha(title, dontPrintToConsole = true)
+                if (getParshaDontPrint != null && getParshaDontPrint != ""/*<- I think this means that there was a recognized parsha but there was a problem (e.g. two parshiyos)*/) {
+                    tag.setField(FieldKey.ALBUM, getParsha(title, dontPrintToConsole = false))
+                    numberOfShiurimAlbumed++
+                } else {
+                    if (title !in rejects) rejects[title] = "No Recognized Parsha Found."
                     continue@processShiurim
                 }
+
+                checkForDate@ while (true) {
+                    val yearGivenInFile = year != ""
+                    //Don't know if this finds the amount of matches of regex in title: "(57|19|20)\\d\\d".toRegex().findAll(title).toList().size>1
+                    val regexForYear = "(57|19|20)\\d\\d".toRegex()
+                    val numberOfMatchesInTitle = regexForYear.findAll(title).toList().size
+
+                    if (numberOfMatchesInTitle == 0 && yearGivenInFile) break@checkForDate
+                    else if (numberOfMatchesInTitle == 0 && !yearGivenInFile) {
+                        rejects[title] = "Parsha Found In Title But No Date Given In File Nor In Title.";continue@processShiurim
+                    } else {
+                        val yearInTitle = regexForYear.find(title)!!.value
+                        if (numberOfMatchesInTitle == 1 && !yearGivenInFile) {
+                            tag.setField(FieldKey.CONDUCTOR, "Parsha $yearInTitle")
+                            tag.setField(FieldKey.YEAR, yearInTitle)
+                        } else if (numberOfMatchesInTitle == 1 && yearGivenInFile && yearInTitle == year/*if year in title and file are the same*/) break@checkForDate/*because year was already read from file*/
+                        else if (numberOfMatchesInTitle == 1 && yearGivenInFile && yearInTitle != year) {
+                            rejects[title] = "Parsha Found In Title But Also Found Different Year In Title($yearInTitle) Than In File($year). Unable To Determine Correct Year."
+                            continue@processShiurim
+                        } else if (numberOfMatchesInTitle > 1) {
+                            /*there are 2+ dates in title*/
+                            val datesFound = mutableListOf<String>()
+                            regexForYear.findAll(title).forEach { datesFound += it.value }
+                            rejects[title] = "Parsha Found In Title But Also Found Two Or More Years In Title: $datesFound. Unable To Determine Correct Year."
+                            continue@processShiurim
+                        }
+                    }
+                    break@checkForDate
+                }
+
+                //If I am not mistaken, it would have only reached here if date was some number which "fit the bill" for being a date, so I took out check for if(year != "") before setting the tags to year, etc., and consequetently thereby deleting the tags which were presetn before the write.
+                if (year != "") {
+                    tag.setField(FieldKey.CONDUCTOR, "Parsha $year")
+                    tag.setField(FieldKey.YEAR, year)
+                    numberOfShiurimDated++
+                }
+                tag.setField(FieldKey.ARTIST, speaker)
+                f.commit()
             }
-            break@checkForDate
         }
-
-        //If I am not mistaken, it would have only reached here if date was some number which "fit the bill" for being a date, so I took out check for if(year != "") before setting the tags to year, etc., and consequetently thereby deleting the tags which were presetn before the write.
-        tag.setField(FieldKey.CONDUCTOR, "Parsha $year")
-        tag.setField(FieldKey.YEAR, year)
-        tag.setField(FieldKey.ARTIST, speaker)
-        f.commit()
+        println()
+        println()
+        println()
+        println()
+        println()
+        println()
+        println()
+        println("Number Of Shiurim Found:   ${listOfMp3s.size}")
+        println("Number Of Shiurim Albumed: $numberOfShiurimAlbumed")
+        println("Number Of Shiurim Dated:   $numberOfShiurimDated")
+        if (listOfMp3s.size - numberOfShiurimAlbumed > 0 || listOfMp3s.size - numberOfShiurimDated > 0) {
+            println()
+            println("In Total: ${listOfMp3s.size - numberOfShiurimAlbumed} Unalbumed, ${listOfMp3s.size - numberOfShiurimDated} Undated")
+        }
+        println()
+        println()
+        println()
+        println()
     }
+    val a = timeToCompleteProgram / 1000000000.0
+    val b = timeToProcessShiurim / 1000000000.0
+    val texta = a.toString()
+    val textb = b.toString()
+    val integerPlacesa = texta.indexOf('.')
+    val decimalPlacesa = texta.length - integerPlacesa - 1
+    val integerPlacesb = textb.indexOf('.')
+    val decimalPlacesb = textb.length - integerPlacesb - 1
     println()
-    var counter = 0
-
+    println("Time To Execute Program: ${a.format(decimalPlacesa)} Sec")
+    println("Average Processing Rate: ${((listOfMp3s.size / b).format(decimalPlacesb))} Shiurim/Sec")
+    println("------------------------------------------------------------------------------------------------------")
     println()
     println()
     println("List Of Rejected Shiurim And Reasons For Rejection:")
     println()
+    println()
+    println()
+    var counter = 0
     rejects.forEach {
-        if(counter==1) {println();println()}
+        if (counter == 1) {
+            println();println()
+        }
         println("${counter}a. ${it.key}")
         println("${counter}b. ${it.value}")
         println()
@@ -127,12 +183,17 @@ fun main() {
     println("Rejection Reasons List:")
     println()
     var counter1 = 1
-     printReasons@for(it in rejects) {
-         if(it.value=="Rejection Reason") continue@printReasons
-         println("$counter1. ${it.value}")
-         counter1++
+    printReasons@ for (it in rejects) {
+        if (it.value == "Rejection Reason") continue@printReasons
+        println("$counter1. ${it.value}")
+        counter1++
     }
+    println()
+    println()
+    println()
 }
+
+fun Double.format(digits: Int): String = java.lang.String.format("%.${digits}f", this)
 
 private fun findMP3sAndAddThemToListOfMp3s(files: Array<File>, thereWereNoFilesInDirectory: Boolean, listOfMp3s: MutableList<File>): Boolean {
     /*
@@ -165,7 +226,7 @@ fun getParsha(givenShiurTitle: String, dontPrintToConsole: Boolean = false, mapO
     outerLoop@
     for ((listOfPossibleSpellings, mapOfPossibleSpellingToCorrectSpelling) in mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling1) {
         for (spelling in listOfPossibleSpellings) {
-            if (lowerCaseShiurTitle.contains("\\b$spelling\\b".toRegex())/*if there is a recognized parsha name in the title*/) {
+            if (lowerCaseShiurTitle.contains("(?<!(Sefer)|(sefer))\\b$spelling\\b".toRegex())/*if there is a recognized parsha name in the title*/) {
                 matchFound = true
                 val actualSpelling = mapOfPossibleSpellingToCorrectSpelling.values.toList()[0]
 
@@ -186,6 +247,7 @@ fun getParsha(givenShiurTitle: String, dontPrintToConsole: Boolean = false, mapO
                 if (!dontPrintToConsole) {
                     println("Proper spelling is: $properParshaName")
                     println()
+                    println()
                 }
                 break@outerLoop
             }
@@ -201,21 +263,21 @@ fun containsSecondParsha(capitalizedShiurTitle: String, listOfPossibleSpellings:
 
     return if
                    (
-            getParshaSimple_WithoutDoubles(
+            getParshaWithoutCheckForDoubleParshiyos(
                     capitalizedShiurTitle,
                     true,
                     mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpellingMinusTheAlreadyFoundParsha
             )
             == null
     ) null
-    else getParshaSimple_WithoutDoubles(
+    else getParshaWithoutCheckForDoubleParshiyos(
             capitalizedShiurTitle,
             true,
             mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpellingMinusTheAlreadyFoundParsha
     )
 }
 
-private fun getParshaSimple_WithoutDoubles(givenShiurTitle: String, dontPrintToConsole: Boolean, mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling1: Map<List<String>, Map<String, String>> = mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling): String? {
+private fun getParshaWithoutCheckForDoubleParshiyos(givenShiurTitle: String, dontPrintToConsole: Boolean, mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling1: Map<List<String>, Map<String, String>> = mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling): String? {
     val lowerCaseShiurTitle = givenShiurTitle.toLowerCase()
     if (!dontPrintToConsole) {
         println(givenShiurTitle)
@@ -227,11 +289,12 @@ private fun getParshaSimple_WithoutDoubles(givenShiurTitle: String, dontPrintToC
     outerLoop@
     for ((listOfPossibleSpellings, mapOfPossibleSpellingToCorrectSpelling) in mapOfPossibleSpellingsListToMapOfPossibleSpellingToCorrectSpelling1) {
         for (spelling in listOfPossibleSpellings) {
-            if (lowerCaseShiurTitle.contains("\\b$spelling\\b".toRegex())/*if there is a recognized parsha name in the title*/) {
+            if (lowerCaseShiurTitle.contains("(?<!(Sefer)|(sefer))\\b$spelling\\b".toRegex())/*if there is a recognized parsha name in the title*/) {
                 matchFound = true
                 properParshaName = mapOfPossibleSpellingToCorrectSpelling[spelling].toString()
                 if (!dontPrintToConsole) {
                     println("Proper spelling is: ${mapOfPossibleSpellingToCorrectSpelling[spelling]}")
+                    println()
                     println()
                 }
                 break@outerLoop
